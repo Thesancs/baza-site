@@ -1,0 +1,704 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>BAZA® — Uniformes que vestem a identidade da sua marca</title>
+<meta name="description" content="A BAZA cria e produz uniformes exclusivos, desenvolvidos a partir do branding, da estética e das necessidades da sua empresa. Campinas — SP.">
+<meta name="theme-color" content="#151515">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800&family=IBM+Plex+Mono:wght@400;500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<!-- LCP: o poster aparece na hora; o vídeo só carrega depois -->
+<link rel="preload" as="image" href="assets/video/hero-poster-mobile.webp" media="(max-width: 768px)">
+<link rel="preload" as="image" href="assets/video/hero-poster-desktop.webp" media="(min-width: 769px)">
+<style>
+/*
+VOICE   editorial de moda contemporânea: direto, autoral, comercial
+IDEA    um lookbook de estúdio: fotos grandes, ficha técnica em mono, títulos condensados
+PICTURE vídeo editorial em tela cheia na hero; acervo real da BAZA em todas as seções
+COLOUR  Carbon Black #151515, Natural Cotton #F3F1EB, branco, Stone Grey #A5A29B
+TYPE    Barlow Condensed (display), Inter (texto), IBM Plex Mono (detalhes técnicos)
+*/
+:root{
+  --carbon:#151515;--cotton:#F3F1EB;--white:#fff;--stone:#A5A29B;--line:rgba(21,21,21,.14);--line-d:rgba(243,241,235,.16);
+  --display:"Barlow Condensed","Arial Narrow",Impact,sans-serif;
+  --body:Inter,"Helvetica Neue",Arial,sans-serif;
+  --mono:"IBM Plex Mono",ui-monospace,Menlo,monospace;
+  --pad:max(5vw,20px);--max:1440px;color-scheme:light;
+}
+*{box-sizing:border-box;min-width:0}
+html{scroll-behavior:smooth;scroll-padding-top:72px}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{animation:none!important;transition:none!important}}
+body{margin:0;background:var(--cotton);color:var(--carbon);font:16px/1.6 var(--body);overflow-x:clip;-webkit-font-smoothing:antialiased}
+img,video{display:block;max-width:100%}
+a{color:inherit}
+button{font:inherit;color:inherit;cursor:pointer}
+:focus-visible{outline:2px solid currentColor;outline-offset:3px}
+.wrap{max-width:var(--max);margin:0 auto;padding:0 var(--pad)}
+.mono{font:500 12px/1.4 var(--mono);letter-spacing:.04em;text-transform:uppercase}
+.display{font-family:var(--display);font-weight:800;text-transform:uppercase;line-height:.9;letter-spacing:-.005em;margin:0;text-wrap:balance}
+.h2{font-size:clamp(44px,6.4vw,104px)}
+.lead{font-size:clamp(17px,1.4vw,20px);line-height:1.55;max-width:58ch}
+.logo{display:block;background:currentColor;-webkit-mask:url(assets/img/logo-baza.svg) center/contain no-repeat;mask:url(assets/img/logo-baza.svg) center/contain no-repeat;aspect-ratio:1800/510}
+.btn{display:inline-flex;align-items:center;gap:10px;min-height:52px;padding:0 26px;border:1px solid currentColor;font:600 15px/1 var(--body);text-decoration:none;transition:background .25s,color .25s}
+.btn-solid{background:var(--cotton);color:var(--carbon);border-color:var(--cotton)}
+.btn-solid:hover{background:var(--white)}
+.btn-ghost:hover{background:var(--cotton);color:var(--carbon)}
+.btn-dark{background:var(--carbon);color:var(--cotton);border-color:var(--carbon)}
+.btn-dark:hover{background:#000}
+.sec-head{display:flex;justify-content:space-between;align-items:flex-end;gap:24px;flex-wrap:wrap;margin-bottom:clamp(32px,4vw,64px)}
+section{padding:clamp(72px,9vw,140px) 0}
+
+/* header */
+.hdr{position:fixed;inset:0 0 auto;z-index:50;color:var(--cotton);transition:background .3s,color .3s,box-shadow .3s}
+.hdr.solid{background:rgba(243,241,235,.94);backdrop-filter:blur(10px);color:var(--carbon);box-shadow:0 1px 0 var(--line)}
+.hdr .wrap{display:flex;align-items:center;justify-content:space-between;height:72px;gap:24px}
+.hdr .logo{width:104px}
+.nav{display:flex;align-items:center;gap:32px}
+.nav a{font:500 13px/1 var(--mono);text-transform:uppercase;letter-spacing:.06em;text-decoration:none;opacity:.85}
+.nav a:hover{opacity:1}
+.nav .btn{min-height:42px;padding:0 18px;opacity:1;font:600 13px/1 var(--body);text-transform:none;letter-spacing:0}
+.burger{display:none;background:none;border:0;width:44px;height:44px;padding:10px}
+.burger span{display:block;height:2px;background:currentColor;margin:6px 0;transition:transform .25s}
+@media(max-width:860px){
+  .burger{display:block}
+  .nav{position:fixed;inset:72px 0 auto;flex-direction:column;align-items:flex-start;gap:0;background:var(--carbon);color:var(--cotton);padding:12px var(--pad) 28px;transform:translateY(-120%);transition:transform .35s}
+  .nav a{padding:16px 0;font-size:15px;width:100%;border-bottom:1px solid var(--line-d)}
+  .nav .btn{margin-top:20px;width:auto;border:1px solid var(--cotton)}
+  .menu-open .nav{transform:none}
+}
+
+/* hero */
+.hero{position:relative;min-height:100svh;padding:0;color:var(--cotton);background:var(--carbon);display:flex;flex-direction:column;overflow:hidden}
+.hero-media{position:absolute;inset:0}
+.hero-media img,.hero-media video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.hero-media video{opacity:0;transition:opacity .8s ease}
+.hero.is-playing .hero-media video{opacity:1}
+.hero-media::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(21,21,21,.55) 0%,rgba(21,21,21,.1) 30%,rgba(21,21,21,.35) 60%,rgba(21,21,21,.88) 100%)}
+.hero-body{position:relative;flex:1;display:flex;flex-direction:column;justify-content:flex-end;padding-top:120px;padding-bottom:clamp(28px,4vw,48px)}
+.hero h1{font-size:clamp(54px,9.4vw,164px);max-width:12ch;margin:18px 0 0}
+.hero p{max-width:46ch;font-size:clamp(16px,1.3vw,19px);margin:24px 0 32px;color:rgba(243,241,235,.86)}
+.hero-ctas{display:flex;gap:12px;flex-wrap:wrap}
+.hero-bar{position:relative;border-top:1px solid var(--line-d)}
+.hero-bar .wrap{display:flex;justify-content:space-between;align-items:center;gap:16px;min-height:56px;flex-wrap:wrap}
+.vid-toggle{display:inline-flex;align-items:center;gap:8px;background:none;border:1px solid var(--line-d);min-height:36px;padding:0 12px;font:500 11px/1 var(--mono);text-transform:uppercase;letter-spacing:.06em}
+.vid-toggle:hover{border-color:var(--cotton)}
+@media(max-width:600px){.hero-bar .hide-sm{display:none}}
+
+/* clients marquee */
+.clients{background:var(--carbon);color:var(--cotton);padding:0;border-top:1px solid var(--line-d);overflow:hidden}
+.clients .label{padding:22px var(--pad) 0;color:var(--stone)}
+.marquee{display:flex;width:max-content;animation:mq 42s linear infinite;padding:18px 0 26px}
+.clients:hover .marquee{animation-play-state:paused}
+.marquee span{font:700 clamp(28px,3.4vw,52px)/1 var(--display);text-transform:uppercase;padding:0 .55em;white-space:nowrap}
+.marquee span::after{content:"✳";font-size:.45em;vertical-align:.45em;margin-left:1.1em;color:var(--stone)}
+@keyframes mq{to{transform:translateX(-50%)}}
+
+/* works grid */
+.works-grid{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));gap:clamp(16px,2vw,28px);row-gap:clamp(40px,5vw,72px)}
+.work{grid-column:span 6;text-align:left;background:none;border:0;padding:0;display:block}
+.work:nth-child(4n+1){grid-column:span 7}.work:nth-child(4n+2){grid-column:span 5;margin-top:clamp(0px,8vw,120px)}
+.work:nth-child(4n+3){grid-column:span 5}.work:nth-child(4n){grid-column:span 7;margin-top:clamp(0px,6vw,90px)}
+.work-img{position:relative;overflow:hidden;aspect-ratio:4/5;background:#ddd9cf}
+.work:nth-child(4n+1) .work-img,.work:nth-child(4n) .work-img{aspect-ratio:5/6}
+.work-img img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform .9s cubic-bezier(.2,.7,.2,1),opacity .5s}
+.work-img img+img{opacity:0}
+.work:hover .work-img img{transform:scale(1.035)}
+.work:hover .work-img img+img{opacity:1}
+.work-meta{display:flex;justify-content:space-between;gap:4px 12px;flex-wrap:wrap;margin-top:16px;color:#6d6a63}
+.work-meta span:last-child{text-align:right}
+.work h3{font:800 clamp(34px,3.6vw,56px)/.95 var(--display);text-transform:uppercase;margin:8px 0 6px}
+.work p{margin:0;color:#4a4842;font-size:15px}
+.more{margin-top:clamp(56px,7vw,100px);border-top:1px solid var(--line)}
+.more-row{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:clamp(12px,1.6vw,22px);margin-top:28px}
+.more-row .work{grid-column:auto!important;margin:0!important}
+.more-row .work-img{aspect-ratio:3/4!important}
+.more-row h3{font-size:clamp(24px,2.2vw,32px)}
+@media(max-width:860px){.works-grid{grid-template-columns:1fr}.work{grid-column:1/-1!important;margin-top:0!important}.more-row{grid-template-columns:repeat(2,minmax(0,1fr))}}
+
+/* manifesto */
+.manifesto{background:var(--white)}
+.manifesto .display{font-size:clamp(52px,8.6vw,150px);max-width:14ch}
+.manifesto-grid{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:clamp(28px,5vw,96px);margin-top:clamp(40px,5vw,80px);align-items:end}
+.manifesto-grid img{width:100%;aspect-ratio:4/5;object-fit:cover}
+.manifesto-text p{margin:0 0 18px;max-width:60ch;color:#3c3a35}
+.manifesto-text p:first-child{font-size:clamp(20px,1.8vw,26px);line-height:1.4;color:var(--carbon)}
+.tri{display:flex;gap:28px;flex-wrap:wrap;margin-top:32px;padding-top:20px;border-top:1px solid var(--line)}
+@media(max-width:760px){.manifesto-grid{grid-template-columns:1fr}}
+
+/* development (dark) */
+.dev{background:var(--carbon);color:var(--cotton)}
+.dev-grid{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:clamp(28px,5vw,96px)}
+.dev-media{position:sticky;top:96px;align-self:start}
+.dev-media img{width:100%;aspect-ratio:4/5;object-fit:cover}
+.dev-media .mono{margin-top:12px;color:var(--stone)}
+.dev-list{list-style:none;margin:0;padding:0;border-top:1px solid var(--line-d)}
+.dev-list li{display:grid;grid-template-columns:44px minmax(0,1fr) minmax(0,1fr);gap:16px;padding:22px 0;border-bottom:1px solid var(--line-d);align-items:baseline}
+.dev-list .n{color:var(--stone)}
+.dev-list strong{font:700 clamp(22px,2vw,30px)/1.05 var(--display);text-transform:uppercase}
+.dev-list span:last-child{color:rgba(243,241,235,.7);font-size:15px}
+@media(max-width:860px){.dev-grid{grid-template-columns:1fr}.dev-media{position:static}.dev-list li{grid-template-columns:36px minmax(0,1fr)}.dev-list span:last-child{grid-column:2}}
+
+/* process */
+.steps{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));border-top:1px solid var(--carbon)}
+.step{padding:24px 20px 8px 0;border-right:1px solid var(--line)}
+.step:last-child{border-right:0}
+.step+.step{padding-left:20px}
+.step h3{font:800 clamp(24px,2.1vw,34px)/1 var(--display);text-transform:uppercase;margin:44px 0 12px;overflow-wrap:anywhere;hyphens:auto}
+.step p{margin:0;font-size:15px;color:#4a4842}
+@media(max-width:960px){.steps{grid-template-columns:1fr}.step,.step+.step{border-right:0;border-bottom:1px solid var(--line);padding:22px 0}.step h3{margin-top:14px}}
+
+/* segments */
+.segments{background:var(--white)}
+.seg-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:clamp(12px,1.6vw,22px)}
+.seg{position:relative;aspect-ratio:3/4;overflow:hidden;color:var(--cotton);background:var(--carbon)}
+.seg img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform .9s}
+.seg:hover img{transform:scale(1.04)}
+.seg::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 45%,rgba(21,21,21,.85))}
+.seg div{position:absolute;left:18px;right:18px;bottom:18px;z-index:1}
+.seg h3{font:800 clamp(28px,2.6vw,40px)/.95 var(--display);text-transform:uppercase;margin:0 0 8px}
+.seg p{margin:0;font-size:13px;color:rgba(243,241,235,.8)}
+@media(max-width:860px){.seg-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:480px){.seg-grid{grid-template-columns:1fr}.seg{aspect-ratio:4/3}}
+
+/* lab / bastidores */
+.lab-grid{display:grid;grid-template-columns:minmax(0,4fr) minmax(0,3fr) minmax(0,3fr);gap:clamp(12px,1.6vw,22px);align-items:end}
+.lab-grid img{width:100%;object-fit:cover}
+.lab-grid img:nth-child(1){aspect-ratio:4/5}.lab-grid img:nth-child(2){aspect-ratio:3/4}.lab-grid img:nth-child(3){aspect-ratio:3/5}
+.lab-text{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(24px,4vw,72px);margin-top:clamp(28px,3vw,48px)}
+.lab-text p{margin:0;color:#3c3a35}
+@media(max-width:760px){.lab-grid{grid-template-columns:1fr 1fr}.lab-grid img:nth-child(1){grid-column:1/-1}.lab-text{grid-template-columns:1fr}}
+
+/* faq */
+.faq-grid{display:grid;grid-template-columns:minmax(0,4fr) minmax(0,8fr);gap:clamp(28px,5vw,96px)}
+details{border-top:1px solid var(--line)}
+details:last-child{border-bottom:1px solid var(--line)}
+summary{list-style:none;display:flex;justify-content:space-between;gap:20px;align-items:center;padding:22px 0;cursor:pointer;font:700 clamp(20px,1.8vw,26px)/1.15 var(--display);text-transform:uppercase}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"+";font:400 26px/1 var(--body);transition:transform .25s;flex:none}
+details[open] summary::after{transform:rotate(45deg)}
+details p{margin:0 0 24px;max-width:62ch;color:#3c3a35}
+@media(max-width:860px){.faq-grid{grid-template-columns:1fr}}
+
+/* contact */
+.contact{background:var(--carbon);color:var(--cotton)}
+.contact-grid{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:clamp(32px,5vw,96px)}
+.contact .display{font-size:clamp(48px,6.6vw,110px)}
+.people{margin-top:40px;display:grid;gap:14px}
+.people a{display:flex;justify-content:space-between;gap:12px;padding:14px 0;border-bottom:1px solid var(--line-d);text-decoration:none}
+.people a:hover span:last-child{text-decoration:underline}
+form{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:18px 20px;align-content:start}
+.f{display:grid;gap:8px}
+.f.full{grid-column:1/-1}
+label,.f legend{font:500 12px/1.3 var(--mono);text-transform:uppercase;letter-spacing:.05em;color:var(--stone)}
+input,select,textarea{width:100%;font:16px/1.4 var(--body);color:var(--cotton);background:transparent;border:0;border-bottom:1px solid rgba(243,241,235,.35);padding:12px 0;border-radius:0;appearance:none}
+select{background-image:linear-gradient(45deg,transparent 50%,var(--cotton) 50%),linear-gradient(135deg,var(--cotton) 50%,transparent 50%);background-position:calc(100% - 12px) 55%,calc(100% - 7px) 55%;background-size:5px 5px;background-repeat:no-repeat}
+select option{color:var(--carbon)}
+textarea{min-height:110px;resize:vertical}
+input:focus,select:focus,textarea:focus{outline:0;border-bottom-color:var(--cotton)}
+input[aria-invalid=true],select[aria-invalid=true]{border-bottom-color:#e8a598}
+fieldset{border:0;margin:0;padding:0}
+.chips{display:flex;flex-wrap:wrap;gap:10px;margin-top:10px}
+.chips label{position:relative;color:var(--cotton);font:500 14px/1 var(--body);text-transform:none;letter-spacing:0}
+.chips input{position:absolute;opacity:0;width:1px;height:1px}
+.chips span{display:inline-flex;align-items:center;min-height:44px;padding:0 16px;border:1px solid rgba(243,241,235,.35);cursor:pointer;transition:.2s}
+.chips input:checked+span{background:var(--cotton);color:var(--carbon);border-color:var(--cotton)}
+.chips input:focus-visible+span{outline:2px solid var(--cotton);outline-offset:2px}
+.form-foot{grid-column:1/-1;display:flex;justify-content:space-between;align-items:center;gap:18px;flex-wrap:wrap;margin-top:8px}
+.form-foot small{color:var(--stone);max-width:44ch}
+.err{color:#e8a598;font-size:13px;min-height:1em}
+.done{grid-column:1/-1;border:1px solid var(--line-d);padding:28px}
+.done h3{font:800 40px/1 var(--display);text-transform:uppercase;margin:0 0 10px}
+@media(max-width:860px){.contact-grid{grid-template-columns:1fr}}
+@media(max-width:560px){form{grid-template-columns:1fr}}
+
+/* footer */
+.ftr{background:var(--carbon);color:var(--cotton);padding:clamp(48px,6vw,88px) 0 28px;border-top:1px solid var(--line-d)}
+.ftr .logo{width:100%;max-width:1100px}
+.ftr-cols{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:28px;margin-top:clamp(40px,5vw,72px);font-size:14px;color:rgba(243,241,235,.75)}
+.ftr-cols h4{margin:0 0 12px;color:var(--stone)}
+.ftr-cols p{margin:0 0 6px}
+.ftr-cols a{text-decoration:none;overflow-wrap:anywhere}.ftr-cols a:hover{text-decoration:underline}
+.ftr-bottom{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;margin-top:48px;padding-top:20px;border-top:1px solid var(--line-d);color:var(--stone)}
+@media(max-width:760px){.ftr-cols{grid-template-columns:1fr 1fr}}
+@media(max-width:420px){.ftr-cols{grid-template-columns:1fr}}
+
+/* case dialog */
+.case{position:fixed;inset:0;z-index:100;background:var(--cotton);overflow-y:auto;overscroll-behavior:contain;transform:translateY(100%);transition:transform .55s cubic-bezier(.2,.7,.2,1);visibility:hidden}
+.case.open{transform:none;visibility:visible}
+.case-top{position:sticky;top:0;z-index:2;display:flex;justify-content:space-between;align-items:center;height:64px;padding:0 var(--pad);background:var(--cotton);border-bottom:1px solid var(--line)}
+.case-close{background:none;border:1px solid var(--carbon);min-height:40px;padding:0 16px;font:500 12px/1 var(--mono);text-transform:uppercase}
+.case-grid{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:clamp(28px,4vw,72px);padding:clamp(28px,4vw,64px) var(--pad) 80px;max-width:var(--max);margin:0 auto}
+.case-info{position:sticky;top:100px;align-self:start}
+.case-info h2{font-size:clamp(52px,7vw,112px)}
+.case-tag{font-size:clamp(20px,1.8vw,26px);line-height:1.3;margin:14px 0 28px}
+.case-facts{display:grid;grid-template-columns:1fr 1fr;gap:16px;padding:18px 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line);margin-bottom:24px}
+.case-facts b{display:block;font:600 15px/1.3 var(--body);text-transform:none;letter-spacing:0;color:var(--carbon);margin-top:4px}
+.case-info p{color:#3c3a35;margin:0 0 14px}
+.case-spec{display:flex;flex-wrap:wrap;gap:8px;margin:22px 0 30px}
+.case-spec span{border:1px solid var(--line);padding:8px 12px;font:500 12px/1.2 var(--mono);text-transform:uppercase}
+.case-gallery{display:grid;grid-template-columns:1fr 1fr;gap:clamp(10px,1.4vw,18px)}
+.case-gallery img{width:100%;height:100%;object-fit:cover;aspect-ratio:3/4;background:#ddd9cf}
+.case-gallery img:first-child{grid-column:1/-1;aspect-ratio:4/5}
+.case-nav{display:flex;justify-content:space-between;gap:16px;padding:28px var(--pad);border-top:1px solid var(--line);max-width:var(--max);margin:0 auto}
+.case-nav button{background:none;border:0;text-align:left;padding:8px 0}
+.case-nav button:last-child{text-align:right}
+.case-nav b{display:block;font:800 clamp(24px,2.6vw,40px)/1 var(--display);text-transform:uppercase}
+@media(max-width:860px){.case-grid{grid-template-columns:1fr}.case-info{position:static}}
+body.lock{overflow:hidden}
+
+/* reveal */
+.rv{opacity:0;transform:translateY(24px);transition:opacity .9s ease,transform .9s cubic-bezier(.2,.7,.2,1)}
+.rv.in{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){.rv{opacity:1;transform:none}}
+</style>
+</head>
+<body>
+
+<header class="hdr" id="hdr">
+  <div class="wrap">
+    <a href="#topo" aria-label="BAZA — início"><span class="logo"></span></a>
+    <nav class="nav" id="nav" aria-label="Principal">
+      <a href="#projetos">Projetos</a>
+      <a href="#manifesto">Sobre</a>
+      <a href="#processo">Processo</a>
+      <a href="#faq">FAQ</a>
+      <a class="btn" href="#contato">Iniciar projeto ↗</a>
+    </nav>
+    <button class="burger" id="burger" aria-label="Abrir menu" aria-expanded="false" aria-controls="nav"><span></span><span></span></button>
+  </div>
+</header>
+
+<main id="topo">
+<!-- 01 HERO -->
+<section class="hero" id="hero" aria-label="Apresentação">
+  <div class="hero-media">
+    <picture>
+      <source media="(max-width: 768px)" srcset="assets/video/hero-poster-mobile.webp">
+      <img src="assets/video/hero-poster-desktop.webp" alt="" fetchpriority="high" decoding="async">
+    </picture>
+    <!-- autoplay + lazy: sem src no HTML; o script injeta a fonte certa (desktop/mobile) depois do load -->
+    <video class="hero-video" id="heroVideo" muted loop playsinline autoplay preload="none" aria-hidden="true"
+      data-src-desktop="assets/video/hero-desktop.mp4"
+      data-src-mobile="assets/video/hero-mobile.mp4"></video>
+  </div>
+  <div class="hero-body wrap">
+    <span class="mono">Independent design &amp; production studio</span>
+    <h1 class="display">Uniformes que vestem a identidade da sua marca.</h1>
+    <p>Criamos e produzimos uniformes exclusivos, desenvolvidos a partir do branding, da estética e das necessidades da sua empresa.</p>
+    <div class="hero-ctas">
+      <a class="btn btn-solid" href="#contato">Iniciar meu projeto ↗</a>
+      <a class="btn btn-ghost" href="#projetos">Explorar portfólio</a>
+    </div>
+  </div>
+  <div class="hero-bar">
+    <div class="wrap">
+      <span class="mono">Design. Produção. Identidade.</span>
+      <span class="mono hide-sm">BAZA® Brands — Campinas, SP</span>
+      <button class="vid-toggle" id="vidToggle" type="button" aria-pressed="false" hidden>❚❚ Pausar vídeo</button>
+    </div>
+  </div>
+</section>
+
+<!-- 02 MARCAS ATENDIDAS -->
+<section class="clients" aria-label="Marcas atendidas">
+  <div class="label mono">Marcas que vestem BAZA</div>
+  <div class="marquee" id="marquee"></div>
+</section>
+
+<!-- 03 PROJETOS SELECIONADOS -->
+<section id="projetos">
+  <div class="wrap">
+    <div class="sec-head">
+      <h2 class="display h2 rv">Projetos<br>selecionados.</h2>
+      <span class="mono">Selected works / 06</span>
+    </div>
+    <div class="works-grid" id="works"></div>
+    <div class="more">
+      <div class="sec-head" style="margin:28px 0 0"><span class="mono">Mais projetos</span><span class="mono">04</span></div>
+      <div class="more-row" id="moreWorks"></div>
+    </div>
+  </div>
+</section>
+
+<!-- 04 MANIFESTO -->
+<section class="manifesto" id="manifesto">
+  <div class="wrap">
+    <span class="mono">Manifesto BAZA</span>
+    <h2 class="display rv" style="margin-top:18px">Não partimos do uniforme. Partimos da sua marca.</h2>
+    <div class="manifesto-grid">
+      <img class="rv" src="assets/img/p03_0.webp" srcset="assets/img/p03_0-sm.webp 560w, assets/img/p03_0.webp 1100w" sizes="(max-width:760px) 100vw, 40vw" alt="Uniforme City Tortas: camisa jersey preta com gola branca e calça em sarja" loading="lazy" decoding="async">
+      <div class="manifesto-text">
+        <p>Cada negócio possui sua própria linguagem, cultura e identidade. Nosso trabalho é transformar tudo isso em vestuário.</p>
+        <p>A BAZA é uma empresa de desenvolvimento e produção para marcas. Criamos produtos, coleções e uniformes, acompanhando cada projeto do desenvolvimento à produção — e integramos design, audiovisual, e-commerce e mídia conforme a necessidade de cada marca.</p>
+        <p>Nos uniformes, vamos além dos formatos tradicionais e padronizados. Desenvolvemos peças que também fazem parte do universo da marca, com modelagens, materiais e acabamentos pensados para cada projeto.</p>
+        <div class="tri"><span class="mono">Development</span><span class="mono">Design</span><span class="mono">Production</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 05 DESENVOLVIMENTO DE PRODUTO -->
+<section class="dev" id="desenvolvimento">
+  <div class="wrap">
+    <div class="sec-head">
+      <h2 class="display h2 rv">Desenvolvimento<br>de produto.</h2>
+      <span class="mono" style="color:var(--stone)">Do conceito à peça final</span>
+    </div>
+    <div class="dev-grid">
+      <figure class="dev-media" style="margin:0">
+        <img src="assets/img/p20_0.webp" srcset="assets/img/p20_0-sm.webp 560w, assets/img/p20_0.webp 1100w" sizes="(max-width:860px) 100vw, 40vw" alt="Costas da camiseta Abigail Coffee com arte desenhada à mão em silk" loading="lazy" decoding="async">
+        <figcaption class="mono">Abigail Coffee — arte autoral em silk, tingimento exclusivo</figcaption>
+      </figure>
+      <ul class="dev-list" id="devList"></ul>
+    </div>
+  </div>
+</section>
+
+<!-- 06 PROCESSO -->
+<section id="processo">
+  <div class="wrap">
+    <div class="sec-head">
+      <h2 class="display h2 rv">Processo criativo<br>e produtivo.</h2>
+      <span class="mono">Como trabalhamos</span>
+    </div>
+    <div class="steps" id="steps"></div>
+  </div>
+</section>
+
+<!-- 07 SEGMENTOS -->
+<section class="segments" id="segmentos">
+  <div class="wrap">
+    <div class="sec-head">
+      <h2 class="display h2 rv">Segmentos<br>atendidos.</h2>
+      <span class="mono">Para quem desenvolvemos</span>
+    </div>
+    <div class="seg-grid" id="segs"></div>
+  </div>
+</section>
+
+<!-- 08 BASTIDORES / LAB -->
+<section id="bastidores">
+  <div class="wrap">
+    <div class="sec-head">
+      <h2 class="display h2 rv">Laboratório<br>próprio.</h2>
+      <span class="mono">Outlawz Vision — marca do grupo BAZA</span>
+    </div>
+    <div class="lab-grid">
+      <img src="assets/img/p25_0.webp" srcset="assets/img/p25_0-sm.webp 560w, assets/img/p25_0.webp 1100w" sizes="(max-width:760px) 100vw, 40vw" alt="Outlawz Vision: camisa em tom escuro com calça denim" loading="lazy" decoding="async">
+      <img src="assets/img/p26_1.webp" srcset="assets/img/p26_1-sm.webp 560w, assets/img/p26_1.webp 1100w" sizes="(max-width:760px) 50vw, 30vw" alt="Corta-vento Outlawz Vision em preto e bege" loading="lazy" decoding="async">
+      <img src="assets/img/p28_1.webp" srcset="assets/img/p28_1-sm.webp 560w, assets/img/p28_1.webp 1100w" sizes="(max-width:760px) 50vw, 30vw" alt="Calça denim de corte reto com lavagem clara" loading="lazy" decoding="async">
+    </div>
+    <div class="lab-text">
+      <p class="lead" style="margin:0">A Outlawz Vision é a marca de streetwear do grupo BAZA — e funciona como nosso laboratório de desenvolvimento.</p>
+      <p>É onde testamos novas possibilidades de produto, construção e acabamento: modelagens desenvolvidas internamente, caimentos oversized, calças de corte reto, lavagens e tecidos especiais. O que nasce aqui chega aos projetos dos nossos clientes.</p>
+    </div>
+  </div>
+</section>
+
+<!-- 09 FAQ -->
+<section id="faq" style="background:var(--white)">
+  <div class="wrap faq-grid">
+    <div>
+      <h2 class="display h2 rv">Perguntas<br>frequentes.</h2>
+    </div>
+    <div id="faqList"></div>
+  </div>
+</section>
+
+<!-- 10 FORMULÁRIO -->
+<section class="contact" id="contato">
+  <div class="wrap contact-grid">
+    <div>
+      <span class="mono" style="color:var(--stone)">Novo projeto</span>
+      <h2 class="display" style="margin-top:18px">Sua marca pode ser o próximo projeto.</h2>
+      <p class="lead" style="color:rgba(243,241,235,.8);margin-top:24px">Conte o que você precisa. Nosso time comercial retorna com os próximos passos.</p>
+      <div class="people" id="people"></div>
+    </div>
+    <form id="leadForm" novalidate>
+      <div class="f"><label for="f-nome">Nome</label><input id="f-nome" name="nome" autocomplete="name" required></div>
+      <div class="f"><label for="f-empresa">Empresa / marca</label><input id="f-empresa" name="empresa" autocomplete="organization" required></div>
+      <div class="f"><label for="f-whats">WhatsApp</label><input id="f-whats" name="whatsapp" type="tel" inputmode="tel" autocomplete="tel" placeholder="(19) 99999-9999" required></div>
+      <div class="f"><label for="f-email">E-mail</label><input id="f-email" name="email" type="email" autocomplete="email"></div>
+      <div class="f"><label for="f-seg">Segmento</label>
+        <select id="f-seg" name="segmento" required>
+          <option value="">Selecione</option>
+          <option>Bar ou restaurante</option><option>Cafeteria</option><option>Hotel ou eventos</option>
+          <option>Escola ou esporte</option><option>Empresa</option><option>Marca de moda</option><option>Outro</option>
+        </select></div>
+      <div class="f"><label for="f-equipe">Tamanho da equipe</label>
+        <select id="f-equipe" name="equipe">
+          <option value="">Selecione</option><option>Até 10 pessoas</option><option>11 a 30</option><option>31 a 100</option><option>Mais de 100</option>
+        </select></div>
+      <fieldset class="f full"><legend>O que você precisa</legend>
+        <div class="chips" id="chips"></div>
+      </fieldset>
+      <div class="f full"><label for="f-msg">Conte sobre o projeto</label><textarea id="f-msg" name="mensagem" placeholder="Prazo, quantidade aproximada, referências…"></textarea></div>
+      <!-- UTMs para o tráfego pago (preenchidas pelo script) -->
+      <input type="hidden" name="utm_source"><input type="hidden" name="utm_medium"><input type="hidden" name="utm_campaign"><input type="hidden" name="utm_content"><input type="hidden" name="utm_term">
+      <div class="form-foot">
+        <small>Ao enviar, você concorda em ser contatado pela BAZA sobre o seu projeto.</small>
+        <button class="btn btn-solid" type="submit">Desenvolver meu projeto ↗</button>
+      </div>
+      <p class="err full" id="formErr" role="alert" style="grid-column:1/-1;margin:0"></p>
+    </form>
+  </div>
+</section>
+</main>
+
+<!-- 11 FOOTER -->
+<footer class="ftr">
+  <div class="wrap">
+    <span class="logo" aria-label="BAZA" role="img"></span>
+    <div class="ftr-cols">
+      <div><h4 class="mono">Estúdio</h4><p>BAZA Brands</p><p>R. Barão de Atibaia, 1176</p><p>Vila Itapura, Campinas — SP</p></div>
+      <div><h4 class="mono">Contato</h4><p><a href="mailto:comercial@bazabrands.com">comercial@bazabrands.com</a></p><p><a href="https://wa.me/5519992841428" target="_blank" rel="noopener">(19) 99284-1428</a></p></div>
+      <div><h4 class="mono">Social</h4><p><a href="https://www.instagram.com/baza.brands/" target="_blank" rel="noopener">@baza.brands</a></p></div>
+      <div><h4 class="mono">Navegar</h4><p><a href="#projetos">Projetos</a></p><p><a href="#manifesto">Sobre</a></p><p><a href="#contato">Iniciar projeto</a></p></div>
+    </div>
+    <div class="ftr-bottom mono"><span>© <span id="yr">2026</span> BAZA Brands · CNPJ 66.357.010/0001-97</span><span>Creating fashion uniforms</span></div>
+  </div>
+</footer>
+
+<!-- estudo de caso -->
+<div class="case" id="case" role="dialog" aria-modal="true" aria-labelledby="caseTitle" tabindex="-1">
+  <div class="case-top"><span class="mono" id="caseCode">BAZA® / Selected works</span><button class="case-close" id="caseClose" type="button">Fechar ✕</button></div>
+  <div class="case-grid">
+    <div class="case-info" id="caseInfo"></div>
+    <div class="case-gallery" id="caseGallery"></div>
+  </div>
+  <div class="case-nav" id="caseNav"></div>
+</div>
+
+<script>
+{
+const WA = '5519992841428'; // Lucas Batistela — SDR/closer
+const img = (id, alt, sizes='(max-width:860px) 100vw, 50vw', eager=false) =>
+  `<img src="assets/img/${id}.webp" srcset="assets/img/${id}-sm.webp 560w, assets/img/${id}.webp 1100w" sizes="${sizes}" alt="${alt}" ${eager?'':'loading="lazy"'} decoding="async">`;
+
+/* ---------- conteúdo (fonte: Portfólio BAZA Brands) ---------- */
+const PROJECTS = [
+  {id:'alma-grey-bowl', name:'Alma Grey Bowl', seg:'Bar, skate e cultura urbana', serv:'Uniformes e acessórios', comp:'Cultura urbana e modelagem',
+   tag:'Skate californiano dos anos 80 e 90, reinterpretado para a linguagem do Alma Grey.',
+   text:['O Alma Grey Bowl reúne bar, música, skate e cultura urbana em um mesmo espaço, com uma identidade marcada por street art, black music, groove e brasilidades.',
+     'O cliente trouxe como referência a cultura do skate californiano. Buscamos elementos da época que pudessem ser reinterpretados, sem reproduzir a estética literalmente: faixas, tipografias e a paleta de azul, bege e off-white.',
+     'As duas faixas nas mangas da camisa e as faixas longitudinais na calça criam uma conexão visual entre as peças.'],
+   spec:['Oxford 100% algodão','Calça em poliamida','Boné dad hat','Modelagem vintage atualizada'],
+   imgs:['p09_0','p10_1','p11_0','p11_1','p10_0'], alt:'Uniforme Alma Grey Bowl: camisa azul com faixas nas mangas e boné'},
+  {id:'coisa-boa', name:'Coisa Boa', seg:'Bar', serv:'Uniforme e coleção especial', comp:'Criatividade e coleções temáticas',
+   tag:'Brasilidade dentro e fora do balcão.',
+   text:['O Coisa Boa é um bar descontraído e irreverente, marcado por música, encontros e uma atmosfera ligada à cultura brasileira.',
+     'Desenvolvemos uma camisa verde e rosa, com modelagem oversized e bolso frontal amplo — uma leitura mais atual e casual para a equipe.',
+     'Além do uniforme, criamos uma coleção especial para a Copa: uma jersey de inspiração vintage em dry fit de maior gramatura, com bordados e patches, e um boné para completar. Peças que funcionam naturalmente fora do bar.'],
+   spec:['Camisa oversized','Bolso frontal amplo','Jersey dry fit alta gramatura','Bordados e patches','Boné'],
+   imgs:['p12_0','p13_0','p13_1','p14_0','p14_1','p14_2'], alt:'Jersey azul Coisa Boa com boné 2026'},
+  {id:'city-tortas', name:'City Tortas', seg:'Gastronomia', serv:'Desenvolvimento de uniformes', comp:'Identidade e funcionalidade',
+   tag:'Tradição portuguesa. Uma nova linguagem.',
+   text:['Tradicional em Campinas e de origem familiar portuguesa, a City Tortas trouxe para o projeto uma identidade marcada por história e tradição.',
+     'A camisa jersey resgata uma estética esportiva clássica, enquanto a modelagem ampla e levemente oversized atualiza a peça. Recebe aplicações e bordados com o logotipo e a bandeira de Portugal — preta para a equipe, off-white para a gerência.',
+     'A calça em sarja leve de algodão tem corte reto e soluções para a rotina: espaço para o rádio de comunicação e bolso lateral para caneta.'],
+   spec:['Algodão 100% · 280 g/m²','Bordados personalizados','Sarja leve de algodão','Bolso para rádio e caneta'],
+   imgs:['p03_0','p04_3','p05_1','p05_3','p04_2','p05_2'], alt:'Camisa jersey preta City Tortas com gola branca'},
+  {id:'alma-campinas', name:'Alma Campinas', seg:'Bar, arte e música', serv:'Desenvolvimento de uniformes', comp:'Sofisticação e workwear',
+   tag:'Elegância para a rotina do salão.',
+   text:['No Cambuí, o Alma reúne bar, gastronomia, arte e música. O desafio foi traduzir essa atmosfera elegante para as peças da equipe.',
+     'Camisa e calça em poliamida, pela leveza e conforto; a calça recebe um friso frontal que aproxima a peça da alfaiataria.',
+     'Para os garçons, um colete exclusivo em sarja, em preto e bege, com o logotipo do Alma e bolsos de apoio pensados para a operação. O projeto integra ainda a identidade da Gentleman Jack, marca parceira.'],
+   spec:['Poliamida','Friso de alfaiataria','Colete em sarja','Bolsos de apoio','Co-branding'],
+   imgs:['p06_0','p07_3','p07_1','p07_0','p08_0','p08_1'], alt:'Colete preto e bege Alma com camisa preta'},
+  {id:'abigail-coffee', name:'Abigail Coffee', seg:'Cafeteria', serv:'Produto e design', comp:'Estampa autoral e tingimento',
+   tag:'Arte desenhada à mão. Tingimento exclusivo.',
+   text:['O Abigail é uma cafeteria especializada, com estética própria e muito cuidado nos detalhes.',
+     'Desenvolvemos uma camiseta oversized em algodão premium penteado, 240 g/m², com tingimento marrom criado especialmente para o projeto.',
+     'Também assinamos o design: a partir das referências do Abigail, criamos a arte desenhada à mão aplicada em silk. Produto e design em uma mesma entrega.'],
+   spec:['Algodão premium penteado','240 g/m²','Tingimento exclusivo','Arte autoral em silk'],
+   imgs:['p19_0','p20_0','p20_1'], alt:'Camiseta marrom oversized Abigail Coffee'},
+  {id:'bowa-bar', name:'Bowa Bar', seg:'Bar', serv:'Linha de uniformes e coleção', comp:'Desenvolvimento de coleções',
+   tag:'Uma linha de verão para a boemia de Campinas.',
+   text:['O Bowa é um bar boêmio e consolidado em Campinas, com identidade descontraída e, ao mesmo tempo, sofisticada.',
+     'Criamos uma linha com camiseta, moletom, shorts e boné — leve, de verão, confortável e casual como a casa.',
+     'Para a Copa, uma polo jersey especial com referências retrô e esportivas. Tudo pensado para as unidades Nova Campinas e Cambuí, na mesma linguagem visual.'],
+   spec:['Camiseta e moletom','Shorts e boné','Polo jersey Copa','2 unidades'],
+   imgs:['p21_0','p22_1','p23_0','p24_0','p22_0','p23_1'], alt:'Polo jersey amarela Bowa número 10'},
+  {id:'sorriso', name:'Sorriso Churrascaria', seg:'Churrascaria', serv:'Desenvolvimento de uniformes', comp:'Workwear clássico',
+   tag:'A aparência clássica do segmento, com mais conforto.',
+   text:['Um projeto que parte de uma estética tradicional, com materiais e soluções pensados para a rotina da equipe. A paleta preto e bordô da casa percorre todo o conjunto.',
+     'Para os atendentes, camisa em poliamida com bordado, mais leve e fresca, e colete em sarja. Completam a linha camiseta 100% algodão e aventais em sarja, inteiro e meio avental.'],
+   spec:['Poliamida com bordado','Colete em sarja','Camiseta 100% algodão','Aventais'],
+   imgs:['p15_0','p17_0','p18_1','p17_1','p18_0'], alt:'Camisa preta Sorriso Churrascaria com bordado'},
+  {id:'escola-vivien-fortes', name:'Escola Vivien Fortes', seg:'Escola de dança', serv:'Desenvolvimento de uniformes', comp:'Movimento e modelagem',
+   tag:'Um uniforme que acompanha o movimento.',
+   text:['Para a EVF, um conjunto em moletom que combina conforto, movimento e uma estética atual: jaqueta curta e boxy e calça de corte amplo.',
+     'Na jaqueta, o logotipo aplicado em tecido e strass nas mangas dão um acabamento marcante, próprio do universo da escola.'],
+   spec:['Moletom','Jaqueta boxy','Calça ampla','Strass nas mangas'],
+   imgs:['p30_0','p31_0','p31_1'], alt:'Jaqueta e calça em moletom preto da EVF'},
+  {id:'outlawz-vision', name:'Outlawz Vision', seg:'Marca própria · Streetwear', serv:'Coleção autoral', comp:'Pesquisa e experimentação',
+   tag:'O laboratório de desenvolvimento da BAZA.',
+   text:['Marca de streetwear do grupo BAZA, criada a partir de pesquisa contínua de design, modelagem, materiais e referências contemporâneas.',
+     'A coleção reúne camisaria, denim e corta-ventos, com modelagens próprias e proporções amplas — camisas e denim 100% algodão, corta-ventos em poliamida, lavagens e acabamentos especiais.'],
+   spec:['Camisaria 100% algodão','Denim 100% algodão','Corta-vento em poliamida','Lavagens especiais'],
+   imgs:['p25_0','p26_1','p27_1','p28_0','p28_1','p29_1'], alt:'Peças Outlawz Vision'},
+  {id:'outros-projetos', name:'Baile Run, Wüste e mais', seg:'Running, futebol, barbearia e fitness', serv:'Produto e merch', comp:'Lifestyle e performance',
+   tag:'Vestuário que conecta movimento, comunidade e identidade.',
+   text:['Projetos para Baile Run, Wüste Clothing, D’Lima Barbearia e uma linha fitness — de camisetas, regatas e shorts a jerseys e aventais.'],
+   spec:['Baile Run','Wüste Clothing','D’Lima Barbearia','Linha fitness'],
+   imgs:['p32_0','p35_0','p37_0','p37_1','p35_1','p36_1'], alt:'Camiseta Baile Run'}
+];
+const FEATURED = 6;
+const CLIENTS = ['City Tortas','Alma Campinas','Alma Grey Bowl','Coisa Boa','Sorriso Churrascaria','Abigail Coffee','Bowa Bar','Escola Vivien Fortes','Baile Run','Wüste Clothing','D’Lima Barbearia'];
+const DEV = [
+  ['Modelagem personalizada','City Tortas e Escola Vivien Fortes'],
+  ['Desenvolvimento funcional','Bolsos operacionais da City Tortas e do Alma'],
+  ['Estampas autorais','Arte desenhada à mão para o Abigail Coffee'],
+  ['Tingimento exclusivo','Camiseta marrom do Abigail Coffee'],
+  ['Coleções temáticas','Coleções para a Copa: Bowa Bar e Coisa Boa'],
+  ['Acessórios','Bonés do Alma Grey Bowl, Coisa Boa e Bowa'],
+  ['Pesquisa de materiais','Algodão, Oxford, poliamida, sarja, denim e dry fit'],
+  ['Laboratório criativo próprio','Outlawz Vision, marca do grupo BAZA']
+];
+const STEPS = [
+  ['Imersão','Entendemos a linguagem, o público, o posicionamento e a rotina da sua equipe.'],
+  ['Design','Conceito, referências, desenho das peças e definição de cores e aplicações.'],
+  ['Desenvolvimento','Modelagem, tecidos, acabamentos e soluções funcionais definidos peça a peça.'],
+  ['Aprovação','Validação das peças e dos detalhes antes de seguir para a produção.'],
+  ['Produção','Produção acompanhada até a entrega das peças prontas para vestir.']
+];
+const SEGS = [
+  ['Bares e restaurantes','City Tortas, Alma, Bowa, Coisa Boa, Sorriso','p15_0'],
+  ['Cafés','Abigail Coffee','p19_0'],
+  ['Escolas e esporte','Escola Vivien Fortes, Baile Run','p32_0'],
+  ['Marcas e eventos','Wüste Clothing, coleções para a Copa','p37_0']
+];
+const FAQ = [
+  ['Vocês só produzem ou também criam o design?','Fazemos as duas coisas. Cuidamos do conceito, do design, da modelagem, do desenvolvimento e da produção — como no projeto da City Tortas, feito integralmente pela BAZA.'],
+  ['Posso usar a identidade visual que minha marca já tem?','Sim — ela é o nosso ponto de partida. Entendemos a linguagem da sua marca para desenvolver peças que façam sentido dentro dela.'],
+  ['Com quais tecidos vocês trabalham?','Algodão (inclusive premium penteado), Oxford, poliamida, sarja, denim e dry fit, entre outros. O tecido é escolhido conforme a rotina e a estética de cada projeto.'],
+  ['Vocês criam estampas e artes exclusivas?','Sim. No Abigail Coffee, por exemplo, criamos a arte desenhada à mão aplicada em silk e um tingimento exclusivo para a peça.'],
+  ['Desenvolvem outros produtos além do uniforme?','Sim: coleções especiais, bonés, merch e peças para venda. Também integramos design, audiovisual, e-commerce e mídia conforme a necessidade da marca.'],
+  ['Qual é o pedido mínimo e o prazo?','Variam conforme as peças e as técnicas escolhidas. Envie o seu projeto pelo formulário e o time comercial retorna com prazo e proposta.']
+];
+const PEOPLE = [['Lucas Batistela','(19) 99284-1428','5519992841428'],['Pedro Bensal','(19) 98338-8421','5519983388421']];
+const NEEDS = ['Camisas e camisetas','Calças e shorts','Aventais e coletes','Bonés e acessórios','Coleção ou merch'];
+
+/* ---------- render ---------- */
+const $ = s => document.querySelector(s);
+const code = i => 'PROJECT_' + String(i+1).padStart(3,'0');
+const card = (p,i) => `<button class="work rv" type="button" data-id="${p.id}" aria-label="Ver projeto ${p.name}">
+  <div class="work-img">${img(p.imgs[0],p.alt)}${p.imgs[1]?img(p.imgs[1],''):''}</div>
+  <div class="work-meta mono"><span>${code(i)}</span><span>${p.seg}</span></div>
+  <h3>${p.name}</h3><p>${p.comp}</p></button>`;
+$('#works').innerHTML = PROJECTS.slice(0,FEATURED).map(card).join('');
+$('#moreWorks').innerHTML = PROJECTS.slice(FEATURED).map((p,i)=>card(p,i+FEATURED)).join('');
+const mq = CLIENTS.map(c=>`<span>${c}</span>`).join('');
+$('#marquee').innerHTML = mq + mq.replace(/<span>/g,'<span aria-hidden="true">');
+$('#devList').innerHTML = DEV.map((d,i)=>`<li class="rv"><span class="n mono">${String(i+1).padStart(2,'0')}</span><strong>${d[0]}</strong><span>${d[1]}</span></li>`).join('');
+$('#steps').innerHTML = STEPS.map((s,i)=>`<div class="step rv"><span class="mono">Etapa ${String(i+1).padStart(2,'0')}</span><h3>${s[0]}</h3><p>${s[1]}</p></div>`).join('');
+$('#segs').innerHTML = SEGS.map(s=>`<div class="seg rv">${img(s[2],'','(max-width:860px) 50vw, 25vw')}<div><h3>${s[0]}</h3><p>${s[1]}</p></div></div>`).join('');
+$('#faqList').innerHTML = FAQ.map(f=>`<details><summary>${f[0]}</summary><p>${f[1]}</p></details>`).join('');
+$('#people').innerHTML = PEOPLE.map(p=>`<a href="https://wa.me/${p[2]}" target="_blank" rel="noopener"><span class="mono">${p[0]}</span><span>${p[1]}</span></a>`).join('')
+  + `<a href="https://www.instagram.com/baza.brands/" target="_blank" rel="noopener"><span class="mono">Instagram</span><span>@baza.brands</span></a>`;
+$('#chips').innerHTML = NEEDS.map(n=>`<label><input type="checkbox" name="pecas" value="${n}"><span>${n}</span></label>`).join('');
+$('#yr').textContent = new Date().getFullYear();
+
+/* ---------- HERO VIDEO: autoplay + lazy loading ----------
+   1. HTML não tem src → nada de vídeo baixado antes do conteúdo.
+   2. O poster (<img fetchpriority=high>) é o LCP.
+   3. Depois do window.load (+ idle), injeta a fonte certa: vertical no celular, 16:9 no desktop.
+   4. Respeita prefers-reduced-motion e economia de dados (fica só o poster).
+   5. Pausa fora da tela / aba oculta; botão de pausa (WCAG 2.2.2). */
+const hero = $('#hero'), vid = $('#heroVideo'), tgl = $('#vidToggle');
+const reduceMotion = matchMedia('(prefers-reduced-motion: reduce)').matches;
+const saveData = navigator.connection && (navigator.connection.saveData || /2g/.test(navigator.connection.effectiveType||''));
+let userPaused = false, heroVisible = true, loaded = false;
+const idle = cb => 'requestIdleCallback' in window ? requestIdleCallback(cb,{timeout:1500}) : setTimeout(cb,300);
+const tryPlay = () => { if (!loaded || userPaused || !heroVisible || document.hidden) return; const p = vid.play(); if (p) p.catch(()=>{}); };
+function loadHeroVideo(){
+  if (loaded || reduceMotion || saveData) return;
+  const mobile = matchMedia('(max-width: 768px) and (orientation: portrait)').matches;
+  vid.src = mobile ? vid.dataset.srcMobile : vid.dataset.srcDesktop;
+  vid.muted = true; vid.defaultMuted = true; // iOS exige muted para autoplay
+  loaded = true; vid.load(); tryPlay();
+}
+vid.addEventListener('playing', () => { hero.classList.add('is-playing'); tgl.hidden = false; });
+if (document.readyState === 'complete') idle(loadHeroVideo); else addEventListener('load', () => idle(loadHeroVideo), {once:true});
+const heroObs = new IntersectionObserver(([e]) => { heroVisible = e.isIntersecting; heroVisible ? tryPlay() : vid.pause(); }, {threshold:.15});
+heroObs.observe(hero);
+document.addEventListener('visibilitychange', () => document.hidden ? vid.pause() : tryPlay());
+tgl.addEventListener('click', () => {
+  userPaused = !userPaused; userPaused ? vid.pause() : tryPlay();
+  tgl.setAttribute('aria-pressed', userPaused); tgl.textContent = userPaused ? '▶ Reproduzir vídeo' : '❚❚ Pausar vídeo';
+});
+/* outros vídeos futuros: <video data-lazy-src="..."> carregam ao entrar na viewport */
+const lazyVidObs = new IntersectionObserver((es,o) => es.forEach(e => { if (!e.isIntersecting) return; const v=e.target; v.src=v.dataset.lazySrc; v.muted=true; v.play().catch(()=>{}); o.unobserve(v); }), {rootMargin:'300px'});
+document.querySelectorAll('video[data-lazy-src]').forEach(v => lazyVidObs.observe(v));
+
+/* ---------- header / menu / reveal ---------- */
+const hdr = $('#hdr');
+const onScroll = () => hdr.classList.toggle('solid', scrollY > innerHeight*0.85 - 72);
+addEventListener('scroll', onScroll, {passive:true}); onScroll();
+const burger = $('#burger');
+burger.addEventListener('click', () => { const o = document.body.classList.toggle('menu-open'); burger.setAttribute('aria-expanded', o); if (o) hdr.classList.add('solid'); else onScroll(); });
+document.querySelectorAll('.nav a').forEach(a => a.addEventListener('click', () => { document.body.classList.remove('menu-open'); burger.setAttribute('aria-expanded', false); }));
+const rvObs = new IntersectionObserver((es,o) => es.forEach(e => { if (e.isIntersecting){ e.target.classList.add('in'); o.unobserve(e.target);} }), {rootMargin:'0px 0px -8% 0px'});
+document.querySelectorAll('.rv').forEach(el => rvObs.observe(el));
+
+/* ---------- estudo de caso (#slug) ---------- */
+const caseEl = $('#case'); let lastFocus = null;
+function openCase(id){
+  const i = PROJECTS.findIndex(p => p.id === id); if (i < 0) return closeCase(true);
+  const p = PROJECTS[i], prev = PROJECTS[(i-1+PROJECTS.length)%PROJECTS.length], next = PROJECTS[(i+1)%PROJECTS.length];
+  $('#caseCode').textContent = `BAZA® / Selected works / ${code(i)}`;
+  $('#caseInfo').innerHTML = `<h2 class="display" id="caseTitle">${p.name}.</h2><p class="case-tag">${p.tag}</p>
+    <div class="case-facts mono"><div>Segmento<b>${p.seg}</b></div><div>Serviço<b>${p.serv}</b></div></div>
+    ${p.text.map(t=>`<p>${t}</p>`).join('')}
+    <div class="case-spec">${p.spec.map(s=>`<span>${s}</span>`).join('')}</div>
+    <a class="btn btn-dark" href="#contato" data-cta>Desenvolver meu projeto ↗</a>`;
+  $('#caseGallery').innerHTML = p.imgs.map((m,k)=>img(m, k?`${p.name} — detalhe ${k}`:p.alt, k?'(max-width:860px) 50vw, 30vw':'(max-width:860px) 100vw, 58vw', k<2)).join('');
+  $('#caseNav').innerHTML = `<button type="button" data-id="${prev.id}"><span class="mono">← Anterior</span><b>${prev.name}</b></button><button type="button" data-id="${next.id}"><span class="mono">Próximo →</span><b>${next.name}</b></button>`;
+  if (!caseEl.classList.contains('open')) lastFocus = document.activeElement;
+  caseEl.classList.add('open'); document.body.classList.add('lock'); caseEl.scrollTop = 0; caseEl.focus({preventScroll:true});
+}
+function closeCase(skipHash){
+  caseEl.classList.remove('open'); document.body.classList.remove('lock');
+  if (!skipHash && location.hash) history.replaceState(null,'',location.pathname + location.search);
+  if (lastFocus) lastFocus.focus({preventScroll:true});
+}
+const route = () => { const h = location.hash.slice(1); if (PROJECTS.some(p=>p.id===h)) openCase(h); else if (caseEl.classList.contains('open')) closeCase(true); };
+addEventListener('hashchange', route); route();
+document.addEventListener('click', e => { const b = e.target.closest('[data-id]'); if (b) { location.hash = b.dataset.id; } });
+$('#caseClose').addEventListener('click', () => closeCase());
+caseEl.addEventListener('click', e => { if (e.target.closest('[data-cta]')) { e.preventDefault(); closeCase(); setTimeout(()=>$('#contato').scrollIntoView(),60); } });
+addEventListener('keydown', e => { if (e.key === 'Escape' && caseEl.classList.contains('open')) closeCase(); });
+
+/* ---------- formulário → WhatsApp (depois: CRM) ---------- */
+const form = $('#leadForm');
+const qs = new URLSearchParams(location.search);
+['utm_source','utm_medium','utm_campaign','utm_content','utm_term'].forEach(k => { if (qs.get(k)) form.elements[k].value = qs.get(k); });
+const phone = form.elements.whatsapp;
+phone.addEventListener('input', () => { let d = phone.value.replace(/\D/g,'').slice(0,11);
+  phone.value = d.length>6 ? `(${d.slice(0,2)}) ${d.slice(2,d.length-4)}-${d.slice(-4)}` : d.length>2 ? `(${d.slice(0,2)}) ${d.slice(2)}` : d; });
+form.addEventListener('submit', e => {
+  e.preventDefault();
+  const f = form.elements, bad = [];
+  [f.nome, f.empresa, f.segmento].forEach(el => { const ok = el.value.trim() !== ''; el.setAttribute('aria-invalid', !ok); if (!ok) bad.push(el); });
+  const okPhone = phone.value.replace(/\D/g,'').length >= 10; phone.setAttribute('aria-invalid', !okPhone); if (!okPhone) bad.push(phone);
+  if (f.email.value && !f.email.checkValidity()) { f.email.setAttribute('aria-invalid', true); bad.push(f.email); } else f.email.removeAttribute('aria-invalid');
+  if (bad.length) { $('#formErr').textContent = 'Confira os campos destacados.'; bad[0].focus(); return; }
+  $('#formErr').textContent = '';
+  const pecas = [...form.querySelectorAll('input[name=pecas]:checked')].map(c=>c.value);
+  const data = Object.fromEntries(new FormData(form)); data.pecas = pecas;
+  window.dataLayer = window.dataLayer || []; window.dataLayer.push({event:'generate_lead', segmento:data.segmento});
+  if (typeof window.fbq === 'function') window.fbq('track','Lead');
+  const msg = `Olá! Quero desenvolver uniformes com a BAZA.\n\nNome: ${data.nome}\nEmpresa: ${data.empresa}\nSegmento: ${data.segmento}` +
+    (data.equipe?`\nEquipe: ${data.equipe}`:'') + (pecas.length?`\nPeças: ${pecas.join(', ')}`:'') + (data.mensagem?`\n\n${data.mensagem}`:'');
+  const url = `https://wa.me/${WA}?text=${encodeURIComponent(msg)}`;
+  const done = document.createElement('div'); done.className = 'done';
+  done.innerHTML = `<h3>Recebemos.</h3><p style="margin:0 0 22px;color:rgba(243,241,235,.8)">Para agilizar, envie o resumo do seu projeto direto para o nosso comercial:</p><a class="btn btn-solid" target="_blank" rel="noopener">Enviar pelo WhatsApp ↗</a>`;
+  done.querySelector('a').href = url;
+  form.replaceChildren(done);
+});
+}
+</script>
+</body>
+</html>
