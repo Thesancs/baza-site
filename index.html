@@ -50,6 +50,38 @@ button{font:inherit;color:inherit;cursor:pointer}
 .sec-head{display:flex;justify-content:space-between;align-items:flex-end;gap:24px;flex-wrap:wrap;margin-bottom:clamp(32px,4vw,64px)}
 section{padding:clamp(72px,9vw,140px) 0}
 
+
+/* CTA — botões de alta conversão */
+.cta{position:relative;display:inline-flex;align-items:stretch;min-height:64px;background:var(--carbon);color:var(--cotton);text-decoration:none;overflow:hidden;isolation:isolate;border:0;padding:0;cursor:pointer;box-shadow:0 0 0 0 rgba(21,21,21,.35);animation:ctaPulse 3.2s ease-out infinite}
+.cta span{display:flex;align-items:center;padding:0 26px 0 28px;font:800 clamp(18px,1.5vw,22px)/1 var(--display);text-transform:uppercase;letter-spacing:.02em;white-space:nowrap}
+.cta i{display:flex;align-items:center;justify-content:center;width:64px;background:var(--cotton);color:var(--carbon);font:700 22px/1 var(--body);font-style:normal;border:2px solid var(--carbon);transition:width .35s cubic-bezier(.2,.7,.2,1)}
+.cta i::before{content:"↗";display:block;transition:transform .35s cubic-bezier(.2,.7,.2,1)}
+.cta::after{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(105deg,transparent 30%,rgba(255,255,255,.28) 50%,transparent 70%);transform:translateX(-120%);animation:ctaShine 4.5s ease-in-out infinite}
+.cta:hover i{width:84px}.cta:hover i::before{transform:translate(3px,-3px) rotate(45deg)}
+.cta:active{transform:translateY(1px)}
+.cta.light{background:var(--cotton);color:var(--carbon);box-shadow:0 0 0 0 rgba(243,241,235,.45);animation-name:ctaPulseL}
+.cta.light i{background:var(--carbon);color:var(--cotton);border-color:var(--cotton)}
+.cta.light::after{background:linear-gradient(105deg,transparent 30%,rgba(21,21,21,.12) 50%,transparent 70%)}
+.cta.big{min-height:76px}.cta.big span{font-size:clamp(20px,1.9vw,28px);padding:0 34px}.cta.big i{width:76px}
+@keyframes ctaShine{0%,55%{transform:translateX(-120%)}80%,100%{transform:translateX(120%)}}
+@keyframes ctaPulse{0%{box-shadow:0 0 0 0 rgba(21,21,21,.35)}70%,100%{box-shadow:0 0 0 14px rgba(21,21,21,0)}}
+@keyframes ctaPulseL{0%{box-shadow:0 0 0 0 rgba(243,241,235,.45)}70%,100%{box-shadow:0 0 0 14px rgba(243,241,235,0)}}
+.cta-row{display:flex;align-items:center;gap:18px 28px;flex-wrap:wrap;margin-top:clamp(36px,4.5vw,64px)}
+.cta-row small{font:500 12px/1.5 var(--mono);text-transform:uppercase;letter-spacing:.04em;color:#6d6a63;max-width:38ch}
+.dark-sec .cta-row small,.contact .cta-row small{color:var(--stone)}
+.cta-band{display:flex;justify-content:space-between;align-items:center;gap:20px 32px;flex-wrap:wrap;margin-top:clamp(40px,5vw,72px);padding:clamp(24px,3vw,36px);background:var(--carbon);color:var(--cotton)}
+.cta-band p{margin:0;font:800 clamp(26px,2.8vw,44px)/1 var(--display);text-transform:uppercase;max-width:22ch}
+.fab{position:fixed;right:max(2vw,16px);bottom:max(2vw,16px);z-index:60;transform:translateY(calc(100% + 80px));visibility:hidden;transition:transform .45s cubic-bezier(.2,.7,.2,1),visibility 0s .45s}
+.fab.show{transform:none;visibility:visible;transition:transform .45s cubic-bezier(.2,.7,.2,1),visibility 0s}
+.fab .cta{min-height:58px;box-shadow:0 10px 30px rgba(0,0,0,.25)}
+.fab .cta span{font-size:18px;padding:0 20px 0 22px}.fab .cta i{width:58px}
+@media(max-width:600px){
+  .cta{width:100%}.cta span{flex:1;justify-content:center;padding:0 16px;white-space:normal;text-align:center;line-height:1.05;min-height:64px}
+  .fab{left:12px;right:12px;bottom:12px}.fab .cta{width:100%}
+  .cta-band p{font-size:28px}
+}
+@media (prefers-reduced-motion:reduce){.cta,.cta::after{animation:none}}
+
 /* header */
 .hdr{position:fixed;inset:0 0 auto;z-index:50;color:var(--cotton);transition:background .3s,color .3s,box-shadow .3s}
 .hdr.solid{background:rgba(243,241,235,.94);backdrop-filter:blur(10px);color:var(--carbon);box-shadow:0 1px 0 var(--line)}
@@ -79,7 +111,8 @@ section{padding:clamp(72px,9vw,140px) 0}
 .hero-body{position:relative;flex:1;display:flex;flex-direction:column;justify-content:flex-end;padding-top:120px;padding-bottom:clamp(28px,4vw,48px)}
 .hero h1{font-size:clamp(54px,9.4vw,164px);max-width:12ch;margin:18px 0 0}
 .hero p{max-width:46ch;font-size:clamp(16px,1.3vw,19px);margin:24px 0 32px;color:rgba(243,241,235,.86)}
-.hero-ctas{display:flex;gap:12px;flex-wrap:wrap}
+.hero-ctas{display:flex;gap:14px;flex-wrap:wrap;align-items:center}
+.hero-ctas .btn{min-height:64px}
 .hero-bar{position:relative;border-top:1px solid var(--line-d)}
 .hero-bar .wrap{display:flex;justify-content:space-between;align-items:center;gap:16px;min-height:56px;flex-wrap:wrap}
 .vid-toggle{display:inline-flex;align-items:center;gap:8px;background:none;border:1px solid var(--line-d);min-height:36px;padding:0 12px;font:500 11px/1 var(--mono);text-transform:uppercase;letter-spacing:.06em}
@@ -88,7 +121,10 @@ section{padding:clamp(72px,9vw,140px) 0}
 
 /* clients marquee */
 .clients{background:var(--carbon);color:var(--cotton);padding:0;border-top:1px solid var(--line-d);overflow:hidden}
-.clients .label{padding:22px var(--pad) 0;color:var(--stone)}
+.clients .label{color:var(--stone)}
+.clients-top{display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap;padding:24px var(--pad) 4px}
+.clients-top .cta{min-height:52px;animation:none}.clients-top .cta span{font-size:17px;padding:0 18px}.clients-top .cta i{width:52px}
+@media(max-width:600px){.clients-top .cta{width:auto}}
 .marquee{display:flex;width:max-content;animation:mq 42s linear infinite;padding:18px 0 26px}
 .clients:hover .marquee{animation-play-state:paused}
 .marquee span{font:700 clamp(28px,3.4vw,52px)/1 var(--display);text-transform:uppercase;padding:0 .55em;white-space:nowrap}
@@ -310,7 +346,7 @@ body.lock{overflow:hidden}
     <h1 class="display">Uniformes que vestem a identidade da sua marca.</h1>
     <p>Criamos e produzimos uniformes exclusivos, desenvolvidos a partir do branding, da estética e das necessidades da sua empresa.</p>
     <div class="hero-ctas">
-      <a class="btn btn-solid" href="#contato">Iniciar meu projeto ↗</a>
+      <a class="cta light big" href="#contato" data-loc="hero"><span>Iniciar meu projeto</span><i aria-hidden="true"></i></a>
       <a class="btn btn-ghost" href="#projetos">Explorar portfólio</a>
     </div>
   </div>
@@ -325,7 +361,7 @@ body.lock{overflow:hidden}
 
 <!-- 02 MARCAS ATENDIDAS -->
 <section class="clients" aria-label="Marcas atendidas">
-  <div class="label mono">Marcas que vestem BAZA</div>
+  <div class="clients-top"><span class="label mono">Marcas que vestem BAZA</span><a class="cta light" href="#contato" data-loc="clientes"><span>Quero minha marca aqui</span><i aria-hidden="true"></i></a></div>
   <div class="marquee" id="marquee"></div>
 </section>
 
@@ -340,6 +376,7 @@ body.lock{overflow:hidden}
     <div class="more">
       <div class="sec-head" style="margin:28px 0 0"><span class="mono">Mais projetos</span><span class="mono">04</span></div>
       <div class="more-row" id="moreWorks"></div>
+      <div class="cta-band"><p>Gostou do que viu? Sua marca pode ser a próxima.</p><a class="cta light big" href="#contato" data-loc="projetos"><span>Quero um projeto assim</span><i aria-hidden="true"></i></a></div>
     </div>
   </div>
 </section>
@@ -356,6 +393,7 @@ body.lock{overflow:hidden}
         <p>A BAZA é uma empresa de desenvolvimento e produção para marcas. Criamos produtos, coleções e uniformes, acompanhando cada projeto do desenvolvimento à produção — e integramos design, audiovisual, e-commerce e mídia conforme a necessidade de cada marca.</p>
         <p>Nos uniformes, vamos além dos formatos tradicionais e padronizados. Desenvolvemos peças que também fazem parte do universo da marca, com modelagens, materiais e acabamentos pensados para cada projeto.</p>
         <div class="tri"><span class="mono">Development</span><span class="mono">Design</span><span class="mono">Production</span></div>
+        <div class="cta-row"><a class="cta" href="#contato" data-loc="manifesto"><span>Começar pela minha marca</span><i aria-hidden="true"></i></a><small>Primeiro passo: uma conversa sobre a sua marca e a sua equipe.</small></div>
       </div>
     </div>
   </div>
@@ -383,13 +421,13 @@ body.lock{overflow:hidden}
     </div>
     <div class="research-close">
       <h2 class="display">Por isso, seu uniforme não precisa parecer um uniforme.</h2>
-      <div><p class="lead" style="margin:0 0 24px">Desenvolvemos peças que a equipe gosta de vestir e que o cliente reconhece como parte da sua marca — coerentes, profissionais e com personalidade.</p><a class="btn btn-dark" href="#contato">Desenvolver meu projeto ↗</a></div>
+      <div><p class="lead" style="margin:0 0 24px">Desenvolvemos peças que a equipe gosta de vestir e que o cliente reconhece como parte da sua marca — coerentes, profissionais e com personalidade.</p><a class="cta big" href="#contato" data-loc="pesquisa"><span>Quero um uniforme que vende</span><i aria-hidden="true"></i></a></div>
     </div>
   </div>
 </section>
 
 <!-- 05 DESENVOLVIMENTO DE PRODUTO -->
-<section class="dev" id="desenvolvimento">
+<section class="dev dark-sec" id="desenvolvimento">
   <div class="wrap">
     <div class="sec-head">
       <h2 class="display h2 rv">Desenvolvimento<br>de produto.</h2>
@@ -400,7 +438,8 @@ body.lock{overflow:hidden}
         <img src="assets/img/p20_0.webp" srcset="assets/img/p20_0-sm.webp 560w, assets/img/p20_0.webp 1100w" sizes="(max-width:860px) 100vw, 40vw" alt="Costas da camiseta Abigail Coffee com arte desenhada à mão em silk" loading="lazy" decoding="async">
         <figcaption class="mono">Abigail Coffee — arte autoral em silk, tingimento exclusivo</figcaption>
       </figure>
-      <ul class="dev-list" id="devList"></ul>
+      <div><ul class="dev-list" id="devList"></ul>
+        <div class="cta-row"><a class="cta light" href="#contato" data-loc="desenvolvimento"><span>Desenvolver minhas peças</span><i aria-hidden="true"></i></a><small>Modelagem, tecidos, estampas e acabamentos pensados para o seu negócio.</small></div></div>
     </div>
   </div>
 </section>
@@ -413,6 +452,7 @@ body.lock{overflow:hidden}
       <span class="mono">Como trabalhamos</span>
     </div>
     <div class="steps" id="steps"></div>
+    <div class="cta-band"><p>A etapa 01 começa com uma conversa.</p><a class="cta light big" href="#contato" data-loc="processo"><span>Começar agora</span><i aria-hidden="true"></i></a></div>
   </div>
 </section>
 
@@ -424,6 +464,7 @@ body.lock{overflow:hidden}
       <span class="mono">Para quem desenvolvemos</span>
     </div>
     <div class="seg-grid" id="segs"></div>
+    <div class="cta-row"><a class="cta" href="#contato" data-loc="segmentos"><span>Ver como funciona no meu negócio</span><i aria-hidden="true"></i></a><small>Bares, restaurantes, cafés, escolas, esporte, empresas e eventos.</small></div>
   </div>
 </section>
 
@@ -443,6 +484,7 @@ body.lock{overflow:hidden}
       <p class="lead" style="margin:0">A Outlawz Vision é a marca de streetwear do grupo BAZA — e funciona como nosso laboratório de desenvolvimento.</p>
       <p>É onde testamos novas possibilidades de produto, construção e acabamento: modelagens desenvolvidas internamente, caimentos oversized, calças de corte reto, lavagens e tecidos especiais. O que nasce aqui chega aos projetos dos nossos clientes.</p>
     </div>
+  <div class="cta-row"><a class="cta" href="#contato" data-loc="bastidores"><span>Criar com a BAZA</span><i aria-hidden="true"></i></a><small>O que nasce no nosso laboratório chega ao seu uniforme.</small></div>
   </div>
 </section>
 
@@ -451,6 +493,8 @@ body.lock{overflow:hidden}
   <div class="wrap faq-grid">
     <div>
       <h2 class="display h2 rv">Perguntas<br>frequentes.</h2>
+      <p style="margin:24px 0 0;color:#3c3a35;max-width:34ch">Não achou sua resposta? Fale direto com o nosso comercial.</p>
+      <div class="cta-row" style="margin-top:22px"><a class="cta" href="https://wa.me/5519992841428?text=Ol%C3%A1!%20Tenho%20uma%20d%C3%BAvida%20sobre%20uniformes%20da%20BAZA." data-loc="faq" target="_blank" rel="noopener"><span>Tirar dúvida no WhatsApp</span><i aria-hidden="true"></i></a></div>
     </div>
     <div id="faqList"></div>
   </div>
@@ -488,7 +532,7 @@ body.lock{overflow:hidden}
       <input type="hidden" name="utm_source"><input type="hidden" name="utm_medium"><input type="hidden" name="utm_campaign"><input type="hidden" name="utm_content"><input type="hidden" name="utm_term">
       <div class="form-foot">
         <small>Ao enviar, você concorda em ser contatado pela BAZA sobre o seu projeto.</small>
-        <button class="btn btn-solid" type="submit">Desenvolver meu projeto ↗</button>
+        <button class="cta light big" type="submit" data-loc="formulario"><span>Desenvolver meu projeto</span><i aria-hidden="true"></i></button>
       </div>
       <p class="err full" id="formErr" role="alert" style="grid-column:1/-1;margin:0"></p>
     </form>
@@ -499,6 +543,7 @@ body.lock{overflow:hidden}
 <!-- 11 FOOTER -->
 <footer class="ftr">
   <div class="wrap">
+    <div class="cta-band" style="background:var(--cotton);color:var(--carbon);margin:0 0 clamp(48px,6vw,88px)"><p>Vamos vestir a sua marca?</p><a class="cta big" href="#contato" data-loc="footer"><span>Iniciar projeto</span><i aria-hidden="true"></i></a></div>
     <span class="logo" aria-label="BAZA" role="img"></span>
     <div class="ftr-cols">
       <div><h4 class="mono">Estúdio</h4><p>BAZA Brands</p><p>R. Barão de Atibaia, 1176</p><p>Vila Itapura, Campinas — SP</p></div>
@@ -509,6 +554,8 @@ body.lock{overflow:hidden}
     <div class="ftr-bottom mono"><span>© <span id="yr">2026</span> BAZA Brands · CNPJ 66.357.010/0001-97</span><span>Creating fashion uniforms</span></div>
   </div>
 </footer>
+
+<div class="fab" id="fab"><a class="cta" href="#contato" data-loc="flutuante"><span>Iniciar projeto</span><i aria-hidden="true"></i></a></div>
 
 <!-- estudo de caso -->
 <div class="case" id="case" role="dialog" aria-modal="true" aria-labelledby="caseTitle" tabindex="-1">
@@ -702,7 +749,7 @@ function openCase(id){
     <div class="case-facts mono"><div>Segmento<b>${p.seg}</b></div><div>Serviço<b>${p.serv}</b></div></div>
     ${p.text.map(t=>`<p>${t}</p>`).join('')}
     <div class="case-spec">${p.spec.map(s=>`<span>${s}</span>`).join('')}</div>
-    <a class="btn btn-dark" href="#contato" data-cta>Desenvolver meu projeto ↗</a>`;
+    <a class="cta big" href="#contato" data-cta data-loc="estudo-de-caso"><span>Quero um projeto assim</span><i aria-hidden="true"></i></a>`;
   $('#caseGallery').innerHTML = p.imgs.map((m,k)=>img(m, k?`${p.name} — detalhe ${k}`:p.alt, k?'(max-width:860px) 50vw, 30vw':'(max-width:860px) 100vw, 58vw', k<2)).join('');
   $('#caseNav').innerHTML = `<button type="button" data-id="${prev.id}"><span class="mono">← Anterior</span><b>${prev.name}</b></button><button type="button" data-id="${next.id}"><span class="mono">Próximo →</span><b>${next.name}</b></button>`;
   if (!caseEl.classList.contains('open')) lastFocus = document.activeElement;
@@ -719,6 +766,17 @@ document.addEventListener('click', e => { const b = e.target.closest('[data-id]'
 $('#caseClose').addEventListener('click', () => closeCase());
 caseEl.addEventListener('click', e => { if (e.target.closest('[data-cta]')) { e.preventDefault(); closeCase(); setTimeout(()=>$('#contato').scrollIntoView(),60); } });
 addEventListener('keydown', e => { if (e.key === 'Escape' && caseEl.classList.contains('open')) closeCase(); });
+
+
+/* ---------- CTA flutuante + rastreio de cliques ---------- */
+const fab = $('#fab'); let pastHero = false, atContact = false;
+const showFab = () => fab.classList.toggle('show', pastHero && !atContact && !caseEl.classList.contains('open'));
+new IntersectionObserver(([e]) => { pastHero = !e.isIntersecting; showFab(); }, {threshold:.05}).observe(hero);
+const fabObs = new IntersectionObserver(es => { atContact = es.some(e => e.isIntersecting); showFab(); }, {threshold:.01});
+fabObs.observe($('#contato')); fabObs.observe(document.querySelector('.ftr'));
+new MutationObserver(showFab).observe(caseEl, {attributes:true, attributeFilter:['class']});
+document.addEventListener('click', e => { const c = e.target.closest('.cta'); if (!c) return;
+  window.dataLayer = window.dataLayer || []; window.dataLayer.push({event:'cta_click', cta_local:c.dataset.loc||'', cta_texto:c.textContent.trim()}); });
 
 /* ---------- formulário → WhatsApp (depois: CRM) ---------- */
 const form = $('#leadForm');
@@ -743,7 +801,7 @@ form.addEventListener('submit', e => {
     (data.equipe?`\nEquipe: ${data.equipe}`:'') + (pecas.length?`\nPeças: ${pecas.join(', ')}`:'') + (data.mensagem?`\n\n${data.mensagem}`:'');
   const url = `https://wa.me/${WA}?text=${encodeURIComponent(msg)}`;
   const done = document.createElement('div'); done.className = 'done';
-  done.innerHTML = `<h3>Recebemos.</h3><p style="margin:0 0 22px;color:rgba(243,241,235,.8)">Para agilizar, envie o resumo do seu projeto direto para o nosso comercial:</p><a class="btn btn-solid" target="_blank" rel="noopener">Enviar pelo WhatsApp ↗</a>`;
+  done.innerHTML = `<h3>Recebemos.</h3><p style="margin:0 0 22px;color:rgba(243,241,235,.8)">Para agilizar, envie o resumo do seu projeto direto para o nosso comercial:</p><a class="cta light big" target="_blank" rel="noopener" data-loc="whatsapp-pos-form"><span>Enviar pelo WhatsApp</span><i aria-hidden="true"></i></a>`;
   done.querySelector('a').href = url;
   form.replaceChildren(done);
 });
