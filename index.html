@@ -127,6 +127,28 @@ section{padding:clamp(72px,9vw,140px) 0}
 .tri{display:flex;gap:28px;flex-wrap:wrap;margin-top:32px;padding-top:20px;border-top:1px solid var(--line)}
 @media(max-width:760px){.manifesto-grid{grid-template-columns:1fr}}
 
+
+/* research */
+.research{background:var(--cotton);color:var(--carbon);border-top:1px solid var(--line)}
+.research .lead{color:#3c3a35;margin-top:20px}
+.stats{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));border-top:1px solid var(--line);margin-top:clamp(40px,5vw,72px)}
+.stat{padding:28px 24px 28px 0;border-right:1px solid var(--line)}
+.stat+.stat{padding-left:24px}.stat:last-child{border-right:0}
+.stat b{display:block;font:800 clamp(64px,7.4vw,124px)/.85 var(--display);letter-spacing:-.01em}
+.stat p{margin:14px 0 0;font-size:15px;color:#3c3a35;max-width:30ch}
+.src{margin-top:18px;color:#6d6a63}
+.src a{color:inherit}
+.studies{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:clamp(12px,1.6vw,22px);margin-top:clamp(48px,6vw,96px)}
+.study{border-top:1px solid var(--carbon);padding-top:18px}
+.study h3{font:800 clamp(24px,2.1vw,32px)/1 var(--display);text-transform:uppercase;margin:14px 0 10px}
+.study p{margin:0 0 14px;font-size:15px;color:#4a4842}
+.study a{color:#6d6a63;text-decoration:none;border-bottom:1px solid var(--line)}
+.study a:hover{color:var(--carbon)}
+.research-close{display:grid;grid-template-columns:minmax(0,7fr) minmax(0,5fr);gap:clamp(24px,4vw,72px);align-items:end;margin-top:clamp(56px,7vw,110px);padding-top:clamp(28px,3vw,44px);border-top:1px solid var(--line)}
+.research-close .display{font-size:clamp(40px,5vw,84px)}
+@media(max-width:960px){.stats,.studies{grid-template-columns:repeat(2,minmax(0,1fr))}.stat:nth-child(2){border-right:0}.stat:nth-child(3){padding-left:0}.stat:nth-child(n+3){border-top:1px solid var(--line)}.research-close{grid-template-columns:1fr}}
+@media(max-width:520px){.stats,.studies{grid-template-columns:1fr}.stat,.stat+.stat{border-right:0;padding:24px 0;border-top:1px solid var(--line)}.stat:first-child{border-top:0}}
+
 /* development (dark) */
 .dev{background:var(--carbon);color:var(--cotton)}
 .dev-grid{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:clamp(28px,5vw,96px)}
@@ -335,6 +357,33 @@ body.lock{overflow:hidden}
         <p>Nos uniformes, vamos além dos formatos tradicionais e padronizados. Desenvolvemos peças que também fazem parte do universo da marca, com modelagens, materiais e acabamentos pensados para cada projeto.</p>
         <div class="tri"><span class="mono">Development</span><span class="mono">Design</span><span class="mono">Production</span></div>
       </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- 04b PESQUISA: UNIFORME E VENDAS -->
+<section class="research" id="pesquisa">
+  <div class="wrap">
+    <span class="mono" style="color:#6d6a63">Pesquisa / Uniforme e vendas</span>
+    <h2 class="display h2 rv" style="margin-top:18px">O uniforme também vende.</h2>
+    <p class="lead">Seu cliente decide em segundos se confia na sua equipe. E boa parte dessa decisão passa pelo que ela está vestindo.</p>
+    <div class="stats">
+      <div class="stat rv"><b>64%</b><p>dos consumidores ficam mais inclinados a comprar quando a equipe se apresenta bem.</p></div>
+      <div class="stat rv"><b>48%</b><p>já desistiram de uma compra por não confiar no atendente pela forma como ele se apresentava.</p></div>
+      <div class="stat rv"><b>78%</b><p>confiam mais nas recomendações de uma equipe bem apresentada.</p></div>
+      <div class="stat rv"><b>74%</b><p>lembram mais da experiência com a marca quando a equipe está bem vestida.</p></div>
+    </div>
+    <p class="src mono">Fonte: Coventry University, 2026 — pesquisa com mais de 2.500 pessoas, com Murray Uniforms e World Retail Congress. <a href="https://www.coventry.ac.uk/news/2026/workers-uniforms/" target="_blank" rel="noopener">Ver estudo ↗</a></p>
+    <div class="studies">
+      <article class="study rv"><span class="mono" style="color:#6d6a63">Fidelidade</span><h3>Profissionalismo gera clientes fiéis.</h3><p>Em um estudo com 451 participantes, uniformes percebidos como profissionais aumentaram a satisfação e a fidelidade dos clientes de restaurantes — porque a equipe passa a parecer mais competente.</p><a href="https://openrepository.aut.ac.nz/handle/10292/14188" target="_blank" rel="noopener">Auckland University of Technology ↗</a></article>
+      <article class="study rv"><span class="mono" style="color:#6d6a63">Coerência</span><h3>Equipe alinhada vende mais.</h3><p>Equipes vestidas de forma coerente aumentam a satisfação e a intenção de compra. Mas um único desalinhamento enfraquece o efeito — e, em negócios criativos, padronização excessiva parece robótica.</p><a href="https://newsblog.drexel.edu/2019/01/11/customer-satisfaction-can-rise-if-sales-teams-dress-act-alike/" target="_blank" rel="noopener">Journal of the Academy of Marketing Science ↗</a></article>
+      <article class="study rv"><span class="mono" style="color:#6d6a63">Marca</span><h3>Sua equipe é a sua marca.</h3><p>Quando o atendente está uniformizado, o cliente atribui a atitude dele à empresa — para o bem e para o mal. O uniforme transforma cada atendimento em um ponto de contato da marca.</p><a href="https://dornsife.usc.edu/norbert-schwarz/wp-content/uploads/sites/231/2023/12/20_JASP_Smith_Chandler_Schwarz_Uniformity.pdf" target="_blank" rel="noopener">Journal of Applied Social Psychology ↗</a></article>
+      <article class="study rv"><span class="mono" style="color:#6d6a63">Equipe</span><h3>Quem veste bem, atende melhor.</h3><p>Mais de 80% dos trabalhadores dizem que o uniforme afeta como fazem o seu trabalho, e quase dois terços se sentem mais confiantes com o cliente quando gostam do que vestem.</p><a href="https://www.coventry.ac.uk/news/2026/workers-uniforms/" target="_blank" rel="noopener">Coventry University ↗</a></article>
+    </div>
+    <div class="research-close">
+      <h2 class="display">Por isso, seu uniforme não precisa parecer um uniforme.</h2>
+      <div><p class="lead" style="margin:0 0 24px">Desenvolvemos peças que a equipe gosta de vestir e que o cliente reconhece como parte da sua marca — coerentes, profissionais e com personalidade.</p><a class="btn btn-dark" href="#contato">Desenvolver meu projeto ↗</a></div>
     </div>
   </div>
 </section>
