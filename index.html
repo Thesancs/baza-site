@@ -159,7 +159,7 @@ section{padding:clamp(72px,9vw,140px) 0}
 .hero-media video{opacity:0;transition:opacity .8s ease}
 .hero.is-playing .hero-media video{opacity:1}
 .hero-media::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(21,21,21,.55) 0%,rgba(21,21,21,.1) 30%,rgba(21,21,21,.35) 60%,rgba(21,21,21,.88) 100%)}
-.hero-body{position:relative;flex:1;display:flex;flex-direction:column;justify-content:flex-end;padding-top:120px;padding-bottom:clamp(28px,4vw,48px)}
+.hero-body{position:relative;flex:1;width:100%;display:flex;flex-direction:column;justify-content:flex-end;padding-top:120px;padding-bottom:clamp(28px,4vw,48px)}
 .hero h1{font-size:clamp(54px,9.4vw,164px);max-width:12ch;margin:18px 0 0}
 .hero p{max-width:46ch;font-size:clamp(16px,1.3vw,19px);margin:24px 0 32px;color:rgba(243,241,235,.86)}
 .hero-ctas{display:flex;gap:14px;flex-wrap:wrap;align-items:center}
@@ -374,13 +374,13 @@ body.lock{overflow:hidden}
 <div class="tag-cursor" id="tagCursor" aria-hidden="true">Ver projeto ↗</div>
 <header class="hdr" id="hdr">
   <div class="wrap">
-    <a href="#topo" aria-label="BAZA — início"><span class="logo"></span></a>
+    <a href="#topo" aria-label="BAZA, voltar ao início"><span class="logo"></span></a>
     <nav class="nav" id="nav" aria-label="Principal">
       <a href="#projetos">Projetos</a>
       <a href="#manifesto">Sobre</a>
       <a href="#processo">Processo</a>
       <a href="#faq">FAQ</a>
-      <a class="btn" href="#contato">Iniciar projeto ↗</a>
+      <a class="btn" href="#contato">Pedir orçamento ↗</a>
     </nav>
     <button class="burger" id="burger" aria-label="Abrir menu" aria-expanded="false" aria-controls="nav"><span></span><span></span></button>
   </div>
@@ -400,18 +400,18 @@ body.lock{overflow:hidden}
       data-src-mobile="assets/video/hero-mobile.mp4"></video>
   </div>
   <div class="hero-body wrap">
-    <span class="mono">Independent design &amp; production studio</span>
+    <span class="mono">Estúdio de uniformes · Campinas, SP</span>
     <h1 class="display">Uniformes que vestem a identidade da sua marca.</h1>
-    <p>Criamos e produzimos uniformes exclusivos, desenvolvidos a partir do branding, da estética e das necessidades da sua empresa.</p>
+    <p>Desenhamos e produzimos o uniforme da sua equipe a partir da sua marca, não de um catálogo. O time veste com orgulho e o cliente reconhece de longe.</p>
     <div class="hero-ctas">
-      <a class="cta light big" href="#contato" data-loc="hero"><span>Iniciar meu projeto</span><i aria-hidden="true"></i></a>
-      <a class="btn btn-ghost" href="#projetos">Explorar portfólio</a>
+      <a class="cta light big" href="#contato" data-loc="hero"><span>Pedir meu orçamento</span><i aria-hidden="true"></i></a>
+      <a class="btn btn-ghost" href="#projetos">Ver projetos</a>
     </div>
   </div>
   <div class="hero-bar">
     <div class="wrap">
       <span class="mono">Design. Produção. Identidade.</span>
-      <span class="mono hide-sm">BAZA® Brands — Campinas, SP</span>
+      <span class="mono hide-sm">Atendimento direto pelo WhatsApp</span>
       <button class="vid-toggle" id="vidToggle" type="button" aria-pressed="false" hidden>❚❚ Pausar vídeo</button>
     </div>
   </div>
@@ -420,32 +420,32 @@ body.lock{overflow:hidden}
 <!-- 04b PESQUISA: UNIFORME E VENDAS -->
 <section class="research" id="pesquisa">
   <div class="wrap">
-    <span class="mono" style="color:#6d6a63">Pesquisa / Uniforme e vendas</span>
+    <span class="mono" style="color:#6d6a63">O que as pesquisas dizem</span>
     <h2 class="display h2 rv" style="margin-top:18px">O uniforme também vende.</h2>
-    <p class="lead">Seu cliente decide em segundos se confia na sua equipe. E boa parte dessa decisão passa pelo que ela está vestindo.</p>
+    <p class="lead">Antes de provar o primeiro prato, o cliente já olhou para quem vai atender. E já decidiu se confia.</p>
     <div class="stats">
       <div class="stat rv"><b>64%</b><p>dos consumidores ficam mais inclinados a comprar quando a equipe se apresenta bem.</p></div>
       <div class="stat rv"><b>48%</b><p>já desistiram de uma compra por não confiar no atendente pela forma como ele se apresentava.</p></div>
       <div class="stat rv"><b>78%</b><p>confiam mais nas recomendações de uma equipe bem apresentada.</p></div>
       <div class="stat rv"><b>74%</b><p>lembram mais da experiência com a marca quando a equipe está bem vestida.</p></div>
     </div>
-    <p class="src mono">Fonte: Coventry University, 2026 — pesquisa com mais de 2.500 pessoas, com Murray Uniforms e World Retail Congress. <a href="https://www.coventry.ac.uk/news/2026/workers-uniforms/" target="_blank" rel="noopener">Ver estudo ↗</a></p>
+    <p class="src mono">Fonte: Coventry University, 2026. Pesquisa com mais de 2.500 pessoas, com Murray Uniforms e World Retail Congress. <a href="https://www.coventry.ac.uk/news/2026/workers-uniforms/" target="_blank" rel="noopener">Ver estudo ↗</a></p>
     <div class="studies">
-      <article class="study rv"><span class="mono" style="color:#6d6a63">Fidelidade</span><h3>Profissionalismo gera clientes fiéis.</h3><p>Em um estudo com 451 participantes, uniformes percebidos como profissionais aumentaram a satisfação e a fidelidade dos clientes de restaurantes — porque a equipe passa a parecer mais competente.</p><a href="https://openrepository.aut.ac.nz/handle/10292/14188" target="_blank" rel="noopener">Auckland University of Technology ↗</a></article>
-      <article class="study rv"><span class="mono" style="color:#6d6a63">Coerência</span><h3>Equipe alinhada vende mais.</h3><p>Equipes vestidas de forma coerente aumentam a satisfação e a intenção de compra. Mas um único desalinhamento enfraquece o efeito — e, em negócios criativos, padronização excessiva parece robótica.</p><a href="https://newsblog.drexel.edu/2019/01/11/customer-satisfaction-can-rise-if-sales-teams-dress-act-alike/" target="_blank" rel="noopener">Journal of the Academy of Marketing Science ↗</a></article>
-      <article class="study rv"><span class="mono" style="color:#6d6a63">Marca</span><h3>Sua equipe é a sua marca.</h3><p>Quando o atendente está uniformizado, o cliente atribui a atitude dele à empresa — para o bem e para o mal. O uniforme transforma cada atendimento em um ponto de contato da marca.</p><a href="https://dornsife.usc.edu/norbert-schwarz/wp-content/uploads/sites/231/2023/12/20_JASP_Smith_Chandler_Schwarz_Uniformity.pdf" target="_blank" rel="noopener">Journal of Applied Social Psychology ↗</a></article>
-      <article class="study rv"><span class="mono" style="color:#6d6a63">Equipe</span><h3>Quem veste bem, atende melhor.</h3><p>Mais de 80% dos trabalhadores dizem que o uniforme afeta como fazem o seu trabalho, e quase dois terços se sentem mais confiantes com o cliente quando gostam do que vestem.</p><a href="https://www.coventry.ac.uk/news/2026/workers-uniforms/" target="_blank" rel="noopener">Coventry University ↗</a></article>
+      <article class="study rv"><span class="mono" style="color:#6d6a63">Fidelidade</span><h3>Cliente que confia, volta.</h3><p>Num estudo com 451 pessoas, uniformes vistos como profissionais aumentaram a satisfação e a fidelidade em restaurantes. O motivo: a equipe passa a parecer mais competente.</p><a href="https://openrepository.aut.ac.nz/handle/10292/14188" target="_blank" rel="noopener">Auckland University of Technology ↗</a></article>
+      <article class="study rv"><span class="mono" style="color:#6d6a63">Coerência</span><h3>Equipe alinhada vende mais.</h3><p>Quando o time se veste de forma coerente, a satisfação e a vontade de comprar sobem. Basta uma pessoa fora do padrão para o efeito cair. E em negócios criativos, uniforme engessado demais passa uma imagem robótica.</p><a href="https://newsblog.drexel.edu/2019/01/11/customer-satisfaction-can-rise-if-sales-teams-dress-act-alike/" target="_blank" rel="noopener">Journal of the Academy of Marketing Science ↗</a></article>
+      <article class="study rv"><span class="mono" style="color:#6d6a63">Marca</span><h3>Seu garçom fala pela sua marca.</h3><p>Com uniforme, o cliente credita a atitude do atendente à empresa. Para o bem e para o mal. Cada atendimento vira uma conversa com a sua marca.</p><a href="https://dornsife.usc.edu/norbert-schwarz/wp-content/uploads/sites/231/2023/12/20_JASP_Smith_Chandler_Schwarz_Uniformity.pdf" target="_blank" rel="noopener">Journal of Applied Social Psychology ↗</a></article>
+      <article class="study rv"><span class="mono" style="color:#6d6a63">Equipe</span><h3>Quem gosta do que veste, atende melhor.</h3><p>Mais de 80% dos trabalhadores dizem que o uniforme muda o jeito como trabalham. Quase dois terços ficam mais seguros diante do cliente quando gostam da roupa.</p><a href="https://www.coventry.ac.uk/news/2026/workers-uniforms/" target="_blank" rel="noopener">Coventry University ↗</a></article>
     </div>
     <div class="research-close">
       <h2 class="display">Por isso, seu uniforme não precisa parecer um uniforme.</h2>
-      <div><p class="lead" style="margin:0 0 24px">Desenvolvemos peças que a equipe gosta de vestir e que o cliente reconhece como parte da sua marca — coerentes, profissionais e com personalidade.</p><a class="cta big" href="#contato" data-loc="pesquisa"><span>Quero um uniforme que vende</span><i aria-hidden="true"></i></a></div>
+      <div><p class="lead" style="margin:0 0 24px">Polo com logo bordado no peito todo mundo tem. A gente desenha peças que a equipe quer vestir e que o cliente associa à sua casa na hora.</p><a class="cta big" href="#contato" data-loc="pesquisa"><span>Quero um uniforme que vende</span><i aria-hidden="true"></i></a></div>
     </div>
   </div>
 </section>
 
 <!-- 02 MARCAS ATENDIDAS -->
 <section class="clients" aria-label="Marcas atendidas">
-  <div class="clients-top"><span class="label mono">Marcas que vestem BAZA</span><a class="cta light" href="#contato" data-loc="clientes"><span>Quero minha marca aqui</span><i aria-hidden="true"></i></a></div>
+  <div class="clients-top"><span class="label mono">Quem já veste BAZA</span><a class="cta light" href="#contato" data-loc="clientes"><span>Quero minha marca aqui</span><i aria-hidden="true"></i></a></div>
   <div class="marquee" id="marquee"></div>
 </section>
 
@@ -456,11 +456,12 @@ body.lock{overflow:hidden}
       <h2 class="display h2 rv">Projetos<br>selecionados.</h2>
       <span class="mono">Selected works / 06</span>
     </div>
+    <p class="lead" style="margin:-24px 0 clamp(36px,4vw,56px)">Cada cliente chegou com uma história diferente. Nenhum saiu com o mesmo uniforme.</p>
     <div class="works-grid" id="works"></div>
     <div class="more">
       <div class="sec-head" style="margin:28px 0 0"><span class="mono">Mais projetos</span><span class="mono">04</span></div>
       <div class="more-row" id="moreWorks"></div>
-      <div class="cta-band"><p>Gostou do que viu? Sua marca pode ser a próxima.</p><a class="cta light big" href="#contato" data-loc="projetos"><span>Quero um projeto assim</span><i aria-hidden="true"></i></a></div>
+      <div class="cta-band"><p>O próximo projeto pode ter o seu nome.</p><a class="cta light big" href="#contato" data-loc="projetos"><span>Quero um projeto assim</span><i aria-hidden="true"></i></a></div>
     </div>
   </div>
 </section>
@@ -479,11 +480,11 @@ body.lock{overflow:hidden}
     <div class="manifesto-grid">
       <img class="rv" src="assets/img/p03_0.webp" srcset="assets/img/p03_0-sm.webp 560w, assets/img/p03_0.webp 1100w" sizes="(max-width:760px) 100vw, 40vw" alt="Uniforme City Tortas: camisa jersey preta com gola branca e calça em sarja" loading="lazy" decoding="async">
       <div class="manifesto-text">
-        <p>Cada negócio possui sua própria linguagem, cultura e identidade. Nosso trabalho é transformar tudo isso em vestuário.</p>
-        <p>A BAZA é uma empresa de desenvolvimento e produção para marcas. Criamos produtos, coleções e uniformes, acompanhando cada projeto do desenvolvimento à produção — e integramos design, audiovisual, e-commerce e mídia conforme a necessidade de cada marca.</p>
-        <p>Nos uniformes, vamos além dos formatos tradicionais e padronizados. Desenvolvemos peças que também fazem parte do universo da marca, com modelagens, materiais e acabamentos pensados para cada projeto.</p>
+        <p>Toda casa tem um jeito próprio de receber o cliente. A gente transforma esse jeito em roupa.</p>
+        <p>Uniforme de catálogo resolve um problema: vestir a equipe. Para por aí. A camisa é igual à do vizinho, ninguém usa fora do turno e o cliente nem lembra de ter visto.</p>
+        <p>Aqui cada projeto começa pela marca: a história, o público, a rotina de quem vai vestir. Só depois vêm modelagem, tecido e acabamento. Por isso as peças parecem ter saído da sua marca. E saíram. Quando faz sentido, também cuidamos de coleções, merch, design e audiovisual.</p>
         <div class="tri"><span class="mono">Development</span><span class="mono">Design</span><span class="mono">Production</span></div>
-        <div class="cta-row"><a class="cta" href="#contato" data-loc="manifesto"><span>Começar pela minha marca</span><i aria-hidden="true"></i></a><small>Primeiro passo: uma conversa sobre a sua marca e a sua equipe.</small></div>
+        <div class="cta-row"><a class="cta" href="#contato" data-loc="manifesto"><span>Começar pela minha marca</span><i aria-hidden="true"></i></a><small>O primeiro passo é uma conversa sobre a sua casa e o seu time.</small></div>
       </div>
     </div>
   </div>
@@ -497,15 +498,15 @@ body.lock{overflow:hidden}
   <div class="wrap">
     <div class="sec-head">
       <h2 class="display h2 rv">Desenvolvimento<br>de produto.</h2>
-      <span class="mono" style="color:var(--stone)">Do conceito à peça final</span>
+      <span class="mono" style="color:var(--stone)">O que entra em cada peça</span>
     </div>
     <div class="dev-grid">
       <figure class="dev-media" style="margin:0">
         <img src="assets/img/p20_0.webp" srcset="assets/img/p20_0-sm.webp 560w, assets/img/p20_0.webp 1100w" sizes="(max-width:860px) 100vw, 40vw" alt="Costas da camiseta Abigail Coffee com arte desenhada à mão em silk" loading="lazy" decoding="async">
-        <figcaption class="mono">Abigail Coffee — arte autoral em silk, tingimento exclusivo</figcaption>
+        <figcaption class="mono">Abigail Coffee: arte desenhada à mão, em silk, sobre tingimento exclusivo</figcaption>
       </figure>
       <div><ul class="dev-list" id="devList"></ul>
-        <div class="cta-row"><a class="cta light" href="#contato" data-loc="desenvolvimento"><span>Desenvolver minhas peças</span><i aria-hidden="true"></i></a><small>Modelagem, tecidos, estampas e acabamentos pensados para o seu negócio.</small></div></div>
+        <div class="cta-row"><a class="cta light" href="#contato" data-loc="desenvolvimento"><span>Desenvolver minhas peças</span><i aria-hidden="true"></i></a><small>Bolso para o rádio, tecido que aguenta o turno, estampa que o cliente quer levar para casa.</small></div></div>
     </div>
   </div>
 </section>
@@ -515,10 +516,10 @@ body.lock{overflow:hidden}
   <div class="wrap">
     <div class="sec-head">
       <h2 class="display h2 rv">Processo criativo<br>e produtivo.</h2>
-      <span class="mono">Como trabalhamos</span>
+      <span class="mono">Do primeiro papo à entrega</span>
     </div>
     <div class="steps" id="steps"></div>
-    <div class="cta-band"><p>A etapa 01 começa com uma conversa.</p><a class="cta light big" href="#contato" data-loc="processo"><span>Começar agora</span><i aria-hidden="true"></i></a></div>
+    <div class="cta-band"><p>Tudo começa com uma conversa.</p><a class="cta light big" href="#contato" data-loc="processo"><span>Começar agora</span><i aria-hidden="true"></i></a></div>
   </div>
 </section>
 
@@ -527,10 +528,10 @@ body.lock{overflow:hidden}
   <div class="wrap">
     <div class="sec-head">
       <h2 class="display h2 rv">Segmentos<br>atendidos.</h2>
-      <span class="mono">Para quem desenvolvemos</span>
+      <span class="mono">Para quem a gente cria</span>
     </div>
     <div class="seg-grid" id="segs"></div>
-    <div class="cta-row"><a class="cta" href="#contato" data-loc="segmentos"><span>Ver como funciona no meu negócio</span><i aria-hidden="true"></i></a><small>Bares, restaurantes, cafés, escolas, esporte, empresas e eventos.</small></div>
+    <div class="cta-row"><a class="cta" href="#contato" data-loc="segmentos"><span>Ver como funciona no meu negócio</span><i aria-hidden="true"></i></a><small>Bar, restaurante, café, escola, time, empresa ou evento. Conta o seu caso.</small></div>
   </div>
 </section>
 
@@ -539,7 +540,7 @@ body.lock{overflow:hidden}
   <div class="wrap">
     <div class="sec-head">
       <h2 class="display h2 rv">Laboratório<br>próprio.</h2>
-      <span class="mono">Outlawz Vision — marca do grupo BAZA</span>
+      <span class="mono">Outlawz Vision · marca do grupo BAZA</span>
     </div>
     <div class="lab-grid">
       <img src="assets/img/p25_0.webp" srcset="assets/img/p25_0-sm.webp 560w, assets/img/p25_0.webp 1100w" sizes="(max-width:760px) 100vw, 40vw" alt="Outlawz Vision: camisa em tom escuro com calça denim" loading="lazy" decoding="async">
@@ -547,10 +548,10 @@ body.lock{overflow:hidden}
       <img src="assets/img/p28_1.webp" srcset="assets/img/p28_1-sm.webp 560w, assets/img/p28_1.webp 1100w" sizes="(max-width:760px) 50vw, 30vw" alt="Calça denim de corte reto com lavagem clara" loading="lazy" decoding="async">
     </div>
     <div class="lab-text">
-      <p class="lead" style="margin:0">A Outlawz Vision é a marca de streetwear do grupo BAZA — e funciona como nosso laboratório de desenvolvimento.</p>
-      <p>É onde testamos novas possibilidades de produto, construção e acabamento: modelagens desenvolvidas internamente, caimentos oversized, calças de corte reto, lavagens e tecidos especiais. O que nasce aqui chega aos projetos dos nossos clientes.</p>
+      <p class="lead" style="margin:0">A Outlawz Vision é a nossa marca de streetwear. Também é onde a gente testa tudo antes de levar para você.</p>
+      <p>Modelagens próprias, caimento oversized, calça de corte reto, lavagens e tecidos especiais. Quando propomos um caimento novo para o seu uniforme, ele já foi testado na nossa própria marca.</p>
     </div>
-  <div class="cta-row"><a class="cta" href="#contato" data-loc="bastidores"><span>Criar com a BAZA</span><i aria-hidden="true"></i></a><small>O que nasce no nosso laboratório chega ao seu uniforme.</small></div>
+  <div class="cta-row"><a class="cta" href="#contato" data-loc="bastidores"><span>Criar com a BAZA</span><i aria-hidden="true"></i></a><small>O que chega até você já passou pelo nosso guarda-roupa.</small></div>
   </div>
 </section>
 
@@ -559,7 +560,7 @@ body.lock{overflow:hidden}
   <div class="wrap faq-grid">
     <div>
       <h2 class="display h2 rv">Perguntas<br>frequentes.</h2>
-      <p style="margin:24px 0 0;color:#3c3a35;max-width:34ch">Não achou sua resposta? Fale direto com o nosso comercial.</p>
+      <p style="margin:24px 0 0;color:#3c3a35;max-width:34ch">Ficou alguma dúvida? Pergunta direto para quem vai cuidar do seu projeto.</p>
       <div class="cta-row" style="margin-top:22px"><a class="cta" href="https://wa.me/5519992841428?text=Ol%C3%A1!%20Tenho%20uma%20d%C3%BAvida%20sobre%20uniformes%20da%20BAZA." data-loc="faq" target="_blank" rel="noopener"><span>Tirar dúvida no WhatsApp</span><i aria-hidden="true"></i></a></div>
     </div>
     <div id="faqList"></div>
@@ -570,9 +571,9 @@ body.lock{overflow:hidden}
 <section class="contact" id="contato">
   <div class="wrap contact-grid">
     <div>
-      <span class="mono" style="color:var(--stone)">Novo projeto</span>
+      <span class="mono" style="color:var(--stone)">Pedir orçamento</span>
       <h2 class="display" style="margin-top:18px">Sua marca pode ser o próximo projeto.</h2>
-      <p class="lead" style="color:rgba(243,241,235,.8);margin-top:24px">Conte o que você precisa. Nosso time comercial retorna com os próximos passos.</p>
+      <p class="lead" style="color:rgba(243,241,235,.8);margin-top:24px">Leva dois minutos. Você conta o que precisa e o comercial da BAZA continua a conversa com você no WhatsApp.</p>
       <div class="people" id="people"></div>
     </div>
     <form id="leadForm" novalidate>
@@ -593,12 +594,12 @@ body.lock{overflow:hidden}
       <fieldset class="f full"><legend>O que você precisa</legend>
         <div class="chips" id="chips"></div>
       </fieldset>
-      <div class="f full"><label for="f-msg">Conte sobre o projeto</label><textarea id="f-msg" name="mensagem" placeholder="Prazo, quantidade aproximada, referências…"></textarea></div>
+      <div class="f full"><label for="f-msg">Conte sobre o projeto</label><textarea id="f-msg" name="mensagem" placeholder="Ex.: 20 pessoas no salão, inauguração em março, quero algo com cara de bar de praia"></textarea></div>
       <!-- UTMs para o tráfego pago (preenchidas pelo script) -->
       <input type="hidden" name="utm_source"><input type="hidden" name="utm_medium"><input type="hidden" name="utm_campaign"><input type="hidden" name="utm_content"><input type="hidden" name="utm_term">
       <div class="form-foot">
-        <small>Ao enviar, você concorda em ser contatado pela BAZA sobre o seu projeto.</small>
-        <button class="cta light big" type="submit" data-loc="formulario"><span>Desenvolver meu projeto</span><i aria-hidden="true"></i></button>
+        <small>Sem compromisso. Ao enviar, você concorda em receber o contato da BAZA sobre este projeto.</small>
+        <button class="cta light big" type="submit" data-loc="formulario"><span>Quero meu orçamento</span><i aria-hidden="true"></i></button>
       </div>
       <p class="err full" id="formErr" role="alert" style="grid-column:1/-1;margin:0"></p>
     </form>
@@ -609,19 +610,19 @@ body.lock{overflow:hidden}
 <!-- 11 FOOTER -->
 <footer class="ftr">
   <div class="wrap">
-    <div class="cta-band" style="background:var(--cotton);color:var(--carbon);margin:0 0 clamp(48px,6vw,88px)"><p>Vamos vestir a sua marca?</p><a class="cta big" href="#contato" data-loc="footer"><span>Iniciar projeto</span><i aria-hidden="true"></i></a></div>
+    <div class="cta-band" style="background:var(--cotton);color:var(--carbon);margin:0 0 clamp(48px,6vw,88px)"><p>Vamos vestir a sua marca?</p><a class="cta big" href="#contato" data-loc="footer"><span>Pedir orçamento</span><i aria-hidden="true"></i></a></div>
     <span class="logo" aria-label="BAZA" role="img"></span>
     <div class="ftr-cols">
-      <div><h4 class="mono">Estúdio</h4><p>BAZA Brands</p><p>R. Barão de Atibaia, 1176</p><p>Vila Itapura, Campinas — SP</p></div>
+      <div><h4 class="mono">Estúdio</h4><p>BAZA Brands</p><p>R. Barão de Atibaia, 1176</p><p>Vila Itapura, Campinas, SP</p></div>
       <div><h4 class="mono">Contato</h4><p><a href="mailto:comercial@bazabrands.com">comercial@bazabrands.com</a></p><p><a href="https://wa.me/5519992841428" target="_blank" rel="noopener">(19) 99284-1428</a></p></div>
       <div><h4 class="mono">Social</h4><p><a href="https://www.instagram.com/baza.brands/" target="_blank" rel="noopener">@baza.brands</a></p></div>
-      <div><h4 class="mono">Navegar</h4><p><a href="#projetos">Projetos</a></p><p><a href="#manifesto">Sobre</a></p><p><a href="#contato">Iniciar projeto</a></p></div>
+      <div><h4 class="mono">Navegar</h4><p><a href="#projetos">Projetos</a></p><p><a href="#manifesto">Sobre</a></p><p><a href="#contato">Pedir orçamento</a></p></div>
     </div>
     <div class="ftr-bottom mono"><span>© <span id="yr">2026</span> BAZA Brands · CNPJ 66.357.010/0001-97</span><span>Creating fashion uniforms</span></div>
   </div>
 </footer>
 
-<div class="fab" id="fab"><a class="cta" href="#contato" data-loc="flutuante"><span>Iniciar projeto</span><i aria-hidden="true"></i></a></div>
+<div class="fab" id="fab"><a class="cta" href="#contato" data-loc="flutuante"><span>Pedir orçamento</span><i aria-hidden="true"></i></a></div>
 
 <!-- estudo de caso -->
 <div class="case" id="case" role="dialog" aria-modal="true" aria-labelledby="caseTitle" tabindex="-1">
@@ -635,7 +636,7 @@ body.lock{overflow:hidden}
 
 <script>
 {
-const WA = '5519992841428'; // Lucas Batistela — SDR/closer
+const WA = '5519992841428'; // Lucas Batistela, SDR/closer
 const img = (id, alt, sizes='(max-width:860px) 100vw, 50vw', eager=false) =>
   `<img src="assets/img/${id}.webp" srcset="assets/img/${id}-sm.webp 560w, assets/img/${id}.webp 1100w" sizes="${sizes}" alt="${alt}" ${eager?'':'loading="lazy"'} decoding="async">`;
 
@@ -651,14 +652,14 @@ const PROJECTS = [
   {id:'coisa-boa', name:'Coisa Boa', seg:'Bar', serv:'Uniforme e coleção especial', comp:'Criatividade e coleções temáticas',
    tag:'Brasilidade dentro e fora do balcão.',
    text:['O Coisa Boa é um bar descontraído e irreverente, marcado por música, encontros e uma atmosfera ligada à cultura brasileira.',
-     'Desenvolvemos uma camisa verde e rosa, com modelagem oversized e bolso frontal amplo — uma leitura mais atual e casual para a equipe.',
+     'Desenvolvemos uma camisa verde e rosa, com modelagem oversized e bolso frontal amplo. Mais atual e mais à vontade, como a equipe.',
      'Além do uniforme, criamos uma coleção especial para a Copa: uma jersey de inspiração vintage em dry fit de maior gramatura, com bordados e patches, e um boné para completar. Peças que funcionam naturalmente fora do bar.'],
    spec:['Camisa oversized','Bolso frontal amplo','Jersey dry fit alta gramatura','Bordados e patches','Boné'],
    imgs:['p12_0','p13_0','p13_1','p14_0','p14_1','p14_2'], alt:'Jersey azul Coisa Boa com boné 2026'},
   {id:'city-tortas', name:'City Tortas', seg:'Gastronomia', serv:'Desenvolvimento de uniformes', comp:'Identidade e funcionalidade',
    tag:'Tradição portuguesa. Uma nova linguagem.',
    text:['Tradicional em Campinas e de origem familiar portuguesa, a City Tortas trouxe para o projeto uma identidade marcada por história e tradição.',
-     'A camisa jersey resgata uma estética esportiva clássica, enquanto a modelagem ampla e levemente oversized atualiza a peça. Recebe aplicações e bordados com o logotipo e a bandeira de Portugal — preta para a equipe, off-white para a gerência.',
+     'A camisa jersey resgata uma estética esportiva clássica, enquanto a modelagem ampla e levemente oversized atualiza a peça. Recebe aplicações e bordados com o logotipo e a bandeira de Portugal. Preta para a equipe, off-white para a gerência.',
      'A calça em sarja leve de algodão tem corte reto e soluções para a rotina: espaço para o rádio de comunicação e bolso lateral para caneta.'],
    spec:['Algodão 100% · 280 g/m²','Bordados personalizados','Sarja leve de algodão','Bolso para rádio e caneta'],
    imgs:['p03_0','p04_3','p05_1','p05_3','p04_2','p05_2'], alt:'Camisa jersey preta City Tortas com gola branca'},
@@ -679,7 +680,7 @@ const PROJECTS = [
   {id:'bowa-bar', name:'Bowa Bar', seg:'Bar', serv:'Linha de uniformes e coleção', comp:'Desenvolvimento de coleções',
    tag:'Uma linha de verão para a boemia de Campinas.',
    text:['O Bowa é um bar boêmio e consolidado em Campinas, com identidade descontraída e, ao mesmo tempo, sofisticada.',
-     'Criamos uma linha com camiseta, moletom, shorts e boné — leve, de verão, confortável e casual como a casa.',
+     'Criamos uma linha com camiseta, moletom, shorts e boné. Leve, de verão, à vontade como a casa.',
      'Para a Copa, uma polo jersey especial com referências retrô e esportivas. Tudo pensado para as unidades Nova Campinas e Cambuí, na mesma linguagem visual.'],
    spec:['Camiseta e moletom','Shorts e boné','Polo jersey Copa','2 unidades'],
    imgs:['p21_0','p22_1','p23_0','p24_0','p22_0','p23_1'], alt:'Polo jersey amarela Bowa número 10'},
@@ -698,12 +699,12 @@ const PROJECTS = [
   {id:'outlawz-vision', name:'Outlawz Vision', seg:'Marca própria · Streetwear', serv:'Coleção autoral', comp:'Pesquisa e experimentação',
    tag:'O laboratório de desenvolvimento da BAZA.',
    text:['Marca de streetwear do grupo BAZA, criada a partir de pesquisa contínua de design, modelagem, materiais e referências contemporâneas.',
-     'A coleção reúne camisaria, denim e corta-ventos, com modelagens próprias e proporções amplas — camisas e denim 100% algodão, corta-ventos em poliamida, lavagens e acabamentos especiais.'],
+     'A coleção reúne camisaria, denim e corta-ventos, com modelagens próprias e proporções amplas: camisas e denim 100% algodão, corta-ventos em poliamida, lavagens e acabamentos especiais.'],
    spec:['Camisaria 100% algodão','Denim 100% algodão','Corta-vento em poliamida','Lavagens especiais'],
    imgs:['p25_0','p26_1','p27_1','p28_0','p28_1','p29_1'], alt:'Peças Outlawz Vision'},
   {id:'outros-projetos', name:'Baile Run, Wüste e mais', seg:'Running, futebol, barbearia e fitness', serv:'Produto e merch', comp:'Lifestyle e performance',
    tag:'Vestuário que conecta movimento, comunidade e identidade.',
-   text:['Projetos para Baile Run, Wüste Clothing, Diogo Lima Barbearia e uma linha fitness — de camisetas, regatas e shorts a jerseys e aventais.'],
+   text:['Projetos para Baile Run, Wüste Clothing, Diogo Lima Barbearia e uma linha fitness. Camisetas, regatas, shorts, jerseys e aventais.'],
    spec:['Baile Run','Wüste Clothing','Diogo Lima Barbearia','Linha fitness'],
    imgs:['p32_0','p35_0','p37_0','p37_1','p35_1','p36_1'], alt:'Camiseta Baile Run'}
 ];
@@ -726,11 +727,11 @@ const DEV = [
   ['Laboratório criativo próprio','Outlawz Vision, marca do grupo BAZA']
 ];
 const STEPS = [
-  ['Imersão','Entendemos a linguagem, o público, o posicionamento e a rotina da sua equipe.'],
-  ['Design','Conceito, referências, desenho das peças e definição de cores e aplicações.'],
-  ['Desenvolvimento','Modelagem, tecidos, acabamentos e soluções funcionais definidos peça a peça.'],
-  ['Aprovação','Validação das peças e dos detalhes antes de seguir para a produção.'],
-  ['Produção','Produção acompanhada até a entrega das peças prontas para vestir.']
+  ['Conversa','Você conta sobre a casa, o público e a rotina da equipe. A gente escuta e faz perguntas.'],
+  ['Design','Criamos o conceito e desenhamos as peças, com cores, tecidos e aplicações definidos.'],
+  ['Desenvolvimento','Modelagem e acabamento pensados para quem passa o turno inteiro de pé.'],
+  ['Aprovação','Você valida cada peça e cada detalhe. Nada vai para a produção sem o seu ok.'],
+  ['Produção','Produzimos e acompanhamos até as peças chegarem prontas para vestir.']
 ];
 const SEGS = [
   ['Bares e restaurantes','City Tortas, Alma, Bowa, Coisa Boa, Sorriso','p15_0'],
@@ -739,12 +740,13 @@ const SEGS = [
   ['Marcas e eventos','Wüste Clothing, coleções para a Copa','p37_0']
 ];
 const FAQ = [
-  ['Vocês só produzem ou também criam o design?','Fazemos as duas coisas. Cuidamos do conceito, do design, da modelagem, do desenvolvimento e da produção — como no projeto da City Tortas, feito integralmente pela BAZA.'],
-  ['Posso usar a identidade visual que minha marca já tem?','Sim — ela é o nosso ponto de partida. Entendemos a linguagem da sua marca para desenvolver peças que façam sentido dentro dela.'],
+  ['Uniforme exclusivo não sai mais caro?','Costuma custar mais que uma polo de catálogo, sim. Em troca, você tem uma peça desenhada para a sua marca, que a equipe gosta de vestir. E parte dela pode virar produto: bares e restaurantes já vendem camisetas e bonés da equipe para os próprios clientes.'],
+  ['Vocês só produzem ou também criam o design?','Fazemos os dois. Conceito, design, modelagem, desenvolvimento e produção ficam com a gente, como no projeto da City Tortas, feito de ponta a ponta pela BAZA.'],
+  ['Posso usar a identidade visual que minha marca já tem?','Pode e deve. A sua identidade é o ponto de partida. Ninguém aqui vai reinventar a sua marca, a gente traduz o que ela já é em roupa.'],
   ['Com quais tecidos vocês trabalham?','Algodão (inclusive premium penteado), Oxford, poliamida, sarja, denim e dry fit, entre outros. O tecido é escolhido conforme a rotina e a estética de cada projeto.'],
-  ['Vocês criam estampas e artes exclusivas?','Sim. No Abigail Coffee, por exemplo, criamos a arte desenhada à mão aplicada em silk e um tingimento exclusivo para a peça.'],
-  ['Desenvolvem outros produtos além do uniforme?','Sim: coleções especiais, bonés, merch e peças para venda. Também integramos design, audiovisual, e-commerce e mídia conforme a necessidade da marca.'],
-  ['Qual é o pedido mínimo e o prazo?','Variam conforme as peças e as técnicas escolhidas. Envie o seu projeto pelo formulário e o time comercial retorna com prazo e proposta.']
+  ['Vocês criam estampas e artes exclusivas?','Criamos. A baleia do Abigail Coffee foi desenhada à mão e aplicada em silk, sobre um marrom tingido só para eles.'],
+  ['Desenvolvem outros produtos além do uniforme?','Sim. Coleções especiais, bonés, merch e peças para vender. As coleções da Copa do Bowa e do Coisa Boa são exemplos. Também cuidamos de design, audiovisual, e-commerce e mídia quando a marca precisa.'],
+  ['Qual é o pedido mínimo e o prazo?','Depende das peças e das técnicas. Conta pra gente o tamanho da equipe e a data que você tem em mente no formulário, e o comercial volta com prazo e proposta.']
 ];
 const PEOPLE = [['Lucas Batistela','(19) 99284-1428','5519992841428'],['Pedro Bensal','(19) 98338-8421','5519983388421']];
 const NEEDS = ['Camisas e camisetas','Calças e shorts','Aventais e coletes','Bonés e acessórios','Coleção ou merch'];
@@ -822,7 +824,7 @@ function openCase(id){
     ${p.text.map(t=>`<p>${t}</p>`).join('')}
     <div class="case-spec">${p.spec.map(s=>`<span>${s}</span>`).join('')}</div>
     <a class="cta big" href="#contato" data-cta data-loc="estudo-de-caso"><span>Quero um projeto assim</span><i aria-hidden="true"></i></a>`;
-  $('#caseGallery').innerHTML = p.imgs.map((m,k)=>img(m, k?`${p.name} — detalhe ${k}`:p.alt, k?'(max-width:860px) 50vw, 30vw':'(max-width:860px) 100vw, 58vw', k<2)).join('');
+  $('#caseGallery').innerHTML = p.imgs.map((m,k)=>img(m, k?`${p.name}, detalhe ${k}`:p.alt, k?'(max-width:860px) 50vw, 30vw':'(max-width:860px) 100vw, 58vw', k<2)).join('');
   $('#caseNav').innerHTML = `<button type="button" data-id="${prev.id}"><span class="mono">← Anterior</span><b>${prev.name}</b></button><button type="button" data-id="${next.id}"><span class="mono">Próximo →</span><b>${next.name}</b></button>`;
   if (!caseEl.classList.contains('open')) lastFocus = document.activeElement;
   caseEl.classList.add('open'); document.body.classList.add('lock'); caseEl.scrollTop = 0; caseEl.focus({preventScroll:true});
@@ -935,7 +937,7 @@ form.addEventListener('submit', e => {
     (data.equipe?`\nEquipe: ${data.equipe}`:'') + (pecas.length?`\nPeças: ${pecas.join(', ')}`:'') + (data.mensagem?`\n\n${data.mensagem}`:'');
   const url = `https://wa.me/${WA}?text=${encodeURIComponent(msg)}`;
   const done = document.createElement('div'); done.className = 'done';
-  done.innerHTML = `<h3>Recebemos.</h3><p style="margin:0 0 22px;color:rgba(243,241,235,.8)">Para agilizar, envie o resumo do seu projeto direto para o nosso comercial:</p><a class="cta light big" target="_blank" rel="noopener" data-loc="whatsapp-pos-form"><span>Enviar pelo WhatsApp</span><i aria-hidden="true"></i></a>`;
+  done.innerHTML = `<h3>Recebemos.</h3><p style="margin:0 0 22px;color:rgba(243,241,235,.8)">Falta um clique: mande o resumo do seu projeto para o nosso comercial e a conversa já começa.</p><a class="cta light big" target="_blank" rel="noopener" data-loc="whatsapp-pos-form"><span>Enviar pelo WhatsApp</span><i aria-hidden="true"></i></a>`;
   done.querySelector('a').href = url;
   form.replaceChildren(done);
 });
