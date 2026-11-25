@@ -82,6 +82,57 @@ section{padding:clamp(72px,9vw,140px) 0}
 }
 @media (prefers-reduced-motion:reduce){.cta,.cta::after{animation:none}}
 
+
+/* ===== BRUTALISM: animações de impacto ===== */
+.progress{position:fixed;inset:0 0 auto;height:6px;z-index:80;background:var(--cotton);mix-blend-mode:difference;transform-origin:0 50%;transform:scaleX(0);pointer-events:none}
+/* intro */
+.intro{position:fixed;inset:0;z-index:200;background:var(--carbon);display:grid;place-items:center;pointer-events:none;animation:introOut .55s cubic-bezier(.8,0,.2,1) .75s forwards}
+.intro .logo{width:min(70vw,900px);color:var(--cotton);clip-path:inset(0 100% 0 0);animation:introLogo .5s steps(6) .05s forwards}
+.intro::after{content:"";position:absolute;left:0;bottom:0;height:10px;width:100%;background:var(--cotton);transform-origin:0 50%;transform:scaleX(0);animation:introBar .7s steps(8) forwards}
+@keyframes introLogo{to{clip-path:inset(0 0 0 0)}}
+@keyframes introBar{to{transform:scaleX(1)}}
+@keyframes introOut{to{transform:translateY(-100%)}}
+/* títulos: palavras sobem de uma máscara + bloco que varre */
+.slam{position:relative}
+.slam .w{display:inline-block;overflow:hidden;vertical-align:top;padding-bottom:.06em;margin-bottom:-.06em}
+.slam .w>span{display:inline-block;transform:translateY(105%);transition:transform .7s cubic-bezier(.75,0,.15,1);transition-delay:calc(var(--i)*55ms + .25s)}
+.slam.in .w>span{transform:none}
+.slam::after{content:"";position:absolute;inset:-.04em -.08em;background:currentColor;transform:scaleX(0);transform-origin:0 50%;pointer-events:none}
+.slam.in::after{animation:wipe .62s cubic-bezier(.8,0,.2,1) forwards}
+@keyframes wipe{0%{transform:scaleX(0);transform-origin:0 50%}48%{transform:scaleX(1);transform-origin:0 50%}52%{transform:scaleX(1);transform-origin:100% 50%}100%{transform:scaleX(0);transform-origin:100% 50%}}
+/* fotos: corte seco de baixo para cima */
+.cut{clip-path:inset(100% 0 0 0);transition:clip-path .9s cubic-bezier(.8,0,.2,1)}
+.cut.in{clip-path:inset(0 0 0 0)}
+/* sombra dura no hover */
+.work .work-img,.seg{transition:clip-path .9s cubic-bezier(.8,0,.2,1),transform .25s steps(3),box-shadow .25s steps(3)}
+.work:hover .work-img,.seg:hover{transform:translate(-8px,-8px);box-shadow:8px 8px 0 var(--carbon),16px 16px 0 rgba(21,21,21,.25)}
+.dark-sec .seg:hover{box-shadow:8px 8px 0 var(--cotton)}
+.cta{transition:transform .18s steps(2),box-shadow .18s steps(2)}
+.cta:hover{transform:translate(-5px,-5px);box-shadow:5px 5px 0 currentColor,0 0 0 0 transparent;animation-play-state:paused}
+.cta.light:hover{box-shadow:5px 5px 0 var(--cotton)}
+.cta:not(.light):hover{box-shadow:5px 5px 0 var(--carbon)}
+.contact .cta:hover,.dev .cta:hover,.clients .cta:hover,.hero .cta:hover,.cta-band .cta:hover{box-shadow:5px 5px 0 var(--stone)}
+/* entradas em degraus (stop-motion) */
+.jolt{opacity:0;transform:translateY(46px)}
+.jolt.in{animation:jolt .5s steps(5) forwards;animation-delay:calc(var(--i,0)*90ms)}
+@keyframes jolt{to{opacity:1;transform:none}}
+/* tipografia gigante ligada à rolagem */
+.bigtype{background:var(--carbon);color:var(--cotton);overflow:hidden;padding:clamp(18px,3vw,40px) 0;border-top:1px solid var(--line-d);border-bottom:1px solid var(--line-d)}
+.bt-row{display:flex;white-space:nowrap;font:800 clamp(72px,15vw,260px)/.86 var(--display);text-transform:uppercase;letter-spacing:-.01em;will-change:transform}
+.bt-row span{flex:none;padding-right:.35em}
+.bt-row.outline{color:transparent;-webkit-text-stroke:2px var(--cotton)}
+/* cursor-etiqueta nos projetos */
+.tag-cursor{position:fixed;left:0;top:0;z-index:90;pointer-events:none;background:var(--carbon);color:var(--cotton);font:800 22px/1 var(--display);text-transform:uppercase;padding:16px 18px;transform:translate(-50%,-50%) scale(0);transition:transform .2s steps(3);box-shadow:6px 6px 0 var(--cotton),6px 6px 0 1px var(--carbon)}
+.tag-cursor.on{transform:translate(-50%,-50%) scale(1)}
+@media (hover:none){.tag-cursor{display:none}}
+/* marquee inclina com a velocidade da rolagem */
+.marquee{transform:skewX(var(--skew,0deg));transition:transform .2s}
+@media (prefers-reduced-motion:reduce){
+  .intro,.tag-cursor,.progress{display:none}
+  .slam .w>span,.cut,.jolt{transform:none!important;clip-path:none!important;opacity:1!important;transition:none!important}
+  .slam::after{display:none}.bt-row{transform:none!important}.marquee{transform:none}
+}
+
 /* header */
 .hdr{position:fixed;inset:0 0 auto;z-index:50;color:var(--cotton);transition:background .3s,color .3s,box-shadow .3s}
 .hdr.solid{background:rgba(243,241,235,.94);backdrop-filter:blur(10px);color:var(--carbon);box-shadow:0 1px 0 var(--line)}
@@ -318,6 +369,9 @@ body.lock{overflow:hidden}
 </head>
 <body>
 
+<div class="progress" id="progress" aria-hidden="true"></div>
+<div class="intro" id="intro" aria-hidden="true"><span class="logo"></span></div>
+<div class="tag-cursor" id="tagCursor" aria-hidden="true">Ver projeto ↗</div>
 <header class="hdr" id="hdr">
   <div class="wrap">
     <a href="#topo" aria-label="BAZA — início"><span class="logo"></span></a>
@@ -410,6 +464,12 @@ body.lock{overflow:hidden}
     </div>
   </div>
 </section>
+
+<!-- FAIXA TIPOGRÁFICA -->
+<div class="bigtype" aria-hidden="true">
+  <div class="bt-row" data-dir="-1"><span>Creating fashion uniforms ✳</span><span>Creating fashion uniforms ✳</span><span>Creating fashion uniforms ✳</span></div>
+  <div class="bt-row outline" data-dir="1"><span>Design ✳ Produção ✳ Identidade ✳</span><span>Design ✳ Produção ✳ Identidade ✳</span></div>
+</div>
 
 <!-- 04 MANIFESTO -->
 <section class="manifesto" id="manifesto">
@@ -779,6 +839,68 @@ $('#caseClose').addEventListener('click', () => closeCase());
 caseEl.addEventListener('click', e => { if (e.target.closest('[data-cta]')) { e.preventDefault(); closeCase(); setTimeout(()=>$('#contato').scrollIntoView(),60); } });
 addEventListener('keydown', e => { if (e.key === 'Escape' && caseEl.classList.contains('open')) closeCase(); });
 
+
+
+/* ---------- BRUTALISM ---------- */
+const RM = matchMedia('(prefers-reduced-motion: reduce)').matches;
+// intro: só na primeira visita da sessão
+const intro = $('#intro');
+let seen = false; try { seen = sessionStorage.getItem('baza-intro') === '1'; sessionStorage.setItem('baza-intro','1'); } catch(e) {}
+if (seen || RM) intro.remove(); else setTimeout(() => intro.remove(), 1500);
+// títulos: quebra em palavras
+document.querySelectorAll('h1.display, h2.display').forEach(h => {
+  h.classList.remove('rv'); h.classList.add('slam'); let i = 0;
+  const walk = node => [...node.childNodes].forEach(n => {
+    if (n.nodeType === 3) { const frag = document.createDocumentFragment();
+      n.textContent.split(/(\s+)/).forEach(t => { if (!t) return; if (/^\s+$/.test(t)) { frag.append(t); return; }
+        const w = document.createElement('span'); w.className = 'w'; const inner = document.createElement('span'); inner.textContent = t; inner.style.setProperty('--i', i++); w.append(inner); frag.append(w); });
+      n.replaceWith(frag);
+    } else if (n.nodeType === 1 && n.tagName !== 'BR') walk(n);
+  });
+  walk(h);
+});
+// fotos com corte seco
+document.querySelectorAll('.work-img, .seg, .manifesto-grid img, .dev-media img, .lab-grid img').forEach(el => { el.classList.remove('rv'); el.classList.add('cut'); });
+// entradas em degraus
+document.querySelectorAll('.stat, .step, .study, .dev-list li').forEach(el => {
+  el.classList.remove('rv'); el.classList.add('jolt');
+  el.style.setProperty('--i', [...el.parentNode.children].indexOf(el));
+});
+const fx = new IntersectionObserver((es,o) => es.forEach(e => { if (!e.isIntersecting) return; e.target.classList.add('in'); o.unobserve(e.target);
+  if (e.target.classList.contains('stat')) countUp(e.target.querySelector('b')); }), {rootMargin:'0px 0px -12% 0px'});
+const heroH = document.querySelector('.hero h1');
+document.querySelectorAll('.slam, .cut, .jolt').forEach(el => { if (el !== heroH) fx.observe(el); });
+setTimeout(() => fx.observe(heroH), document.getElementById('intro') ? 1150 : 0);
+// contagem dos números
+function countUp(b){ if (!b || RM) return; const end = parseInt(b.textContent,10); if (isNaN(end)) return; const t0 = performance.now(), D = 900;
+  const tick = now => { const p = Math.min(1,(now-t0)/D); const v = p < 1 ? Math.floor(end*p + Math.random()*(1-p)*12) : end; b.textContent = Math.min(v,99) + '%'; if (p < 1) requestAnimationFrame(tick); else b.textContent = end + '%'; };
+  requestAnimationFrame(tick); }
+// rótulos mono embaralham ao entrar
+const GLY = '█▓▒░#/_01X';
+const scr = new IntersectionObserver((es,o) => es.forEach(e => { if (!e.isIntersecting || RM) return; o.unobserve(e.target); const el = e.target, fin = el.textContent; let f = 0;
+  const id = setInterval(() => { f++; el.textContent = [...fin].map((c,k) => c === ' ' || k < f*1.6 ? c : GLY[Math.random()*GLY.length|0]).join(''); if (f*1.6 >= fin.length) { clearInterval(id); el.textContent = fin; } }, 28); }), {threshold:.6});
+document.querySelectorAll('.sec-head > .mono, section > .wrap > .mono, .hero-body > .mono').forEach(el => scr.observe(el));
+// rolagem: progresso, faixa gigante, inclinação do marquee
+const prog = $('#progress'), rows = [...document.querySelectorAll('.bt-row')], band = document.querySelector('.bigtype'), mqEl = $('#marquee');
+let lastY = scrollY, vel = 0, ticking = false;
+function onFrame(){ ticking = false; const y = scrollY, H = document.documentElement.scrollHeight - innerHeight;
+  prog.style.transform = `scaleX(${H>0 ? y/H : 0})`;
+  vel = vel*0.8 + (y-lastY)*0.2; lastY = y;
+  if (!RM) {
+    const r = band.getBoundingClientRect();
+    if (r.bottom > 0 && r.top < innerHeight) { const p = (innerHeight - r.top)/(innerHeight + r.height); rows.forEach(row => { const d = +row.dataset.dir; row.style.transform = `translateX(${d>0 ? -30 + p*30 : -p*30}%)`; }); }
+    mqEl.style.setProperty('--skew', Math.max(-12, Math.min(12, -vel*0.35)) + 'deg');
+    const a = mqEl.getAnimations()[0]; if (a) a.playbackRate = 1 + Math.min(6, Math.abs(vel)*0.08);
+  }
+  if (Math.abs(vel) > 0.3) req(); }
+const req = () => { if (!ticking) { ticking = true; requestAnimationFrame(onFrame); } };
+addEventListener('scroll', req, {passive:true}); req();
+// cursor-etiqueta
+const tc = $('#tagCursor');
+if (!RM && matchMedia('(hover:hover)').matches) {
+  addEventListener('pointermove', e => { tc.style.left = e.clientX + 'px'; tc.style.top = e.clientY + 'px'; }, {passive:true});
+  document.addEventListener('pointerover', e => tc.classList.toggle('on', !!e.target.closest('.work')));
+}
 
 /* ---------- CTA flutuante + rastreio de cliques ---------- */
 const fab = $('#fab'); let pastHero = false, atContact = false;
