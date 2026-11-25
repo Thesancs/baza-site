@@ -6,13 +6,20 @@
 <title>BAZA® — Uniformes que vestem a identidade da sua marca</title>
 <meta name="description" content="A BAZA cria e produz uniformes exclusivos, desenvolvidos a partir do branding, da estética e das necessidades da sua empresa. Campinas — SP.">
 <meta name="theme-color" content="#151515">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800&family=IBM+Plex+Mono:wght@400;500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="preload" href="assets/fonts/inter-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="assets/fonts/ibm-plex-mono-latin-500-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%23151515'/%3E%3Ctext x='16' y='23' font-family='Arial' font-weight='900' font-size='20' text-anchor='middle' fill='%23F3F1EB'%3EB%3C/text%3E%3C/svg%3E">
+
 <!-- LCP: o poster aparece na hora; o vídeo só carrega depois -->
 <link rel="preload" as="image" href="assets/video/hero-poster-mobile.webp" media="(max-width: 768px)">
 <link rel="preload" as="image" href="assets/video/hero-poster-desktop.webp" media="(min-width: 769px)">
 <style>
+@font-face{font-family:"Barlow Condensed";font-style:normal;font-weight:800;font-display:block;src:url(data:font/woff2;base64,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) format("woff2");unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+@font-face{font-family:"Barlow Condensed";font-style:normal;font-weight:600 700;font-display:swap;src:url(assets/fonts/barlow-condensed-latin-700-normal.woff2) format("woff2");unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+@font-face{font-family:Inter;font-style:normal;font-weight:400 600;font-display:optional;src:url(assets/fonts/inter-latin-wght-normal.woff2) format("woff2");unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+@font-face{font-family:"IBM Plex Mono";font-style:normal;font-weight:400 500;font-display:optional;src:url(assets/fonts/ibm-plex-mono-latin-500-normal.woff2) format("woff2");unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+@font-face{font-family:"Inter Fallback";src:local("Arial"),local("Helvetica"),local("Liberation Sans");size-adjust:107%;ascent-override:90%;descent-override:22.4%;line-gap-override:0%}
+@font-face{font-family:"Barlow Fallback";src:local("Arial Narrow"),local("ArialNarrow"),local("Liberation Sans Narrow"),local("Arial");size-adjust:88%;ascent-override:100%;descent-override:22%;line-gap-override:0%}
 /*
 VOICE   editorial de moda contemporânea: direto, autoral, comercial
 IDEA    um lookbook de estúdio: fotos grandes, ficha técnica em mono, títulos condensados
@@ -22,8 +29,8 @@ TYPE    Barlow Condensed (display), Inter (texto), IBM Plex Mono (detalhes técn
 */
 :root{
   --carbon:#151515;--cotton:#F3F1EB;--white:#fff;--stone:#A5A29B;--line:rgba(21,21,21,.14);--line-d:rgba(243,241,235,.16);
-  --display:"Barlow Condensed","Arial Narrow",Impact,sans-serif;
-  --body:Inter,"Helvetica Neue",Arial,sans-serif;
+  --display:"Barlow Condensed","Barlow Fallback","Arial Narrow",sans-serif;
+  --body:Inter,"Inter Fallback","Helvetica Neue",Arial,sans-serif;
   --mono:"IBM Plex Mono",ui-monospace,Menlo,monospace;
   --pad:max(5vw,20px);--max:1440px;color-scheme:light;
 }
@@ -52,20 +59,21 @@ section{padding:clamp(72px,9vw,140px) 0}
 
 
 /* CTA — botões de alta conversão */
-.cta{position:relative;display:inline-flex;align-items:stretch;min-height:64px;background:var(--carbon);color:var(--cotton);text-decoration:none;overflow:hidden;isolation:isolate;border:0;padding:0;cursor:pointer;box-shadow:0 0 0 0 rgba(21,21,21,.35);animation:ctaPulse 3.2s ease-out infinite}
+.cta{position:relative;display:inline-flex;align-items:stretch;min-height:64px;background:var(--carbon);color:var(--cotton);text-decoration:none;overflow:hidden;isolation:isolate;border:0;padding:0;cursor:pointer;}
+
 .cta span{display:flex;align-items:center;padding:0 26px 0 28px;font:800 clamp(18px,1.5vw,22px)/1 var(--display);text-transform:uppercase;letter-spacing:.02em;white-space:nowrap}
 .cta i{display:flex;align-items:center;justify-content:center;width:64px;background:var(--cotton);color:var(--carbon);font:700 22px/1 var(--body);font-style:normal;border:2px solid var(--carbon);transition:width .35s cubic-bezier(.2,.7,.2,1)}
 .cta i::before{content:"↗";display:block;transition:transform .35s cubic-bezier(.2,.7,.2,1)}
 .cta::after{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(105deg,transparent 30%,rgba(255,255,255,.28) 50%,transparent 70%);transform:translateX(-120%);animation:ctaShine 4.5s ease-in-out infinite}
 .cta:hover i{width:84px}.cta:hover i::before{transform:translate(3px,-3px) rotate(45deg)}
 .cta:active{transform:translateY(1px)}
-.cta.light{background:var(--cotton);color:var(--carbon);box-shadow:0 0 0 0 rgba(243,241,235,.45);animation-name:ctaPulseL}
+.cta.light{background:var(--cotton);color:var(--carbon)}
 .cta.light i{background:var(--carbon);color:var(--cotton);border-color:var(--cotton)}
 .cta.light::after{background:linear-gradient(105deg,transparent 30%,rgba(21,21,21,.12) 50%,transparent 70%)}
 .cta.big{min-height:76px}.cta.big span{font-size:clamp(20px,1.9vw,28px);padding:0 34px}.cta.big i{width:76px}
 @keyframes ctaShine{0%,55%{transform:translateX(-120%)}80%,100%{transform:translateX(120%)}}
-@keyframes ctaPulse{0%{box-shadow:0 0 0 0 rgba(21,21,21,.35)}70%,100%{box-shadow:0 0 0 14px rgba(21,21,21,0)}}
-@keyframes ctaPulseL{0%{box-shadow:0 0 0 0 rgba(243,241,235,.45)}70%,100%{box-shadow:0 0 0 14px rgba(243,241,235,0)}}
+
+
 .cta-row{display:flex;align-items:center;gap:18px 28px;flex-wrap:wrap;margin-top:clamp(36px,4.5vw,64px)}
 .cta-row small{font:500 12px/1.5 var(--mono);text-transform:uppercase;letter-spacing:.04em;color:#6d6a63;max-width:38ch}
 .dark-sec .cta-row small,.contact .cta-row small{color:var(--stone)}
@@ -84,14 +92,8 @@ section{padding:clamp(72px,9vw,140px) 0}
 
 
 /* ===== BRUTALISM: animações de impacto ===== */
-.progress{position:fixed;inset:0 0 auto;height:6px;z-index:80;background:var(--cotton);mix-blend-mode:difference;transform-origin:0 50%;transform:scaleX(0);pointer-events:none}
-/* intro */
-.intro{position:fixed;inset:0;z-index:200;background:var(--carbon);display:grid;place-items:center;pointer-events:none;animation:introOut .55s cubic-bezier(.8,0,.2,1) .75s forwards}
-.intro .logo{width:min(70vw,900px);color:var(--cotton);clip-path:inset(0 100% 0 0);animation:introLogo .5s steps(6) .05s forwards}
-.intro::after{content:"";position:absolute;left:0;bottom:0;height:10px;width:100%;background:var(--cotton);transform-origin:0 50%;transform:scaleX(0);animation:introBar .7s steps(8) forwards}
-@keyframes introLogo{to{clip-path:inset(0 0 0 0)}}
-@keyframes introBar{to{transform:scaleX(1)}}
-@keyframes introOut{to{transform:translateY(-100%)}}
+.progress{position:fixed;inset:0 0 auto;height:6px;will-change:transform;z-index:80;background:var(--cotton);mix-blend-mode:difference;transform-origin:0 50%;transform:scaleX(0);pointer-events:none}
+
 /* títulos: palavras sobem de uma máscara + bloco que varre */
 .slam{position:relative}
 .slam .w{display:inline-block;overflow:hidden;vertical-align:top;padding-bottom:.06em;margin-bottom:-.06em}
@@ -108,7 +110,7 @@ section{padding:clamp(72px,9vw,140px) 0}
 .work:hover .work-img,.seg:hover{transform:translate(-8px,-8px);box-shadow:8px 8px 0 var(--carbon),16px 16px 0 rgba(21,21,21,.25)}
 .dark-sec .seg:hover{box-shadow:8px 8px 0 var(--cotton)}
 .cta{transition:transform .18s steps(2),box-shadow .18s steps(2)}
-.cta:hover{transform:translate(-5px,-5px);box-shadow:5px 5px 0 currentColor,0 0 0 0 transparent;animation-play-state:paused}
+.cta:hover{transform:translate(-5px,-5px);box-shadow:5px 5px 0 currentColor}
 .cta.light:hover{box-shadow:5px 5px 0 var(--cotton)}
 .cta:not(.light):hover{box-shadow:5px 5px 0 var(--carbon)}
 .contact .cta:hover,.dev .cta:hover,.clients .cta:hover,.hero .cta:hover,.cta-band .cta:hover{box-shadow:5px 5px 0 var(--stone)}
@@ -122,15 +124,16 @@ section{padding:clamp(72px,9vw,140px) 0}
 .bt-row span{flex:none;padding-right:.35em}
 .bt-row.outline{color:transparent;-webkit-text-stroke:2px var(--cotton)}
 /* cursor-etiqueta nos projetos */
-.tag-cursor{position:fixed;left:0;top:0;z-index:90;pointer-events:none;background:var(--carbon);color:var(--cotton);font:800 22px/1 var(--display);text-transform:uppercase;padding:16px 18px;transform:translate(-50%,-50%) scale(0);transition:transform .2s steps(3);box-shadow:6px 6px 0 var(--cotton),6px 6px 0 1px var(--carbon)}
-.tag-cursor.on{transform:translate(-50%,-50%) scale(1)}
+.tag-cursor{position:fixed;left:0;top:0;will-change:transform;z-index:90;pointer-events:none;background:var(--carbon);color:var(--cotton);font:800 22px/1 var(--display);text-transform:uppercase;padding:16px 18px;transform:translate3d(var(--x,-200px),var(--y,-200px),0) translate(-50%,-50%) scale(0);transition:transform .2s steps(3);box-shadow:6px 6px 0 var(--cotton),6px 6px 0 1px var(--carbon)}
+.tag-cursor.on{transform:translate3d(var(--x),var(--y),0) translate(-50%,-50%) scale(1)}
 @media (hover:none){.tag-cursor{display:none}}
 /* marquee inclina com a velocidade da rolagem */
-.marquee{transform:skewX(var(--skew,0deg));transition:transform .2s}
+.mq-skew{transform:skewX(var(--skew,0deg));transition:transform .2s;will-change:transform}
+.marquee{will-change:transform}
 @media (prefers-reduced-motion:reduce){
-  .intro,.tag-cursor,.progress{display:none}
+  .tag-cursor,.progress{display:none}
   .slam .w>span,.cut,.jolt{transform:none!important;clip-path:none!important;opacity:1!important;transition:none!important}
-  .slam::after{display:none}.bt-row{transform:none!important}.marquee{transform:none}
+  .slam::after{display:none}.bt-row{transform:none!important}.mq-skew{transform:none}
 }
 
 /* header */
@@ -160,7 +163,10 @@ section{padding:clamp(72px,9vw,140px) 0}
 .hero.is-playing .hero-media video{opacity:1}
 .hero-media::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(21,21,21,.55) 0%,rgba(21,21,21,.1) 30%,rgba(21,21,21,.35) 60%,rgba(21,21,21,.88) 100%)}
 .hero-body{position:relative;flex:1;width:100%;display:flex;flex-direction:column;justify-content:flex-end;padding-top:120px;padding-bottom:clamp(28px,4vw,48px)}
-.hero h1{font-size:clamp(54px,9.4vw,164px);max-width:12ch;margin:18px 0 0}
+.hero h1{font-size:clamp(40px,min(12.6vw,15.5vh),164px);margin:18px 0 0;line-height:.9}
+.hero h1 span{display:block;white-space:nowrap;height:.9em}
+.hero-ctas,.hero p{animation:heroIn .6s steps(4) both .1s}
+@keyframes heroIn{from{transform:translateY(24px)}}
 .hero p{max-width:46ch;font-size:clamp(16px,1.3vw,19px);margin:24px 0 32px;color:rgba(243,241,235,.86)}
 .hero-ctas{display:flex;gap:14px;flex-wrap:wrap;align-items:center}
 .hero-ctas .btn{min-height:64px}
@@ -201,12 +207,7 @@ section{padding:clamp(72px,9vw,140px) 0}
 .work-meta span:last-child{text-align:right}
 .work h3{font:800 clamp(34px,3.6vw,56px)/.95 var(--display);text-transform:uppercase;margin:8px 0 6px}
 .work p{margin:0;color:#4a4842;font-size:15px}
-.more{margin-top:clamp(56px,7vw,100px);border-top:1px solid var(--line)}
-.more-row{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:clamp(12px,1.6vw,22px);margin-top:28px}
-.more-row .work{grid-column:auto!important;margin:0!important}
-.more-row .work-img{aspect-ratio:3/4!important}
-.more-row h3{font-size:clamp(24px,2.2vw,32px)}
-@media(max-width:860px){.works-grid{grid-template-columns:1fr}.work{grid-column:1/-1!important;margin-top:0!important}.more-row{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:860px){.works-grid{grid-template-columns:1fr}.work{grid-column:1/-1!important;margin-top:0!important}}
 
 /* manifesto */
 .manifesto{background:var(--white)}
@@ -262,27 +263,6 @@ section{padding:clamp(72px,9vw,140px) 0}
 .step p{margin:0;font-size:15px;color:#4a4842}
 @media(max-width:960px){.steps{grid-template-columns:1fr}.step,.step+.step{border-right:0;border-bottom:1px solid var(--line);padding:22px 0}.step h3{margin-top:14px}}
 
-/* segments */
-.segments{background:var(--white)}
-.seg-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:clamp(12px,1.6vw,22px)}
-.seg{position:relative;aspect-ratio:3/4;overflow:hidden;color:var(--cotton);background:var(--carbon)}
-.seg img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform .9s}
-.seg:hover img{transform:scale(1.04)}
-.seg::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 45%,rgba(21,21,21,.85))}
-.seg div{position:absolute;left:18px;right:18px;bottom:18px;z-index:1}
-.seg h3{font:800 clamp(28px,2.6vw,40px)/.95 var(--display);text-transform:uppercase;margin:0 0 8px}
-.seg p{margin:0;font-size:13px;color:rgba(243,241,235,.8)}
-@media(max-width:860px){.seg-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
-@media(max-width:480px){.seg-grid{grid-template-columns:1fr}.seg{aspect-ratio:4/3}}
-
-/* lab / bastidores */
-.lab-grid{display:grid;grid-template-columns:minmax(0,4fr) minmax(0,3fr) minmax(0,3fr);gap:clamp(12px,1.6vw,22px);align-items:end}
-.lab-grid img{width:100%;object-fit:cover}
-.lab-grid img:nth-child(1){aspect-ratio:4/5}.lab-grid img:nth-child(2){aspect-ratio:3/4}.lab-grid img:nth-child(3){aspect-ratio:3/5}
-.lab-text{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(24px,4vw,72px);margin-top:clamp(28px,3vw,48px)}
-.lab-text p{margin:0;color:#3c3a35}
-@media(max-width:760px){.lab-grid{grid-template-columns:1fr 1fr}.lab-grid img:nth-child(1){grid-column:1/-1}.lab-text{grid-template-columns:1fr}}
-
 /* faq */
 .faq-grid{display:grid;grid-template-columns:minmax(0,4fr) minmax(0,8fr);gap:clamp(28px,5vw,96px)}
 details{border-top:1px solid var(--line)}
@@ -298,9 +278,7 @@ details p{margin:0 0 24px;max-width:62ch;color:#3c3a35}
 .contact{background:var(--carbon);color:var(--cotton)}
 .contact-grid{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:clamp(32px,5vw,96px)}
 .contact .display{font-size:clamp(48px,6.6vw,110px)}
-.people{margin-top:40px;display:grid;gap:14px}
-.people a{display:flex;justify-content:space-between;gap:12px;padding:14px 0;border-bottom:1px solid var(--line-d);text-decoration:none}
-.people a:hover span:last-child{text-decoration:underline}
+
 form{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:18px 20px;align-content:start}
 .f{display:grid;gap:8px}
 .f.full{grid-column:1/-1}
@@ -329,8 +307,8 @@ fieldset{border:0;margin:0;padding:0}
 /* footer */
 .ftr{background:var(--carbon);color:var(--cotton);padding:clamp(48px,6vw,88px) 0 28px;border-top:1px solid var(--line-d)}
 .ftr .logo{width:100%;max-width:1100px}
-.ftr-cols{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:28px;margin-top:clamp(40px,5vw,72px);font-size:14px;color:rgba(243,241,235,.75)}
-.ftr-cols h4{margin:0 0 12px;color:var(--stone)}
+.ftr-cols{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:28px;margin-top:clamp(40px,5vw,72px);font-size:14px;color:rgba(243,241,235,.75)}
+.ftr-cols .ftr-h{margin:0 0 12px;color:var(--stone)}
 .ftr-cols p{margin:0 0 6px}
 .ftr-cols a{text-decoration:none;overflow-wrap:anywhere}.ftr-cols a:hover{text-decoration:underline}
 .ftr-bottom{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;margin-top:48px;padding-top:20px;border-top:1px solid var(--line-d);color:var(--stone)}
@@ -370,13 +348,13 @@ body.lock{overflow:hidden}
 <body>
 
 <div class="progress" id="progress" aria-hidden="true"></div>
-<div class="intro" id="intro" aria-hidden="true"><span class="logo"></span></div>
 <div class="tag-cursor" id="tagCursor" aria-hidden="true">Ver projeto ↗</div>
 <header class="hdr" id="hdr">
   <div class="wrap">
     <a href="#topo" aria-label="BAZA, voltar ao início"><span class="logo"></span></a>
     <nav class="nav" id="nav" aria-label="Principal">
       <a href="#projetos">Projetos</a>
+      <a href="portfolio.html">Portfólio</a>
       <a href="#manifesto">Sobre</a>
       <a href="#processo">Processo</a>
       <a href="#faq">FAQ</a>
@@ -401,7 +379,7 @@ body.lock{overflow:hidden}
   </div>
   <div class="hero-body wrap">
     <span class="mono">Estúdio de uniformes · Campinas, SP</span>
-    <h1 class="display">Uniformes que vestem a identidade da sua marca.</h1>
+    <h1 class="display"><span>Uniformes</span> <span>que vestem a</span> <span>identidade da</span> <span>sua marca.</span></h1>
     <p>Desenhamos e produzimos o uniforme da sua equipe a partir da sua marca, não de um catálogo. O time veste com orgulho e o cliente reconhece de longe.</p>
     <div class="hero-ctas">
       <a class="cta light big" href="#contato" data-loc="hero"><span>Pedir meu orçamento</span><i aria-hidden="true"></i></a>
@@ -446,23 +424,18 @@ body.lock{overflow:hidden}
 <!-- 02 MARCAS ATENDIDAS -->
 <section class="clients" aria-label="Marcas atendidas">
   <div class="clients-top"><span class="label mono">Quem já veste BAZA</span><a class="cta light" href="#contato" data-loc="clientes"><span>Quero minha marca aqui</span><i aria-hidden="true"></i></a></div>
-  <div class="marquee" id="marquee"></div>
+  <div class="mq-skew" id="mqSkew"><div class="marquee" id="marquee"></div></div>
 </section>
 
 <!-- 03 PROJETOS SELECIONADOS -->
 <section id="projetos">
   <div class="wrap">
     <div class="sec-head">
-      <h2 class="display h2 rv">Projetos<br>selecionados.</h2>
-      <span class="mono">Selected works / 06</span>
+      <h2 class="display h2 rv">Em serviço.</h2>
+      <p class="lead" style="margin:0">Uniformes que já estão trabalhando por aí. Cada um com a cara da casa que veste, e nenhum se repete.</p>
     </div>
-    <p class="lead" style="margin:-24px 0 clamp(36px,4vw,56px)">Cada cliente chegou com uma história diferente. Nenhum saiu com o mesmo uniforme.</p>
     <div class="works-grid" id="works"></div>
-    <div class="more">
-      <div class="sec-head" style="margin:28px 0 0"><span class="mono">Mais projetos</span><span class="mono">04</span></div>
-      <div class="more-row" id="moreWorks"></div>
-      <div class="cta-band"><p>O próximo projeto pode ter o seu nome.</p><a class="cta light big" href="#contato" data-loc="projetos"><span>Quero um projeto assim</span><i aria-hidden="true"></i></a></div>
-    </div>
+    <div class="cta-row"><a class="cta big" href="portfolio.html" data-loc="projetos-portfolio"><span>Ver portfólio completo</span><i aria-hidden="true"></i></a><small>Todos os projetos da BAZA, com as fotos e os detalhes de cada peça.</small></div>
   </div>
 </section>
 
@@ -478,7 +451,7 @@ body.lock{overflow:hidden}
     <span class="mono">Manifesto BAZA</span>
     <h2 class="display rv" style="margin-top:18px">Não partimos do uniforme. Partimos da sua marca.</h2>
     <div class="manifesto-grid">
-      <img class="rv" src="assets/img/p03_0.webp" srcset="assets/img/p03_0-sm.webp 560w, assets/img/p03_0.webp 1100w" sizes="(max-width:760px) 100vw, 40vw" alt="Uniforme City Tortas: camisa jersey preta com gola branca e calça em sarja" loading="lazy" decoding="async">
+      <img class="rv" src="assets/img/p03_0.webp" srcset="assets/img/p03_0-sm.webp 560w, assets/img/p03_0-md.webp 800w, assets/img/p03_0.webp 1100w" sizes="(max-width:760px) 100vw, 40vw" alt="Uniforme City Tortas: camisa jersey preta com gola branca e calça em sarja" loading="lazy" decoding="async">
       <div class="manifesto-text">
         <p>Toda casa tem um jeito próprio de receber o cliente. A gente transforma esse jeito em roupa.</p>
         <p>Uniforme de catálogo resolve um problema: vestir a equipe. Para por aí. A camisa é igual à do vizinho, ninguém usa fora do turno e o cliente nem lembra de ter visto.</p>
@@ -502,7 +475,7 @@ body.lock{overflow:hidden}
     </div>
     <div class="dev-grid">
       <figure class="dev-media" style="margin:0">
-        <img src="assets/img/p20_0.webp" srcset="assets/img/p20_0-sm.webp 560w, assets/img/p20_0.webp 1100w" sizes="(max-width:860px) 100vw, 40vw" alt="Costas da camiseta Abigail Coffee com arte desenhada à mão em silk" loading="lazy" decoding="async">
+        <img src="assets/img/p20_0.webp" srcset="assets/img/p20_0-sm.webp 560w, assets/img/p20_0-md.webp 800w, assets/img/p20_0.webp 1100w" sizes="(max-width:860px) 100vw, 40vw" alt="Costas da camiseta Abigail Coffee com arte desenhada à mão em silk" loading="lazy" decoding="async">
         <figcaption class="mono">Abigail Coffee: arte desenhada à mão, em silk, sobre tingimento exclusivo</figcaption>
       </figure>
       <div><ul class="dev-list" id="devList"></ul>
@@ -523,45 +496,13 @@ body.lock{overflow:hidden}
   </div>
 </section>
 
-<!-- 07 SEGMENTOS -->
-<section class="segments" id="segmentos">
-  <div class="wrap">
-    <div class="sec-head">
-      <h2 class="display h2 rv">Segmentos<br>atendidos.</h2>
-      <span class="mono">Para quem a gente cria</span>
-    </div>
-    <div class="seg-grid" id="segs"></div>
-    <div class="cta-row"><a class="cta" href="#contato" data-loc="segmentos"><span>Ver como funciona no meu negócio</span><i aria-hidden="true"></i></a><small>Bar, restaurante, café, escola, time, empresa ou evento. Conta o seu caso.</small></div>
-  </div>
-</section>
-
-<!-- 08 BASTIDORES / LAB -->
-<section id="bastidores">
-  <div class="wrap">
-    <div class="sec-head">
-      <h2 class="display h2 rv">Laboratório<br>próprio.</h2>
-      <span class="mono">Outlawz Vision · marca do grupo BAZA</span>
-    </div>
-    <div class="lab-grid">
-      <img src="assets/img/p25_0.webp" srcset="assets/img/p25_0-sm.webp 560w, assets/img/p25_0.webp 1100w" sizes="(max-width:760px) 100vw, 40vw" alt="Outlawz Vision: camisa em tom escuro com calça denim" loading="lazy" decoding="async">
-      <img src="assets/img/p26_1.webp" srcset="assets/img/p26_1-sm.webp 560w, assets/img/p26_1.webp 1100w" sizes="(max-width:760px) 50vw, 30vw" alt="Corta-vento Outlawz Vision em preto e bege" loading="lazy" decoding="async">
-      <img src="assets/img/p28_1.webp" srcset="assets/img/p28_1-sm.webp 560w, assets/img/p28_1.webp 1100w" sizes="(max-width:760px) 50vw, 30vw" alt="Calça denim de corte reto com lavagem clara" loading="lazy" decoding="async">
-    </div>
-    <div class="lab-text">
-      <p class="lead" style="margin:0">A Outlawz Vision é a nossa marca de streetwear. Também é onde a gente testa tudo antes de levar para você.</p>
-      <p>Modelagens próprias, caimento oversized, calça de corte reto, lavagens e tecidos especiais. Quando propomos um caimento novo para o seu uniforme, ele já foi testado na nossa própria marca.</p>
-    </div>
-  <div class="cta-row"><a class="cta" href="#contato" data-loc="bastidores"><span>Criar com a BAZA</span><i aria-hidden="true"></i></a><small>O que chega até você já passou pelo nosso guarda-roupa.</small></div>
-  </div>
-</section>
-
 <!-- 09 FAQ -->
 <section id="faq" style="background:var(--white)">
   <div class="wrap faq-grid">
     <div>
       <h2 class="display h2 rv">Perguntas<br>frequentes.</h2>
-      <p style="margin:24px 0 0;color:#3c3a35;max-width:34ch">Ficou alguma dúvida? Pergunta direto para quem vai cuidar do seu projeto.</p>
-      <div class="cta-row" style="margin-top:22px"><a class="cta" href="https://wa.me/5519992841428?text=Ol%C3%A1!%20Tenho%20uma%20d%C3%BAvida%20sobre%20uniformes%20da%20BAZA." data-loc="faq" target="_blank" rel="noopener"><span>Tirar dúvida no WhatsApp</span><i aria-hidden="true"></i></a></div>
+      <p style="margin:24px 0 0;color:#3c3a35;max-width:34ch">Ficou alguma dúvida? Escreve no formulário que o comercial responde.</p>
+      <div class="cta-row" style="margin-top:22px"><a class="cta" href="#contato" data-loc="faq"><span>Mandar minha dúvida</span><i aria-hidden="true"></i></a></div>
     </div>
     <div id="faqList"></div>
   </div>
@@ -574,8 +515,7 @@ body.lock{overflow:hidden}
       <span class="mono" style="color:var(--stone)">Pedir orçamento</span>
       <h2 class="display" style="margin-top:18px">Sua marca pode ser o próximo projeto.</h2>
       <p class="lead" style="color:rgba(243,241,235,.8);margin-top:24px">Leva dois minutos. Você conta o que precisa e o comercial da BAZA continua a conversa com você no WhatsApp.</p>
-      <div class="people" id="people"></div>
-    </div>
+          </div>
     <form id="leadForm" novalidate>
       <div class="f"><label for="f-nome">Nome</label><input id="f-nome" name="nome" autocomplete="name" required></div>
       <div class="f"><label for="f-empresa">Empresa / marca</label><input id="f-empresa" name="empresa" autocomplete="organization" required></div>
@@ -613,10 +553,9 @@ body.lock{overflow:hidden}
     <div class="cta-band" style="background:var(--cotton);color:var(--carbon);margin:0 0 clamp(48px,6vw,88px)"><p>Vamos vestir a sua marca?</p><a class="cta big" href="#contato" data-loc="footer"><span>Pedir orçamento</span><i aria-hidden="true"></i></a></div>
     <span class="logo" aria-label="BAZA" role="img"></span>
     <div class="ftr-cols">
-      <div><h4 class="mono">Estúdio</h4><p>BAZA Brands</p><p>R. Barão de Atibaia, 1176</p><p>Vila Itapura, Campinas, SP</p></div>
-      <div><h4 class="mono">Contato</h4><p><a href="mailto:comercial@bazabrands.com">comercial@bazabrands.com</a></p><p><a href="https://wa.me/5519992841428" target="_blank" rel="noopener">(19) 99284-1428</a></p></div>
-      <div><h4 class="mono">Social</h4><p><a href="https://www.instagram.com/baza.brands/" target="_blank" rel="noopener">@baza.brands</a></p></div>
-      <div><h4 class="mono">Navegar</h4><p><a href="#projetos">Projetos</a></p><p><a href="#manifesto">Sobre</a></p><p><a href="#contato">Pedir orçamento</a></p></div>
+      <div><p class="mono ftr-h">Estúdio</p><p>BAZA Brands</p><p>R. Barão de Atibaia, 1176</p><p>Vila Itapura, Campinas, SP</p></div>
+      <div><p class="mono ftr-h">Contato</p><p><a href="mailto:comercial@bazabrands.com">comercial@bazabrands.com</a></p></div>
+            <div><p class="mono ftr-h">Navegar</p><p><a href="#projetos">Projetos</a></p><p><a href="portfolio.html">Portfólio</a></p><p><a href="#manifesto">Sobre</a></p><p><a href="#contato">Pedir orçamento</a></p></div>
     </div>
     <div class="ftr-bottom mono"><span>© <span id="yr">2026</span> BAZA Brands · CNPJ 66.357.010/0001-97</span><span>Creating fashion uniforms</span></div>
   </div>
@@ -626,7 +565,7 @@ body.lock{overflow:hidden}
 
 <!-- estudo de caso -->
 <div class="case" id="case" role="dialog" aria-modal="true" aria-labelledby="caseTitle" tabindex="-1">
-  <div class="case-top"><span class="mono" id="caseCode">BAZA® / Selected works</span><button class="case-close" id="caseClose" type="button">Fechar ✕</button></div>
+  <div class="case-top"><span class="mono" id="caseCode">BAZA®</span><button class="case-close" id="caseClose" type="button">Fechar ✕</button></div>
   <div class="case-grid">
     <div class="case-info" id="caseInfo"></div>
     <div class="case-gallery" id="caseGallery"></div>
@@ -636,9 +575,10 @@ body.lock{overflow:hidden}
 
 <script>
 {
-const WA = '5519992841428'; // Lucas Batistela, SDR/closer
+
+const WA = '5519992841428'; // destino do lead (comercial) até a integração com o CRM
 const img = (id, alt, sizes='(max-width:860px) 100vw, 50vw', eager=false) =>
-  `<img src="assets/img/${id}.webp" srcset="assets/img/${id}-sm.webp 560w, assets/img/${id}.webp 1100w" sizes="${sizes}" alt="${alt}" ${eager?'':'loading="lazy"'} decoding="async">`;
+  `<img src="assets/img/${id}-md.webp" srcset="assets/img/${id}-sm.webp 560w, assets/img/${id}-md.webp 800w, assets/img/${id}.webp 1100w" sizes="${sizes}" alt="${alt}" ${eager?'':'loading="lazy"'} decoding="async">`;
 
 /* ---------- conteúdo (fonte: Portfólio BAZA Brands) ---------- */
 const PROJECTS = [
@@ -710,11 +650,12 @@ const PROJECTS = [
 ];
 const FEATURED = 6;
 /* Logos: coloque o arquivo em assets/logos/ e preencha "logo" (SVG ou PNG transparente). Sem logo, aparece o nome. */
+const LD = {"abigail-coffee.webp": [167, 136], "alma-campinas.webp": [144, 136], "alma-grey-bowl.webp": [121, 136], "baile-run.webp": [420, 65], "bowa-bar.webp": [132, 136], "city-tortas.webp": [91, 136], "coisa-boa.webp": [136, 136], "diogo-lima-barbearia.webp": [133, 136], "escola-vivien-fortes.webp": [189, 136], "sorriso.webp": [142, 136]};
 const CLIENTS = [
-  {name:'City Tortas', logo:'city-tortas.png'}, {name:'Alma Campinas', logo:'alma-campinas.png'}, {name:'Alma Grey Bowl', logo:'alma-grey-bowl.png'},
-  {name:'Coisa Boa', logo:'coisa-boa.png'}, {name:'Sorriso Churrascaria', logo:'sorriso.png'}, {name:'Abigail Coffee', logo:'abigail-coffee.png'},
-  {name:'Bowa Bar', logo:'bowa-bar.png'}, {name:'Escola Vivien Fortes', logo:'escola-vivien-fortes.png'}, {name:'Baile Run', logo:'baile-run.png'},
-  {name:'Wüste Clothing', logo:''}, {name:'Diogo Lima Barbearia', logo:'diogo-lima-barbearia.png'}
+  {name:'City Tortas', logo:'city-tortas.webp'}, {name:'Alma Campinas', logo:'alma-campinas.webp'}, {name:'Alma Grey Bowl', logo:'alma-grey-bowl.webp'},
+  {name:'Coisa Boa', logo:'coisa-boa.webp'}, {name:'Sorriso Churrascaria', logo:'sorriso.webp'}, {name:'Abigail Coffee', logo:'abigail-coffee.webp'},
+  {name:'Bowa Bar', logo:'bowa-bar.webp'}, {name:'Escola Vivien Fortes', logo:'escola-vivien-fortes.webp'}, {name:'Baile Run', logo:'baile-run.webp'},
+  {name:'Wüste Clothing', logo:''}, {name:'Diogo Lima Barbearia', logo:'diogo-lima-barbearia.webp'}
 ];
 const DEV = [
   ['Modelagem personalizada','City Tortas e Escola Vivien Fortes'],
@@ -733,12 +674,6 @@ const STEPS = [
   ['Aprovação','Você valida cada peça e cada detalhe. Nada vai para a produção sem o seu ok.'],
   ['Produção','Produzimos e acompanhamos até as peças chegarem prontas para vestir.']
 ];
-const SEGS = [
-  ['Bares e restaurantes','City Tortas, Alma, Bowa, Coisa Boa, Sorriso','p15_0'],
-  ['Cafés','Abigail Coffee','p19_0'],
-  ['Escolas e esporte','Escola Vivien Fortes, Baile Run','p32_0'],
-  ['Marcas e eventos','Wüste Clothing, coleções para a Copa','p37_0']
-];
 const FAQ = [
   ['Uniforme exclusivo não sai mais caro?','Costuma custar mais que uma polo de catálogo, sim. Em troca, você tem uma peça desenhada para a sua marca, que a equipe gosta de vestir. E parte dela pode virar produto: bares e restaurantes já vendem camisetas e bonés da equipe para os próprios clientes.'],
   ['Vocês só produzem ou também criam o design?','Fazemos os dois. Conceito, design, modelagem, desenvolvimento e produção ficam com a gente, como no projeto da City Tortas, feito de ponta a ponta pela BAZA.'],
@@ -748,28 +683,29 @@ const FAQ = [
   ['Desenvolvem outros produtos além do uniforme?','Sim. Coleções especiais, bonés, merch e peças para vender. As coleções da Copa do Bowa e do Coisa Boa são exemplos. Também cuidamos de design, audiovisual, e-commerce e mídia quando a marca precisa.'],
   ['Qual é o pedido mínimo e o prazo?','Depende das peças e das técnicas. Conta pra gente o tamanho da equipe e a data que você tem em mente no formulário, e o comercial volta com prazo e proposta.']
 ];
-const PEOPLE = [['Lucas Batistela','(19) 99284-1428','5519992841428'],['Pedro Bensal','(19) 98338-8421','5519983388421']];
 const NEEDS = ['Camisas e camisetas','Calças e shorts','Aventais e coletes','Bonés e acessórios','Coleção ou merch'];
 
 /* ---------- render ---------- */
 const $ = s => document.querySelector(s);
+const SZ = i => i >= FEATURED ? '(max-width:860px) 50vw, 24vw' : (i%4===0||i%4===3) ? '(max-width:860px) 100vw, 55vw' : '(max-width:860px) 100vw, 40vw';
 const code = i => 'PROJECT_' + String(i+1).padStart(3,'0');
+
+const run = () => {
 const card = (p,i) => `<button class="work rv" type="button" data-id="${p.id}" aria-label="Ver projeto ${p.name}">
-  <div class="work-img">${img(p.imgs[0],p.alt)}${p.imgs[1]?img(p.imgs[1],''):''}</div>
-  <div class="work-meta mono"><span>${code(i)}</span><span>${p.seg}</span></div>
+  <div class="work-img">${img(p.imgs[0],p.alt,SZ(i))}${p.imgs[1]?img(p.imgs[1],'',SZ(i)):''}</div>
+  <div class="work-meta mono"><span>${p.seg}</span></div>
   <h3>${p.name}</h3><p>${p.comp}</p></button>`;
 $('#works').innerHTML = PROJECTS.slice(0,FEATURED).map(card).join('');
-$('#moreWorks').innerHTML = PROJECTS.slice(FEATURED).map((p,i)=>card(p,i+FEATURED)).join('');
-const mq = CLIENTS.map(c=>c.logo?`<span class="has-logo"><img class="client-logo" src="assets/logos/${c.logo}" alt="${c.name}" loading="lazy" decoding="async"></span>`:`<span>${c.name}</span>`).join('');
+const mq = CLIENTS.map(c=>c.logo?`<span class="has-logo"><img class="client-logo" src="assets/logos/${c.logo}" width="${LD[c.logo][0]}" height="${LD[c.logo][1]}" alt="${c.name}" loading="lazy" decoding="async"></span>`:`<span>${c.name}</span>`).join('');
 $('#marquee').innerHTML = mq + mq.replace(/<span>/g,'<span aria-hidden="true">');
 $('#devList').innerHTML = DEV.map((d,i)=>`<li class="rv"><span class="n mono">${String(i+1).padStart(2,'0')}</span><strong>${d[0]}</strong><span>${d[1]}</span></li>`).join('');
 $('#steps').innerHTML = STEPS.map((s,i)=>`<div class="step rv"><span class="mono">Etapa ${String(i+1).padStart(2,'0')}</span><h3>${s[0]}</h3><p>${s[1]}</p></div>`).join('');
-$('#segs').innerHTML = SEGS.map(s=>`<div class="seg rv">${img(s[2],'','(max-width:860px) 50vw, 25vw')}<div><h3>${s[0]}</h3><p>${s[1]}</p></div></div>`).join('');
 $('#faqList').innerHTML = FAQ.map(f=>`<details><summary>${f[0]}</summary><p>${f[1]}</p></details>`).join('');
-$('#people').innerHTML = PEOPLE.map(p=>`<a href="https://wa.me/${p[2]}" target="_blank" rel="noopener"><span class="mono">${p[0]}</span><span>${p[1]}</span></a>`).join('')
-  + `<a href="https://www.instagram.com/baza.brands/" target="_blank" rel="noopener"><span class="mono">Instagram</span><span>@baza.brands</span></a>`;
+
 $('#chips').innerHTML = NEEDS.map(n=>`<label><input type="checkbox" name="pecas" value="${n}"><span>${n}</span></label>`).join('');
 $('#yr').textContent = new Date().getFullYear();
+setTimeout(() => {
+
 
 /* ---------- HERO VIDEO: autoplay + lazy loading ----------
    1. HTML não tem src → nada de vídeo baixado antes do conteúdo.
@@ -818,7 +754,7 @@ const caseEl = $('#case'); let lastFocus = null;
 function openCase(id){
   const i = PROJECTS.findIndex(p => p.id === id); if (i < 0) return closeCase(true);
   const p = PROJECTS[i], prev = PROJECTS[(i-1+PROJECTS.length)%PROJECTS.length], next = PROJECTS[(i+1)%PROJECTS.length];
-  $('#caseCode').textContent = `BAZA® / Selected works / ${code(i)}`;
+  $('#caseCode').textContent = `BAZA® / ${p.seg}`;
   $('#caseInfo').innerHTML = `<h2 class="display" id="caseTitle">${p.name}.</h2><p class="case-tag">${p.tag}</p>
     <div class="case-facts mono"><div>Segmento<b>${p.seg}</b></div><div>Serviço<b>${p.serv}</b></div></div>
     ${p.text.map(t=>`<p>${t}</p>`).join('')}
@@ -845,13 +781,11 @@ addEventListener('keydown', e => { if (e.key === 'Escape' && caseEl.classList.co
 
 /* ---------- BRUTALISM ---------- */
 const RM = matchMedia('(prefers-reduced-motion: reduce)').matches;
-// intro: só na primeira visita da sessão
-const intro = $('#intro');
-let seen = false; try { seen = sessionStorage.getItem('baza-intro') === '1'; sessionStorage.setItem('baza-intro','1'); } catch(e) {}
-if (seen || RM) intro.remove(); else setTimeout(() => intro.remove(), 1500);
+
+const initFX = () => {
 // títulos: quebra em palavras
-document.querySelectorAll('h1.display, h2.display').forEach(h => {
-  h.classList.remove('rv'); h.classList.add('slam'); let i = 0;
+const splitH = h => {
+  if (h.dataset.split) return; h.dataset.split = 1; let i = 0;
   const walk = node => [...node.childNodes].forEach(n => {
     if (n.nodeType === 3) { const frag = document.createDocumentFragment();
       n.textContent.split(/(\s+)/).forEach(t => { if (!t) return; if (/^\s+$/.test(t)) { frag.append(t); return; }
@@ -860,7 +794,10 @@ document.querySelectorAll('h1.display, h2.display').forEach(h => {
     } else if (n.nodeType === 1 && n.tagName !== 'BR') walk(n);
   });
   walk(h);
-});
+};
+document.querySelectorAll('h2.display').forEach(h => { h.classList.remove('rv'); h.classList.add('slam'); });
+const pre = new IntersectionObserver((es,o) => es.forEach(e => { if (e.isIntersecting) { splitH(e.target); o.unobserve(e.target); } }), {rootMargin:'0px 0px 60% 0px'});
+document.querySelectorAll('.slam').forEach(h => pre.observe(h));
 // fotos com corte seco
 document.querySelectorAll('.work-img, .seg, .manifesto-grid img, .dev-media img, .lab-grid img').forEach(el => { el.classList.remove('rv'); el.classList.add('cut'); });
 // entradas em degraus
@@ -870,18 +807,19 @@ document.querySelectorAll('.stat, .step, .study, .dev-list li').forEach(el => {
 });
 const fx = new IntersectionObserver((es,o) => es.forEach(e => { if (!e.isIntersecting) return; e.target.classList.add('in'); o.unobserve(e.target);
   if (e.target.classList.contains('stat')) countUp(e.target.querySelector('b')); }), {rootMargin:'0px 0px -12% 0px'});
-const heroH = document.querySelector('.hero h1');
-document.querySelectorAll('.slam, .cut, .jolt').forEach(el => { if (el !== heroH) fx.observe(el); });
-setTimeout(() => fx.observe(heroH), document.getElementById('intro') ? 1150 : 0);
+document.querySelectorAll('.slam, .cut, .jolt').forEach(el => fx.observe(el));
+
 // contagem dos números
 function countUp(b){ if (!b || RM) return; const end = parseInt(b.textContent,10); if (isNaN(end)) return; const t0 = performance.now(), D = 900;
   const tick = now => { const p = Math.min(1,(now-t0)/D); const v = p < 1 ? Math.floor(end*p + Math.random()*(1-p)*12) : end; b.textContent = Math.min(v,99) + '%'; if (p < 1) requestAnimationFrame(tick); else b.textContent = end + '%'; };
   requestAnimationFrame(tick); }
+};
+(window.requestIdleCallback || (f => setTimeout(f, 1)))(initFX, {timeout: 600});
 // rótulos mono embaralham ao entrar
 const GLY = '█▓▒░#/_01X';
 const scr = new IntersectionObserver((es,o) => es.forEach(e => { if (!e.isIntersecting || RM) return; o.unobserve(e.target); const el = e.target, fin = el.textContent; let f = 0;
   const id = setInterval(() => { f++; el.textContent = [...fin].map((c,k) => c === ' ' || k < f*1.6 ? c : GLY[Math.random()*GLY.length|0]).join(''); if (f*1.6 >= fin.length) { clearInterval(id); el.textContent = fin; } }, 28); }), {threshold:.6});
-document.querySelectorAll('.sec-head > .mono, section > .wrap > .mono, .hero-body > .mono').forEach(el => scr.observe(el));
+document.querySelectorAll('.sec-head > .mono, section > .wrap > .mono, .hero-body > .mono').forEach(el => { if (!el.children.length) scr.observe(el); });
 // rolagem: progresso, faixa gigante, inclinação do marquee
 const prog = $('#progress'), rows = [...document.querySelectorAll('.bt-row')], band = document.querySelector('.bigtype'), mqEl = $('#marquee');
 let lastY = scrollY, vel = 0, ticking = false;
@@ -891,7 +829,7 @@ function onFrame(){ ticking = false; const y = scrollY, H = document.documentEle
   if (!RM) {
     const r = band.getBoundingClientRect();
     if (r.bottom > 0 && r.top < innerHeight) { const p = (innerHeight - r.top)/(innerHeight + r.height); rows.forEach(row => { const d = +row.dataset.dir; row.style.transform = `translateX(${d>0 ? -30 + p*30 : -p*30}%)`; }); }
-    mqEl.style.setProperty('--skew', Math.max(-12, Math.min(12, -vel*0.35)) + 'deg');
+    document.getElementById('mqSkew').style.setProperty('--skew', Math.max(-12, Math.min(12, -vel*0.35)) + 'deg');
     const a = mqEl.getAnimations()[0]; if (a) a.playbackRate = 1 + Math.min(6, Math.abs(vel)*0.08);
   }
   if (Math.abs(vel) > 0.3) req(); }
@@ -900,7 +838,7 @@ addEventListener('scroll', req, {passive:true}); req();
 // cursor-etiqueta
 const tc = $('#tagCursor');
 if (!RM && matchMedia('(hover:hover)').matches) {
-  addEventListener('pointermove', e => { tc.style.left = e.clientX + 'px'; tc.style.top = e.clientY + 'px'; }, {passive:true});
+  addEventListener('pointermove', e => { tc.style.setProperty('--x', e.clientX + 'px'); tc.style.setProperty('--y', e.clientY + 'px'); }, {passive:true});
   document.addEventListener('pointerover', e => tc.classList.toggle('on', !!e.target.closest('.work')));
 }
 
@@ -941,6 +879,10 @@ form.addEventListener('submit', e => {
   done.querySelector('a').href = url;
   form.replaceChildren(done);
 });
+
+}, 0);
+};
+requestAnimationFrame(() => setTimeout(run, 0));
 }
 </script>
 </body>
