@@ -163,7 +163,9 @@ section{padding:clamp(72px,9vw,140px) 0}
 .hero.is-playing .hero-media video{opacity:1}
 .hero-media::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(21,21,21,.55) 0%,rgba(21,21,21,.1) 30%,rgba(21,21,21,.35) 60%,rgba(21,21,21,.88) 100%)}
 .hero-body{position:relative;flex:1;width:100%;display:flex;flex-direction:column;justify-content:flex-end;padding-top:120px;padding-bottom:clamp(28px,4vw,48px)}
-.hero h1{font-size:clamp(40px,min(12.6vw,15.5vh),164px);margin:18px 0 0;line-height:.9}
+.hero h1{font-size:clamp(38px,min(8.4vw,10.5vh),116px);margin:16px 0 0;line-height:.9}
+/* contorno de 1px nas letras brancas da hero */
+.hero h1,.hero p,.hero-body>.mono{text-shadow:1px 0 0 #151515,-1px 0 0 #151515,0 1px 0 #151515,0 -1px 0 #151515,1px 1px 0 #151515,-1px -1px 0 #151515,1px -1px 0 #151515,-1px 1px 0 #151515}
 .hero h1 span{display:block;white-space:nowrap;height:.9em}
 .hero-ctas,.hero p{animation:heroIn .6s steps(4) both .1s}
 @keyframes heroIn{from{transform:translateY(24px)}}
