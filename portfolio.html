@@ -16,7 +16,7 @@
 /*
 VOICE   editorial de moda contemporânea: direto, autoral, comercial
 IDEA    um lookbook de estúdio: fotos grandes, ficha técnica em mono, títulos condensados
-PICTURE vídeo editorial em tela cheia na hero; acervo real da BAZA em todas as seções
+PICTURE foto editorial em tela cheia na hero; acervo real da BAZA em todas as seções
 COLOUR  Carbon Black #151515, Natural Cotton #F3F1EB, branco, Stone Grey #A5A29B
 TYPE    Barlow Condensed (display), Inter (texto), IBM Plex Mono (detalhes técnicos)
 */
@@ -399,23 +399,24 @@ body.lock{overflow:hidden}
 .fbtn b{font:500 11px/1 var(--mono);margin-left:8px;opacity:.7}
 .pf-list{padding:0 0 clamp(40px,5vw,80px)}
 #list{min-height:200vh}
-.pf{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:clamp(24px,4vw,72px);padding:clamp(48px,6vw,96px) 0;border-bottom:1px solid var(--line)}
+.pf{padding:clamp(48px,6vw,96px) 0;border-bottom:1px solid var(--line);scroll-margin-top:100px}
 .pf[hidden]{display:none}
-.pf-info{position:sticky;top:150px;align-self:start}
-.pf-info h2{font-size:clamp(44px,5.6vw,92px)}
-.pf-tag{font-size:clamp(19px,1.7vw,24px);line-height:1.3;margin:14px 0 24px}
-.pf-facts{display:grid;grid-template-columns:1fr 1fr;gap:14px;padding:16px 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line);margin-bottom:22px}
+.pf-head{margin-bottom:clamp(20px,2.6vw,36px)}
+.pf-head h2{font-size:clamp(44px,5.6vw,92px)}
+.pf-tag{font-size:clamp(19px,1.7vw,24px);line-height:1.3;margin:12px 0 0}
+.pf-gal{display:grid;grid-template-columns:repeat(var(--c,3),minmax(0,1fr));gap:clamp(8px,1.2vw,16px)}
+.pf-gal[style*="--c:1"]{max-width:560px}
+.pf-gal img{width:100%;height:auto;object-fit:cover;aspect-ratio:3/4;background:#ddd9cf;display:block}
+.pf-body{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:clamp(24px,4vw,72px);margin-top:clamp(24px,3vw,44px)}
+.pf-facts{display:grid;grid-template-columns:1fr 1fr;gap:14px;padding:16px 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
 .pf-facts b{display:block;font:600 15px/1.3 var(--body);text-transform:none;letter-spacing:0;color:var(--carbon);margin-top:4px}
-.pf-info p{color:#3c3a35;margin:0 0 14px;max-width:60ch}
-.pf-spec{display:flex;flex-wrap:wrap;gap:8px;margin:20px 0 26px}
+.pf-text p{color:#3c3a35;margin:0 0 14px;max-width:60ch}
+.pf-spec{display:flex;flex-wrap:wrap;gap:8px;margin:18px 0 0}
 .pf-spec span{border:1px solid var(--line);padding:8px 12px;font:500 12px/1.2 var(--mono);text-transform:uppercase}
-.pf-gal{display:grid;grid-template-columns:1fr 1fr;gap:clamp(8px,1.2vw,16px)}
-.pf-gal img{width:100%;height:100%;object-fit:cover;aspect-ratio:3/4;background:#ddd9cf}
-.pf-gal img:first-child{grid-column:1/-1;aspect-ratio:4/5}
-.pf-gal img:only-child{aspect-ratio:3/4}
+.pf-text .cta{margin-top:12px}
 .pf-band{margin:clamp(40px,5vw,72px) 0 0}
 .empty{padding:80px 0;text-align:center}
-@media(max-width:860px){.pf{grid-template-columns:1fr}.pf-info{position:static}}
+@media(max-width:860px){.pf-body{grid-template-columns:1fr}.pf-gal{grid-template-columns:repeat(min(var(--c,3),2),minmax(0,1fr))}.pf-gal[style*="--c:1"]{max-width:none}.pf-gal.odd img:first-child{grid-column:1/-1}}
 </style>
 </head>
 <body>
@@ -469,24 +470,29 @@ body.lock{overflow:hidden}
 const P = [{"id": "city-tortas", "name": "City Tortas", "cat": "workwear", "seg": "Gastronomia", "serv": "Desenvolvimento de uniformes", "tag": "Tradição portuguesa. Uma nova linguagem.", "text": ["Tradicional em Campinas e de origem familiar portuguesa, a City Tortas trouxe para o projeto uma identidade marcada por história e tradição.", "A camisa jersey resgata uma estética esportiva clássica, e a modelagem ampla e levemente oversized deixa a peça atual. Ela recebe aplicações e bordados com o logotipo e a bandeira de Portugal: preta para a equipe, off-white para a gerência.", "A calça em sarja leve de algodão tem corte reto e soluções para a rotina, como o espaço para o rádio de comunicação e o bolso lateral para caneta."], "spec": ["Algodão 100% · 280 g/m²", "Bordados personalizados", "Sarja leve de algodão", "Bolso para rádio e caneta"], "imgs": ["p03_0", "p04_3", "p04_1", "p04_2", "p05_1", "p05_3", "p05_0", "p05_2"]}, {"id": "alma-campinas", "name": "Alma Campinas", "cat": "workwear", "seg": "Bar, arte e música", "serv": "Desenvolvimento de uniformes", "tag": "Elegância para a rotina do salão.", "text": ["No Cambuí, o Alma reúne bar, gastronomia, arte e música. O desafio foi levar essa atmosfera elegante para as peças da equipe.", "Camisa e calça em poliamida, pela leveza e pelo conforto. A calça ganhou um friso frontal que aproxima a peça da alfaiataria.", "Para os garçons, um colete exclusivo em sarja, preto e bege, com o logotipo do Alma e bolsos de apoio pensados para a operação. O projeto também integra a identidade da Gentleman Jack, marca parceira da casa."], "spec": ["Poliamida", "Friso de alfaiataria", "Colete em sarja", "Bolsos de apoio", "Co-branding"], "imgs": ["p06_0", "p07_3", "p07_0", "p07_1", "p07_2", "p08_0", "p08_1"]}, {"id": "alma-grey-bowl", "name": "Alma Grey Bowl", "cat": "streetwear", "seg": "Bar, skate e cultura urbana", "serv": "Uniformes e acessórios", "tag": "O skate californiano dos anos 80 e 90, na linguagem do Alma Grey.", "text": ["O Alma Grey Bowl junta bar, música, skate e cultura urbana no mesmo espaço, com uma identidade marcada por street art, black music, groove e brasilidade.", "A referência do cliente foi a cultura do skate californiano. Fomos buscar elementos da época para reinterpretar, sem copiar a estética ao pé da letra: faixas, tipografias e a paleta de azul, bege e off-white.", "As duas faixas nas mangas da camisa conversam com as faixas longitudinais da calça e amarram o conjunto."], "spec": ["Oxford 100% algodão", "Calça em poliamida", "Boné dad hat", "Modelagem vintage atualizada"], "imgs": ["p09_0", "p10_1", "p10_0", "p11_0", "p11_1"]}, {"id": "coisa-boa", "name": "Coisa Boa", "cat": "retro", "seg": "Bar", "serv": "Uniforme e coleção especial", "tag": "Brasilidade dentro e fora do balcão.", "text": ["O Coisa Boa é um bar descontraído e irreverente, cheio de música, encontros e cultura brasileira.", "Para a equipe, uma camisa verde e rosa com modelagem oversized e bolso frontal amplo. Mais atual e mais à vontade, como a casa.", "Também criamos uma coleção para a Copa: jersey de inspiração vintage em dry fit de gramatura maior, com bordados e patches, e um boné para fechar. São peças que funcionam muito bem fora do bar."], "spec": ["Camisa oversized", "Bolso frontal amplo", "Jersey dry fit alta gramatura", "Bordados e patches", "Boné"], "imgs": ["p12_0", "p13_0", "p13_1", "p14_0", "p14_1", "p14_2"]}, {"id": "sorriso", "name": "Sorriso Churrascaria", "cat": "workwear", "seg": "Churrascaria", "serv": "Desenvolvimento de uniformes", "tag": "O visual clássico do segmento, com mais conforto.", "text": ["O ponto de partida foi uma estética tradicional, com materiais e soluções pensados para a rotina da equipe. O preto e o bordô da casa atravessam todo o conjunto.", "Para os atendentes, camisa em poliamida com bordado, mais leve e fresca, e colete em sarja. A linha se completa com camiseta 100% algodão e aventais em sarja, inteiro e meio avental."], "spec": ["Poliamida com bordado", "Colete em sarja", "Camiseta 100% algodão", "Aventais"], "imgs": ["p15_0", "p17_0", "p17_1", "p18_0", "p18_1"]}, {"id": "abigail-coffee", "name": "Abigail Coffee", "cat": "streetwear", "seg": "Cafeteria", "serv": "Produto e design", "tag": "Arte desenhada à mão. Tingimento exclusivo.", "text": ["O Abigail é uma cafeteria especializada, com estética própria e muito cuidado nos detalhes.", "Desenvolvemos uma camiseta oversized em algodão premium penteado, 240 g/m², com um marrom tingido especialmente para o projeto.", "O design também é nosso: a partir das referências do Abigail, desenhamos à mão a arte aplicada em silk. Produto e design na mesma entrega."], "spec": ["Algodão premium penteado", "240 g/m²", "Tingimento exclusivo", "Arte autoral em silk"], "imgs": ["p19_0", "p20_0", "p20_1"]}, {"id": "bowa-bar", "name": "Bowa Bar", "cat": "retro", "seg": "Bar", "serv": "Linha de uniformes e coleção", "tag": "Uma linha de verão para a boemia de Campinas.", "text": ["O Bowa é um bar boêmio e consolidado em Campinas, descontraído e sofisticado ao mesmo tempo.", "Criamos uma linha com camiseta, moletom, shorts e boné. Leve, de verão, à vontade como a casa.", "Para a Copa, uma polo jersey especial com referências retrô e esportivas. Tudo pensado para as unidades Nova Campinas e Cambuí, com a mesma linguagem visual."], "spec": ["Camiseta e moletom", "Shorts e boné", "Polo jersey Copa", "2 unidades"], "imgs": ["p21_0", "p22_0", "p22_1", "p23_0", "p23_1", "p23_2", "p24_0"]}, {"id": "escola-vivien-fortes", "name": "Escola Vivien Fortes", "cat": "lifestyle", "seg": "Escola de dança", "serv": "Desenvolvimento de uniformes", "tag": "Um uniforme que acompanha o movimento.", "text": ["Para a EVF, um conjunto em moletom que junta conforto, movimento e estética atual: jaqueta curta e boxy e calça de corte amplo.", "Na jaqueta, o logotipo aplicado em tecido e o strass nas mangas dão um acabamento marcante, com a cara da escola."], "spec": ["Moletom", "Jaqueta boxy", "Calça ampla", "Strass nas mangas"], "imgs": ["p30_0", "p31_0", "p31_1"]}, {"id": "baile-run", "name": "Baile Run", "cat": "lifestyle", "seg": "Running", "serv": "Produto e merch", "tag": "Corrida, música e comunidade na mesma camiseta.", "text": ["Camisetas, regatas e peças de treino para a Baile Run, com estampas que carregam a identidade do grupo para dentro e fora da corrida."], "spec": ["Camisetas", "Regatas", "Estampas autorais"], "imgs": ["p32_0", "p35_1", "p35_0", "p34_0", "p33_0", "p33_1"]}, {"id": "wuste-clothing", "name": "Wüste Clothing", "cat": "retro", "seg": "Marca de moda", "serv": "Desenvolvimento de produto", "tag": "Futebol retrô em versão de marca.", "text": ["Jersey de futebol com referências retrô para a Wüste Clothing: gola contrastante, número nas costas e o escudo da marca."], "spec": ["Jersey esportiva", "Gola contrastante", "Numeração"], "imgs": ["p37_1", "p37_0"]}, {"id": "diogo-lima-barbearia", "name": "Diogo Lima Barbearia", "cat": "workwear", "seg": "Barbearia", "serv": "Uniforme", "tag": "O avental da barbearia, com a identidade da casa.", "text": ["Avental para a equipe da Diogo Lima Barbearia, em preto e off-white, com o logotipo aplicado no peito."], "spec": ["Avental", "Aplicação do logotipo"], "imgs": ["p36_1"]}, {"id": "linha-fitness", "name": "Linha fitness", "cat": "lifestyle", "seg": "Fitness", "serv": "Desenvolvimento de produto", "tag": "Peças de treino com acabamento de marca.", "text": ["Regatas e shorts para treino, com modelagem pensada para o movimento."], "spec": ["Regata", "Shorts"], "imgs": ["p36_0", "p34_1"]}, {"id": "outlawz-vision", "name": "Outlawz Vision", "cat": "streetwear", "seg": "Marca própria · Streetwear", "serv": "Coleção autoral", "tag": "O laboratório de desenvolvimento da BAZA.", "text": ["A Outlawz Vision é a marca de streetwear do grupo BAZA, nascida de uma pesquisa contínua de design, modelagem, materiais e referências contemporâneas.", "A coleção reúne camisaria, denim e corta-ventos, com modelagens próprias e proporções amplas. Camisas e denim são 100% algodão, os corta-ventos são em poliamida, com lavagens e acabamentos especiais. É aqui que testamos o que depois chega aos uniformes dos clientes."], "spec": ["Camisaria 100% algodão", "Denim 100% algodão", "Corta-vento em poliamida", "Lavagens especiais"], "imgs": ["p25_0", "p26_0", "p26_1", "p27_0", "p27_1", "p28_0", "p28_1", "p29_0", "p29_1"]}];
 const CATS = [["todos", "Todos"], ["workwear", "Workwear"], ["retro", "Retrô esportivo"], ["streetwear", "Streetwear"], ["lifestyle", "Lifestyle e performance"]];
 const $ = s => document.querySelector(s);
-const RM = matchMedia('(prefers-reduced-motion: reduce)').matches;
 const esc = t => String(t).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'})[c]);
 const img = (id, alt, sizes, eager) => `<img src="assets/img/${id}-md.webp?v=2" srcset="assets/img/${id}-sm.webp?v=2 560w, assets/img/${id}-md.webp?v=2 800w, assets/img/${id}.webp?v=2 1100w" sizes="${sizes}" alt="${esc(alt)}" ${eager ? 'fetchpriority="high"' : 'loading="lazy"'} decoding="async">`;
 if ($('#count').textContent != P.length) $('#count').textContent = P.length;
 $('#yr').textContent = new Date().getFullYear();
 $('#filters').innerHTML = CATS.map(([k,l]) => `<button class="fbtn" type="button" data-cat="${k}" aria-pressed="${k==='todos'}">${l}<b>${k==='todos' ? P.length : P.filter(p=>p.cat===k).length}</b></button>`).join('');
-const tpl = (p,i) => `
+const tpl = (p,i) => { const c = Math.min(p.imgs.length,3), sz = c===1 ? '(max-width:860px) 100vw, 560px' : `(max-width:860px) 50vw, ${Math.round(92/c)}vw`; return `
   <article class="pf" id="${p.id}" data-cat="${p.cat}">
-    <div class="pf-info">
+    <header class="pf-head">
       <h2 class="display">${esc(p.name)}.</h2>
       <p class="pf-tag">${esc(p.tag)}</p>
-      <div class="pf-facts mono"><div>Segmento<b>${esc(p.seg)}</b></div><div>Serviço<b>${esc(p.serv)}</b></div></div>
-      ${p.text.map(t=>`<p>${esc(t)}</p>`).join('')}
-      <div class="pf-spec">${p.spec.map(s=>`<span>${esc(s)}</span>`).join('')}</div>
-      <a class="cta" href="index.html#contato" data-loc="portfolio-${p.id}"><span>Quero um projeto assim</span><i aria-hidden="true"></i></a>
+    </header>
+    <div class="pf-gal${p.imgs.length%2 && p.imgs.length>1 ? ' odd' : ''}" style="--c:${c}">${p.imgs.map((m,k)=>img(m, `${p.name}, foto ${k+1}`, sz, i===0 && k===0)).join('')}</div>
+    <div class="pf-body">
+      <div>
+        <div class="pf-facts mono"><div>Segmento<b>${esc(p.seg)}</b></div><div>Serviço<b>${esc(p.serv)}</b></div></div>
+        <div class="pf-spec">${p.spec.map(s=>`<span>${esc(s)}</span>`).join('')}</div>
+      </div>
+      <div class="pf-text">
+        ${p.text.map(t=>`<p>${esc(t)}</p>`).join('')}
+        <a class="cta" href="index.html#contato" data-loc="portfolio-${p.id}"><span>Quero um projeto assim</span><i aria-hidden="true"></i></a>
+      </div>
     </div>
-    <div class="pf-gal">${p.imgs.map((m,k)=>img(m, `${p.name}, foto ${k+1}`, k===0 ? '(max-width:860px) 100vw, 56vw' : '(max-width:860px) 50vw, 28vw', i===0 && k===0)).join('')}</div>
-  </article>`;
+  </article>`; };
 const listEl = $('#list');
 const renderChunk = (from, n) => { listEl.insertAdjacentHTML('beforeend', P.slice(from, from+n).map((p,k) => tpl(p, from+k)).join('')); };
 const afterList = () => {
@@ -515,13 +521,6 @@ const prog = $('#progress'), fab = $('#fab');
 let ticking = false;
 const frame = () => { ticking = false; const H = document.documentElement.scrollHeight - innerHeight; prog.style.transform = `scaleX(${H>0 ? scrollY/H : 0})`; fab.classList.toggle('show', scrollY > 500 && (innerHeight + scrollY) < document.documentElement.scrollHeight - 600); };
 addEventListener('scroll', () => { if (!ticking) { ticking = true; requestAnimationFrame(frame); } }, {passive:true}); frame();
-// animações (ociosas): títulos com bloco, fotos com corte seco
-(window.requestIdleCallback || (f => setTimeout(f,1)))(() => {
-  if (RM) return;
-  document.querySelectorAll('.pf-gal img, .pf-info h2').forEach(el => { if (el.getBoundingClientRect().top < innerHeight) return; el.classList.add(el.tagName === 'IMG' ? 'cut' : 'slam'); });
-  const fx = new IntersectionObserver((es,o) => es.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); o.unobserve(e.target); } }), {rootMargin:'0px 0px -10% 0px'});
-  document.querySelectorAll('.cut, .slam').forEach(el => fx.observe(el));
-}, {timeout:800});
 document.addEventListener('click', e => { const c = e.target.closest('.cta'); if (!c) return; window.dataLayer = window.dataLayer || []; window.dataLayer.push({event:'cta_click', cta_local:c.dataset.loc||''}); });
 }
 </script>
