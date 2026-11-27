@@ -212,9 +212,9 @@ section{padding:clamp(72px,9vw,140px) 0}
 .work{grid-column:span 6;text-align:left;background:none;border:0;padding:0;display:block}
 .work:nth-child(4n+1){grid-column:span 7}.work:nth-child(4n+2){grid-column:span 5;margin-top:clamp(0px,8vw,120px)}
 .work:nth-child(4n+3){grid-column:span 5}.work:nth-child(4n){grid-column:span 7;margin-top:clamp(0px,6vw,90px)}
-.work-img{position:relative;overflow:hidden;aspect-ratio:4/5;background:#ddd9cf}
-.work:nth-child(4n+1) .work-img,.work:nth-child(4n) .work-img{aspect-ratio:5/6}
-.work-img img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform .9s cubic-bezier(.2,.7,.2,1),opacity .5s}
+.work-img{position:relative;overflow:hidden;height:0;padding-top:125%;background:#ddd9cf}
+.work:nth-child(4n+1) .work-img,.work:nth-child(4n) .work-img{padding-top:120%}
+.work-img img{position:absolute;top:0;left:0;width:100%;height:100%;object-fit:cover;transition:transform .9s cubic-bezier(.2,.7,.2,1),opacity .5s}
 .work-img img+img{opacity:0}
 .work:hover .work-img img{transform:scale(1.035)}
 .work:hover .work-img img+img{opacity:1}
@@ -228,7 +228,8 @@ section{padding:clamp(72px,9vw,140px) 0}
 .manifesto{background:var(--white)}
 .manifesto .display{font-size:clamp(52px,8.6vw,150px);max-width:14ch}
 .manifesto-grid{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:clamp(28px,5vw,96px);margin-top:clamp(40px,5vw,80px);align-items:end}
-.manifesto-grid img{width:100%;aspect-ratio:4/5;object-fit:cover}
+.ph{position:relative;display:block;height:0;padding-top:var(--r,133.333%);overflow:hidden;background:#ddd9cf}.ph>img{position:absolute;top:0;left:0;width:100%;height:100%;object-fit:cover}
+.manifesto-grid .ph,.dev-media .ph{--r:125%}
 .manifesto-text p{margin:0 0 18px;max-width:60ch;color:#3c3a35}
 .manifesto-text p:first-child{font-size:clamp(20px,1.8vw,26px);line-height:1.4;color:var(--carbon)}
 .tri{display:flex;gap:28px;flex-wrap:wrap;margin-top:32px;padding-top:20px;border-top:1px solid var(--line)}
@@ -260,7 +261,6 @@ section{padding:clamp(72px,9vw,140px) 0}
 .dev{background:var(--carbon);color:var(--cotton)}
 .dev-grid{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:clamp(28px,5vw,96px)}
 .dev-media{position:sticky;top:96px;align-self:start}
-.dev-media img{width:100%;aspect-ratio:4/5;object-fit:cover}
 .dev-media .mono{margin-top:12px;color:var(--stone)}
 .dev-list{list-style:none;margin:0;padding:0;border-top:1px solid var(--line-d)}
 .dev-list li{display:grid;grid-template-columns:44px minmax(0,1fr) minmax(0,1fr);gap:16px;padding:22px 0;border-bottom:1px solid var(--line-d);align-items:baseline}
@@ -345,8 +345,7 @@ fieldset{border:0;margin:0;padding:0}
 .case-spec{display:flex;flex-wrap:wrap;gap:8px;margin:22px 0 30px}
 .case-spec span{border:1px solid var(--line);padding:8px 12px;font:500 12px/1.2 var(--mono);text-transform:uppercase}
 .case-gallery{display:grid;grid-template-columns:1fr 1fr;gap:clamp(10px,1.4vw,18px)}
-.case-gallery img{width:100%;height:100%;object-fit:cover;aspect-ratio:3/4;background:#ddd9cf}
-.case-gallery img:first-child{grid-column:1/-1;aspect-ratio:4/5}
+.case-gallery .ph:first-child{grid-column:1/-1;--r:125%}
 .case-nav{display:flex;justify-content:space-between;gap:16px;padding:28px var(--pad);border-top:1px solid var(--line);max-width:var(--max);margin:0 auto}
 .case-nav button{background:none;border:0;text-align:left;padding:8px 0}
 .case-nav button:last-child{text-align:right}
@@ -462,7 +461,7 @@ body.lock{overflow:hidden}
     <span class="mono">Manifesto BAZA</span>
     <h2 class="display rv" style="margin-top:18px">Não partimos do uniforme. Partimos da sua marca.</h2>
     <div class="manifesto-grid">
-      <img class="rv" src="assets/img/p03_0.webp?v=2" srcset="assets/img/p03_0-sm.webp?v=2 560w, assets/img/p03_0-md.webp?v=2 800w, assets/img/p03_0.webp?v=2 1100w" sizes="(max-width:760px) 100vw, 40vw" alt="Uniforme City Tortas: camisa jersey preta com gola branca e calça em sarja" loading="lazy" decoding="async">
+      <span class="ph"><img class="rv" src="assets/img/p03_0.webp?v=2" srcset="assets/img/p03_0-sm.webp?v=2 560w, assets/img/p03_0-md.webp?v=2 800w, assets/img/p03_0.webp?v=2 1100w" sizes="(max-width:760px) 100vw, 40vw" alt="Uniforme City Tortas: camisa jersey preta com gola branca e calça em sarja" loading="lazy" decoding="async"></span>
       <div class="manifesto-text">
         <p>Toda casa tem um jeito próprio de receber o cliente. A gente transforma esse jeito em roupa.</p>
         <p>Uniforme de catálogo resolve um problema: vestir a equipe. Para por aí. A camisa é igual à do vizinho, ninguém usa fora do turno e o cliente nem lembra de ter visto.</p>
@@ -486,7 +485,7 @@ body.lock{overflow:hidden}
     </div>
     <div class="dev-grid">
       <figure class="dev-media" style="margin:0">
-        <img src="assets/img/p20_0.webp?v=2" srcset="assets/img/p20_0-sm.webp?v=2 560w, assets/img/p20_0-md.webp?v=2 800w, assets/img/p20_0.webp?v=2 1100w" sizes="(max-width:860px) 100vw, 40vw" alt="Costas da camiseta Abigail Coffee com arte desenhada à mão em silk" loading="lazy" decoding="async">
+        <span class="ph"><img src="assets/img/p20_0.webp?v=2" srcset="assets/img/p20_0-sm.webp?v=2 560w, assets/img/p20_0-md.webp?v=2 800w, assets/img/p20_0.webp?v=2 1100w" sizes="(max-width:860px) 100vw, 40vw" alt="Costas da camiseta Abigail Coffee com arte desenhada à mão em silk" loading="lazy" decoding="async"></span>
         <figcaption class="mono">Abigail Coffee: arte desenhada à mão, em silk, sobre tingimento exclusivo</figcaption>
       </figure>
       <div><ul class="dev-list" id="devList"></ul>
@@ -744,7 +743,7 @@ function openCase(id){
     ${p.text.map(t=>`<p>${t}</p>`).join('')}
     <div class="case-spec">${p.spec.map(s=>`<span>${s}</span>`).join('')}</div>
     <a class="cta big" href="#contato" data-cta data-loc="estudo-de-caso"><span>Quero um projeto assim</span><i aria-hidden="true"></i></a>`;
-  $('#caseGallery').innerHTML = p.imgs.map((m,k)=>img(m, k?`${p.name}, detalhe ${k}`:p.alt, k?'(max-width:860px) 50vw, 30vw':'(max-width:860px) 100vw, 58vw', k<2)).join('');
+  $('#caseGallery').innerHTML = p.imgs.map((m,k)=>'<span class="ph">'+img(m, k?`${p.name}, detalhe ${k}`:p.alt, k?'(max-width:860px) 50vw, 30vw':'(max-width:860px) 100vw, 58vw', k<2)+'</span>').join('');
   $('#caseNav').innerHTML = `<button type="button" data-id="${prev.id}"><span class="mono"><i class="ic ic-left" aria-hidden="true"></i> Anterior</span><b>${prev.name}</b></button><button type="button" data-id="${next.id}"><span class="mono">Próximo <i class="ic ic-right" aria-hidden="true"></i></span><b>${next.name}</b></button>`;
   if (!caseEl.classList.contains('open')) lastFocus = document.activeElement;
   caseEl.classList.add('open'); document.body.classList.add('lock'); caseEl.scrollTop = 0; caseEl.focus({preventScroll:true});
