@@ -471,7 +471,7 @@ const CATS = [["todos", "Todos"], ["workwear", "Workwear"], ["retro", "Retrô es
 const $ = s => document.querySelector(s);
 const RM = matchMedia('(prefers-reduced-motion: reduce)').matches;
 const esc = t => String(t).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'})[c]);
-const img = (id, alt, sizes, eager) => `<img src="assets/img/${id}-md.webp" srcset="assets/img/${id}-sm.webp 560w, assets/img/${id}-md.webp 800w, assets/img/${id}.webp 1100w" sizes="${sizes}" alt="${esc(alt)}" ${eager ? 'fetchpriority="high"' : 'loading="lazy"'} decoding="async">`;
+const img = (id, alt, sizes, eager) => `<img src="assets/img/${id}-md.webp?v=2" srcset="assets/img/${id}-sm.webp?v=2 560w, assets/img/${id}-md.webp?v=2 800w, assets/img/${id}.webp?v=2 1100w" sizes="${sizes}" alt="${esc(alt)}" ${eager ? 'fetchpriority="high"' : 'loading="lazy"'} decoding="async">`;
 if ($('#count').textContent != P.length) $('#count').textContent = P.length;
 $('#yr').textContent = new Date().getFullYear();
 $('#filters').innerHTML = CATS.map(([k,l]) => `<button class="fbtn" type="button" data-cat="${k}" aria-pressed="${k==='todos'}">${l}<b>${k==='todos' ? P.length : P.filter(p=>p.cat===k).length}</b></button>`).join('');
